@@ -1,0 +1,1310 @@
+[
+ {
+  "name": "Scyther",
+  "localId": "001",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/001/high.png"
+ },
+ {
+  "name": "Pineco",
+  "localId": "002",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/002/high.png"
+ },
+ {
+  "name": "Seedot",
+  "localId": "003",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/003/high.png"
+ },
+ {
+  "name": "Nuzleaf",
+  "localId": "004",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/004/high.png"
+ },
+ {
+  "name": "Shiftry",
+  "localId": "005",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/005/high.png"
+ },
+ {
+  "name": "Shroomish",
+  "localId": "006",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/006/high.png"
+ },
+ {
+  "name": "Breloom",
+  "localId": "007",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/007/high.png"
+ },
+ {
+  "name": "Roselia",
+  "localId": "008",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/008/high.png"
+ },
+ {
+  "name": "Roserade",
+  "localId": "009",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/009/high.png"
+ },
+ {
+  "name": "Turtwig",
+  "localId": "010",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/010/high.png"
+ },
+ {
+  "name": "Grotle",
+  "localId": "011",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/011/high.png"
+ },
+ {
+  "name": "Torterra ex",
+  "localId": "012",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/012/high.png"
+ },
+ {
+  "name": "Shaymin",
+  "localId": "013",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/013/high.png"
+ },
+ {
+  "name": "Cottonee",
+  "localId": "014",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/014/high.png"
+ },
+ {
+  "name": "Whimsicott",
+  "localId": "015",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/015/high.png"
+ },
+ {
+  "name": "Deerling",
+  "localId": "016",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/016/high.png"
+ },
+ {
+  "name": "Sawsbuck",
+  "localId": "017",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/017/high.png"
+ },
+ {
+  "name": "Grubbin",
+  "localId": "018",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/018/high.png"
+ },
+ {
+  "name": "Dhelmise",
+  "localId": "019",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/019/high.png"
+ },
+ {
+  "name": "Bramblin",
+  "localId": "020",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/020/high.png"
+ },
+ {
+  "name": "Brambleghast",
+  "localId": "021",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/021/high.png"
+ },
+ {
+  "name": "Scovillain ex",
+  "localId": "022",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/022/high.png"
+ },
+ {
+  "name": "Rellor",
+  "localId": "023",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/023/high.png"
+ },
+ {
+  "name": "Rabsca",
+  "localId": "024",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/024/high.png"
+ },
+ {
+  "name": "Iron Leaves ex",
+  "localId": "025",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/025/high.png"
+ },
+ {
+  "name": "Ponyta",
+  "localId": "026",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/026/high.png"
+ },
+ {
+  "name": "Rapidash",
+  "localId": "027",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/027/high.png"
+ },
+ {
+  "name": "Slugma",
+  "localId": "028",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/028/high.png"
+ },
+ {
+  "name": "Magcargo",
+  "localId": "029",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/029/high.png"
+ },
+ {
+  "name": "Victini",
+  "localId": "030",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/030/high.png"
+ },
+ {
+  "name": "Heatmor",
+  "localId": "031",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/031/high.png"
+ },
+ {
+  "name": "Litten",
+  "localId": "032",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/032/high.png"
+ },
+ {
+  "name": "Torracat",
+  "localId": "033",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/033/high.png"
+ },
+ {
+  "name": "Incineroar ex",
+  "localId": "034",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/034/high.png"
+ },
+ {
+  "name": "Turtonator",
+  "localId": "035",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/035/high.png"
+ },
+ {
+  "name": "Sizzlipede",
+  "localId": "036",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/036/high.png"
+ },
+ {
+  "name": "Centiskorch",
+  "localId": "037",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/037/high.png"
+ },
+ {
+  "name": "Gouging Fire ex",
+  "localId": "038",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/038/high.png"
+ },
+ {
+  "name": "Totodile",
+  "localId": "039",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/039/high.png"
+ },
+ {
+  "name": "Croconaw",
+  "localId": "040",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/040/high.png"
+ },
+ {
+  "name": "Feraligatr",
+  "localId": "041",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/041/high.png"
+ },
+ {
+  "name": "Carvanha",
+  "localId": "042",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/042/high.png"
+ },
+ {
+  "name": "Sharpedo",
+  "localId": "043",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/043/high.png"
+ },
+ {
+  "name": "Keldeo",
+  "localId": "044",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/044/high.png"
+ },
+ {
+  "name": "Snom",
+  "localId": "045",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/045/high.png"
+ },
+ {
+  "name": "Frosmoth",
+  "localId": "046",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/046/high.png"
+ },
+ {
+  "name": "Wiglett",
+  "localId": "047",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/047/high.png"
+ },
+ {
+  "name": "Finizen",
+  "localId": "048",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/048/high.png"
+ },
+ {
+  "name": "Palafin",
+  "localId": "049",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/049/high.png"
+ },
+ {
+  "name": "Walking Wake ex",
+  "localId": "050",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/050/high.png"
+ },
+ {
+  "name": "Pikachu",
+  "localId": "051",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/051/high.png"
+ },
+ {
+  "name": "Raichu",
+  "localId": "052",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/052/high.png"
+ },
+ {
+  "name": "Electabuzz",
+  "localId": "053",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/053/high.png"
+ },
+ {
+  "name": "Electivire",
+  "localId": "054",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/054/high.png"
+ },
+ {
+  "name": "Charjabug",
+  "localId": "055",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/055/high.png"
+ },
+ {
+  "name": "Vikavolt",
+  "localId": "056",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/056/high.png"
+ },
+ {
+  "name": "Zeraora",
+  "localId": "057",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/057/high.png"
+ },
+ {
+  "name": "Yamper",
+  "localId": "058",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/058/high.png"
+ },
+ {
+  "name": "Boltund",
+  "localId": "059",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/059/high.png"
+ },
+ {
+  "name": "Wugtrio ex",
+  "localId": "060",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/060/high.png"
+ },
+ {
+  "name": "Iron Hands",
+  "localId": "061",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/061/high.png"
+ },
+ {
+  "name": "Iron Thorns",
+  "localId": "062",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/062/high.png"
+ },
+ {
+  "name": "Mr. Mime",
+  "localId": "063",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/063/high.png"
+ },
+ {
+  "name": "Marill",
+  "localId": "064",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/064/high.png"
+ },
+ {
+  "name": "Azumarill",
+  "localId": "065",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/065/high.png"
+ },
+ {
+  "name": "Girafarig",
+  "localId": "066",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/066/high.png"
+ },
+ {
+  "name": "Latias",
+  "localId": "067",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/067/high.png"
+ },
+ {
+  "name": "Bronzor",
+  "localId": "068",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/068/high.png"
+ },
+ {
+  "name": "Bronzong",
+  "localId": "069",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/069/high.png"
+ },
+ {
+  "name": "Solosis",
+  "localId": "070",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/070/high.png"
+ },
+ {
+  "name": "Duosion",
+  "localId": "071",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/071/high.png"
+ },
+ {
+  "name": "Reuniclus",
+  "localId": "072",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/072/high.png"
+ },
+ {
+  "name": "Elgyem",
+  "localId": "073",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/073/high.png"
+ },
+ {
+  "name": "Beheeyem",
+  "localId": "074",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/074/high.png"
+ },
+ {
+  "name": "Cutiefly",
+  "localId": "075",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/075/high.png"
+ },
+ {
+  "name": "Ribombee",
+  "localId": "076",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/076/high.png"
+ },
+ {
+  "name": "Scream Tail",
+  "localId": "077",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/077/high.png"
+ },
+ {
+  "name": "Flutter Mane",
+  "localId": "078",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/078/high.png"
+ },
+ {
+  "name": "Iron Valiant",
+  "localId": "079",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/079/high.png"
+ },
+ {
+  "name": "Iron Valiant",
+  "localId": "080",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/080/high.png"
+ },
+ {
+  "name": "Iron Crown ex",
+  "localId": "081",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/081/high.png"
+ },
+ {
+  "name": "Meditite",
+  "localId": "082",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/082/high.png"
+ },
+ {
+  "name": "Medicham",
+  "localId": "083",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/083/high.png"
+ },
+ {
+  "name": "Relicanth",
+  "localId": "084",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/084/high.png"
+ },
+ {
+  "name": "Drilbur",
+  "localId": "085",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/085/high.png"
+ },
+ {
+  "name": "Excadrill",
+  "localId": "086",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/086/high.png"
+ },
+ {
+  "name": "Golett",
+  "localId": "087",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/087/high.png"
+ },
+ {
+  "name": "Golurk",
+  "localId": "088",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/088/high.png"
+ },
+ {
+  "name": "Rockruff",
+  "localId": "089",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/089/high.png"
+ },
+ {
+  "name": "Lycanroc",
+  "localId": "090",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/090/high.png"
+ },
+ {
+  "name": "Mudbray",
+  "localId": "091",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/091/high.png"
+ },
+ {
+  "name": "Mudsdale",
+  "localId": "092",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/092/high.png"
+ },
+ {
+  "name": "Rolycoly",
+  "localId": "093",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/093/high.png"
+ },
+ {
+  "name": "Carkol",
+  "localId": "094",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/094/high.png"
+ },
+ {
+  "name": "Coalossal",
+  "localId": "095",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/095/high.png"
+ },
+ {
+  "name": "Great Tusk",
+  "localId": "096",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/096/high.png"
+ },
+ {
+  "name": "Great Tusk",
+  "localId": "097",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/097/high.png"
+ },
+ {
+  "name": "Sandy Shocks",
+  "localId": "098",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/098/high.png"
+ },
+ {
+  "name": "Iron Boulder ex",
+  "localId": "099",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/099/high.png"
+ },
+ {
+  "name": "Ekans",
+  "localId": "100",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/100/high.png"
+ },
+ {
+  "name": "Arbok",
+  "localId": "101",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/101/high.png"
+ },
+ {
+  "name": "Gastly",
+  "localId": "102",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/102/high.png"
+ },
+ {
+  "name": "Haunter",
+  "localId": "103",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/103/high.png"
+ },
+ {
+  "name": "Gengar ex",
+  "localId": "104",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/104/high.png"
+ },
+ {
+  "name": "Poochyena",
+  "localId": "105",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/105/high.png"
+ },
+ {
+  "name": "Mightyena",
+  "localId": "106",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/106/high.png"
+ },
+ {
+  "name": "Sableye",
+  "localId": "107",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/107/high.png"
+ },
+ {
+  "name": "Farigiraf ex",
+  "localId": "108",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/108/high.png"
+ },
+ {
+  "name": "Roaring Moon",
+  "localId": "109",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/109/high.png"
+ },
+ {
+  "name": "Forretress",
+  "localId": "110",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/110/high.png"
+ },
+ {
+  "name": "Scizor ex",
+  "localId": "111",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/111/high.png"
+ },
+ {
+  "name": "Mawile",
+  "localId": "112",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/112/high.png"
+ },
+ {
+  "name": "Beldum",
+  "localId": "113",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/113/high.png"
+ },
+ {
+  "name": "Metang",
+  "localId": "114",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/114/high.png"
+ },
+ {
+  "name": "Metagross",
+  "localId": "115",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/115/high.png"
+ },
+ {
+  "name": "Meltan",
+  "localId": "116",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/116/high.png"
+ },
+ {
+  "name": "Melmetal",
+  "localId": "117",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/117/high.png"
+ },
+ {
+  "name": "Iron Treads",
+  "localId": "118",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/118/high.png"
+ },
+ {
+  "name": "Koraidon",
+  "localId": "119",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/119/high.png"
+ },
+ {
+  "name": "Koraidon ex",
+  "localId": "120",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/120/high.png"
+ },
+ {
+  "name": "Miraidon",
+  "localId": "121",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/121/high.png"
+ },
+ {
+  "name": "Miraidon ex",
+  "localId": "122",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/122/high.png"
+ },
+ {
+  "name": "Raging Bolt ex",
+  "localId": "123",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/123/high.png"
+ },
+ {
+  "name": "Lickitung",
+  "localId": "124",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/124/high.png"
+ },
+ {
+  "name": "Lickilicky",
+  "localId": "125",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/125/high.png"
+ },
+ {
+  "name": "Hoothoot",
+  "localId": "126",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/126/high.png"
+ },
+ {
+  "name": "Noctowl",
+  "localId": "127",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/127/high.png"
+ },
+ {
+  "name": "Dunsparce",
+  "localId": "128",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/128/high.png"
+ },
+ {
+  "name": "Dudunsparce",
+  "localId": "129",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/129/high.png"
+ },
+ {
+  "name": "Skitty",
+  "localId": "130",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/130/high.png"
+ },
+ {
+  "name": "Delcatty",
+  "localId": "131",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/131/high.png"
+ },
+ {
+  "name": "Chatot",
+  "localId": "132",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/132/high.png"
+ },
+ {
+  "name": "Pidove",
+  "localId": "133",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/133/high.png"
+ },
+ {
+  "name": "Tranquill",
+  "localId": "134",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/134/high.png"
+ },
+ {
+  "name": "Unfezant",
+  "localId": "135",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/135/high.png"
+ },
+ {
+  "name": "Minccino",
+  "localId": "136",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/136/high.png"
+ },
+ {
+  "name": "Cinccino",
+  "localId": "137",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/137/high.png"
+ },
+ {
+  "name": "Drampa",
+  "localId": "138",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/138/high.png"
+ },
+ {
+  "name": "Iron Jugulis",
+  "localId": "139",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/139/high.png"
+ },
+ {
+  "name": "Ancient Booster Energy Capsule",
+  "localId": "140",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/140/high.png"
+ },
+ {
+  "name": "Awakening Drum",
+  "localId": "141",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/141/high.png"
+ },
+ {
+  "name": "Bianca's Devotion",
+  "localId": "142",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/142/high.png"
+ },
+ {
+  "name": "Boxed Order",
+  "localId": "143",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/143/high.png"
+ },
+ {
+  "name": "Buddy-Buddy Poffin",
+  "localId": "144",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/144/high.png"
+ },
+ {
+  "name": "Ciphermaniac's Codebreaking",
+  "localId": "145",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/145/high.png"
+ },
+ {
+  "name": "Eri",
+  "localId": "146",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/146/high.png"
+ },
+ {
+  "name": "Explorer's Guidance",
+  "localId": "147",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/147/high.png"
+ },
+ {
+  "name": "Full Metal Lab",
+  "localId": "148",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/148/high.png"
+ },
+ {
+  "name": "Future Booster Energy Capsule",
+  "localId": "149",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/149/high.png"
+ },
+ {
+  "name": "Hand Trimmer",
+  "localId": "150",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/150/high.png"
+ },
+ {
+  "name": "Heavy Baton",
+  "localId": "151",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/151/high.png"
+ },
+ {
+  "name": "Hero's Cape",
+  "localId": "152",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/152/high.png"
+ },
+ {
+  "name": "Master Ball",
+  "localId": "153",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/153/high.png"
+ },
+ {
+  "name": "Maximum Belt",
+  "localId": "154",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/154/high.png"
+ },
+ {
+  "name": "Morty's Conviction",
+  "localId": "155",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/155/high.png"
+ },
+ {
+  "name": "Perilous Jungle",
+  "localId": "156",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/156/high.png"
+ },
+ {
+  "name": "Prime Catcher",
+  "localId": "157",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/157/high.png"
+ },
+ {
+  "name": "Reboot Pod",
+  "localId": "158",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/158/high.png"
+ },
+ {
+  "name": "Rescue Board",
+  "localId": "159",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/159/high.png"
+ },
+ {
+  "name": "Salvatore",
+  "localId": "160",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/160/high.png"
+ },
+ {
+  "name": "Mist Energy",
+  "localId": "161",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/161/high.png"
+ },
+ {
+  "name": "Neo Upper Energy",
+  "localId": "162",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/162/high.png"
+ },
+ {
+  "name": "Shiftry",
+  "localId": "163",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/163/high.png"
+ },
+ {
+  "name": "Grotle",
+  "localId": "164",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/164/high.png"
+ },
+ {
+  "name": "Deerling",
+  "localId": "165",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/165/high.png"
+ },
+ {
+  "name": "Sawsbuck",
+  "localId": "166",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/166/high.png"
+ },
+ {
+  "name": "Litten",
+  "localId": "167",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/167/high.png"
+ },
+ {
+  "name": "Snom",
+  "localId": "168",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/168/high.png"
+ },
+ {
+  "name": "Charjabug",
+  "localId": "169",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/169/high.png"
+ },
+ {
+  "name": "Bronzor",
+  "localId": "170",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/170/high.png"
+ },
+ {
+  "name": "Reuniclus",
+  "localId": "171",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/171/high.png"
+ },
+ {
+  "name": "Cutiefly",
+  "localId": "172",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/172/high.png"
+ },
+ {
+  "name": "Relicanth",
+  "localId": "173",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/173/high.png"
+ },
+ {
+  "name": "Excadrill",
+  "localId": "174",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/174/high.png"
+ },
+ {
+  "name": "Mudsdale",
+  "localId": "175",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/175/high.png"
+ },
+ {
+  "name": "Arbok",
+  "localId": "176",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/176/high.png"
+ },
+ {
+  "name": "Gastly",
+  "localId": "177",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/177/high.png"
+ },
+ {
+  "name": "Metagross",
+  "localId": "178",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/178/high.png"
+ },
+ {
+  "name": "Meltan",
+  "localId": "179",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/179/high.png"
+ },
+ {
+  "name": "Lickitung",
+  "localId": "180",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/180/high.png"
+ },
+ {
+  "name": "Chatot",
+  "localId": "181",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/181/high.png"
+ },
+ {
+  "name": "Minccino",
+  "localId": "182",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/182/high.png"
+ },
+ {
+  "name": "Cinccino",
+  "localId": "183",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/183/high.png"
+ },
+ {
+  "name": "Drampa",
+  "localId": "184",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/184/high.png"
+ },
+ {
+  "name": "Torterra ex",
+  "localId": "185",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/185/high.png"
+ },
+ {
+  "name": "Iron Leaves ex",
+  "localId": "186",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/186/high.png"
+ },
+ {
+  "name": "Incineroar ex",
+  "localId": "187",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/187/high.png"
+ },
+ {
+  "name": "Gouging Fire ex",
+  "localId": "188",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/188/high.png"
+ },
+ {
+  "name": "Walking Wake ex",
+  "localId": "189",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/189/high.png"
+ },
+ {
+  "name": "Wugtrio ex",
+  "localId": "190",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/190/high.png"
+ },
+ {
+  "name": "Iron Crown ex",
+  "localId": "191",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/191/high.png"
+ },
+ {
+  "name": "Iron Boulder ex",
+  "localId": "192",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/192/high.png"
+ },
+ {
+  "name": "Gengar ex",
+  "localId": "193",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/193/high.png"
+ },
+ {
+  "name": "Farigiraf ex",
+  "localId": "194",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/194/high.png"
+ },
+ {
+  "name": "Scizor ex",
+  "localId": "195",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/195/high.png"
+ },
+ {
+  "name": "Raging Bolt ex",
+  "localId": "196",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/196/high.png"
+ },
+ {
+  "name": "Bianca's Devotion",
+  "localId": "197",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/197/high.png"
+ },
+ {
+  "name": "Ciphermaniac's Codebreaking",
+  "localId": "198",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/198/high.png"
+ },
+ {
+  "name": "Eri",
+  "localId": "199",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/199/high.png"
+ },
+ {
+  "name": "Explorer's Guidance",
+  "localId": "200",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/200/high.png"
+ },
+ {
+  "name": "Morty's Conviction",
+  "localId": "201",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/201/high.png"
+ },
+ {
+  "name": "Salvatore",
+  "localId": "202",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/202/high.png"
+ },
+ {
+  "name": "Iron Leaves ex",
+  "localId": "203",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/203/high.png"
+ },
+ {
+  "name": "Gouging Fire ex",
+  "localId": "204",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/204/high.png"
+ },
+ {
+  "name": "Walking Wake ex",
+  "localId": "205",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/205/high.png"
+ },
+ {
+  "name": "Iron Crown ex",
+  "localId": "206",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/206/high.png"
+ },
+ {
+  "name": "Iron Boulder ex",
+  "localId": "207",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/207/high.png"
+ },
+ {
+  "name": "Raging Bolt ex",
+  "localId": "208",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/208/high.png"
+ },
+ {
+  "name": "Bianca's Devotion",
+  "localId": "209",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/209/high.png"
+ },
+ {
+  "name": "Eri",
+  "localId": "210",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/210/high.png"
+ },
+ {
+  "name": "Morty's Conviction",
+  "localId": "211",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/211/high.png"
+ },
+ {
+  "name": "Salvatore",
+  "localId": "212",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/212/high.png"
+ },
+ {
+  "name": "Iron Leaves ex",
+  "localId": "213",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/213/high.png"
+ },
+ {
+  "name": "Gouging Fire ex",
+  "localId": "214",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/214/high.png"
+ },
+ {
+  "name": "Walking Wake ex",
+  "localId": "215",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/215/high.png"
+ },
+ {
+  "name": "Iron Crown ex",
+  "localId": "216",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/216/high.png"
+ },
+ {
+  "name": "Iron Boulder ex",
+  "localId": "217",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/217/high.png"
+ },
+ {
+  "name": "Raging Bolt ex",
+  "localId": "218",
+  "set_id": "sv05",
+  "image_url": "https://assets.tcgdex.net/en/sv/sv05/218/high.png"
+ }
+]

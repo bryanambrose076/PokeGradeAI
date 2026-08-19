@@ -1,0 +1,734 @@
+[
+ {
+  "name": "Weedle",
+  "localId": "001",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/001/high.png"
+ },
+ {
+  "name": "Kakuna",
+  "localId": "002",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/002/high.png"
+ },
+ {
+  "name": "Beedrill ex",
+  "localId": "003",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/003/high.png"
+ },
+ {
+  "name": "Carnivine",
+  "localId": "004",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/004/high.png"
+ },
+ {
+  "name": "Chespin",
+  "localId": "005",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/005/high.png"
+ },
+ {
+  "name": "Quilladin",
+  "localId": "006",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/006/high.png"
+ },
+ {
+  "name": "Chesnaught",
+  "localId": "007",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/007/high.png"
+ },
+ {
+  "name": "Vulpix",
+  "localId": "008",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/008/high.png"
+ },
+ {
+  "name": "Ninetales",
+  "localId": "009",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/009/high.png"
+ },
+ {
+  "name": "Ho-Oh",
+  "localId": "010",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/010/high.png"
+ },
+ {
+  "name": "Fennekin",
+  "localId": "011",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/011/high.png"
+ },
+ {
+  "name": "Braixen",
+  "localId": "012",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/012/high.png"
+ },
+ {
+  "name": "Delphox",
+  "localId": "013",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/013/high.png"
+ },
+ {
+  "name": "Litleo",
+  "localId": "014",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/014/high.png"
+ },
+ {
+  "name": "Mega Pyroar ex",
+  "localId": "015",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/015/high.png"
+ },
+ {
+  "name": "Remoraid",
+  "localId": "016",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/016/high.png"
+ },
+ {
+  "name": "Octillery",
+  "localId": "017",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/017/high.png"
+ },
+ {
+  "name": "Delibird",
+  "localId": "018",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/018/high.png"
+ },
+ {
+  "name": "Keldeo",
+  "localId": "019",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/019/high.png"
+ },
+ {
+  "name": "Froakie",
+  "localId": "020",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/020/high.png"
+ },
+ {
+  "name": "Frogadier",
+  "localId": "021",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/021/high.png"
+ },
+ {
+  "name": "Mega Greninja ex",
+  "localId": "022",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/022/high.png"
+ },
+ {
+  "name": "Bergmite",
+  "localId": "023",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/023/high.png"
+ },
+ {
+  "name": "Avalugg",
+  "localId": "024",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/024/high.png"
+ },
+ {
+  "name": "Wimpod",
+  "localId": "025",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/025/high.png"
+ },
+ {
+  "name": "Golisopod",
+  "localId": "026",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/026/high.png"
+ },
+ {
+  "name": "Mareep",
+  "localId": "027",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/027/high.png"
+ },
+ {
+  "name": "Flaaffy",
+  "localId": "028",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/028/high.png"
+ },
+ {
+  "name": "Ampharos",
+  "localId": "029",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/029/high.png"
+ },
+ {
+  "name": "Emolga",
+  "localId": "030",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/030/high.png"
+ },
+ {
+  "name": "Deoxys",
+  "localId": "031",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/031/high.png"
+ },
+ {
+  "name": "Deoxys",
+  "localId": "032",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/032/high.png"
+ },
+ {
+  "name": "Deoxys",
+  "localId": "033",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/033/high.png"
+ },
+ {
+  "name": "Deoxys",
+  "localId": "034",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/034/high.png"
+ },
+ {
+  "name": "Mega Floette ex",
+  "localId": "035",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/035/high.png"
+ },
+ {
+  "name": "Espurr",
+  "localId": "036",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/036/high.png"
+ },
+ {
+  "name": "Meowstic",
+  "localId": "037",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/037/high.png"
+ },
+ {
+  "name": "Phantump",
+  "localId": "038",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/038/high.png"
+ },
+ {
+  "name": "Trevenant",
+  "localId": "039",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/039/high.png"
+ },
+ {
+  "name": "Pumpkaboo",
+  "localId": "040",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/040/high.png"
+ },
+ {
+  "name": "Gourgeist ex",
+  "localId": "041",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/041/high.png"
+ },
+ {
+  "name": "Xerneas",
+  "localId": "042",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/042/high.png"
+ },
+ {
+  "name": "Sudowoodo",
+  "localId": "043",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/043/high.png"
+ },
+ {
+  "name": "Phanpy",
+  "localId": "044",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/044/high.png"
+ },
+ {
+  "name": "Donphan",
+  "localId": "045",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/045/high.png"
+ },
+ {
+  "name": "Baltoy",
+  "localId": "046",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/046/high.png"
+ },
+ {
+  "name": "Claydol",
+  "localId": "047",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/047/high.png"
+ },
+ {
+  "name": "Mega Gallade ex",
+  "localId": "048",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/048/high.png"
+ },
+ {
+  "name": "Zubat",
+  "localId": "049",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/049/high.png"
+ },
+ {
+  "name": "Golbat",
+  "localId": "050",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/050/high.png"
+ },
+ {
+  "name": "Crobat",
+  "localId": "051",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/051/high.png"
+ },
+ {
+  "name": "Qwilfish",
+  "localId": "052",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/052/high.png"
+ },
+ {
+  "name": "Stunky",
+  "localId": "053",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/053/high.png"
+ },
+ {
+  "name": "Skuntank",
+  "localId": "054",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/054/high.png"
+ },
+ {
+  "name": "Krookodile ex",
+  "localId": "055",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/055/high.png"
+ },
+ {
+  "name": "Trubbish",
+  "localId": "056",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/056/high.png"
+ },
+ {
+  "name": "Garbodor",
+  "localId": "057",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/057/high.png"
+ },
+ {
+  "name": "Skrelp",
+  "localId": "058",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/058/high.png"
+ },
+ {
+  "name": "Beldum",
+  "localId": "059",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/059/high.png"
+ },
+ {
+  "name": "Metang",
+  "localId": "060",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/060/high.png"
+ },
+ {
+  "name": "Metagross",
+  "localId": "061",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/061/high.png"
+ },
+ {
+  "name": "Ferroseed",
+  "localId": "062",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/062/high.png"
+ },
+ {
+  "name": "Ferrothorn",
+  "localId": "063",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/063/high.png"
+ },
+ {
+  "name": "Cobalion ex",
+  "localId": "064",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/064/high.png"
+ },
+ {
+  "name": "Mega Dragalge ex",
+  "localId": "065",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/065/high.png"
+ },
+ {
+  "name": "Goomy",
+  "localId": "066",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/066/high.png"
+ },
+ {
+  "name": "Sliggoo",
+  "localId": "067",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/067/high.png"
+ },
+ {
+  "name": "Goodra",
+  "localId": "068",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/068/high.png"
+ },
+ {
+  "name": "Tauros",
+  "localId": "069",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/069/high.png"
+ },
+ {
+  "name": "Patrat",
+  "localId": "070",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/070/high.png"
+ },
+ {
+  "name": "Watchog",
+  "localId": "071",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/071/high.png"
+ },
+ {
+  "name": "Minccino",
+  "localId": "072",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/072/high.png"
+ },
+ {
+  "name": "Cinccino ex",
+  "localId": "073",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/073/high.png"
+ },
+ {
+  "name": "Adversity Policy",
+  "localId": "074",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/074/high.png"
+ },
+ {
+  "name": "Ange Floette",
+  "localId": "075",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/075/high.png"
+ },
+ {
+  "name": "AZ's Tranquility",
+  "localId": "076",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/076/high.png"
+ },
+ {
+  "name": "Emma",
+  "localId": "077",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/077/high.png"
+ },
+ {
+  "name": "Great Haul Net",
+  "localId": "078",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/078/high.png"
+ },
+ {
+  "name": "Philippe",
+  "localId": "079",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/079/high.png"
+ },
+ {
+  "name": "Prism Tower",
+  "localId": "080",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/080/high.png"
+ },
+ {
+  "name": "Roxie's Performance",
+  "localId": "081",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/081/high.png"
+ },
+ {
+  "name": "Special Red Card",
+  "localId": "082",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/082/high.png"
+ },
+ {
+  "name": "Transformation Tome",
+  "localId": "083",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/083/high.png"
+ },
+ {
+  "name": "Bubbly Water Energy",
+  "localId": "084",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/084/high.png"
+ },
+ {
+  "name": "Magnetic Metal Energy",
+  "localId": "085",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/085/high.png"
+ },
+ {
+  "name": "Nitro Fire Energy",
+  "localId": "086",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/086/high.png"
+ },
+ {
+  "name": "Chespin",
+  "localId": "087",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/087/high.png"
+ },
+ {
+  "name": "Froakie",
+  "localId": "088",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/088/high.png"
+ },
+ {
+  "name": "Frogadier",
+  "localId": "089",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/089/high.png"
+ },
+ {
+  "name": "Ampharos",
+  "localId": "090",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/090/high.png"
+ },
+ {
+  "name": "Xerneas",
+  "localId": "091",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/091/high.png"
+ },
+ {
+  "name": "Claydol",
+  "localId": "092",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/092/high.png"
+ },
+ {
+  "name": "Crobat",
+  "localId": "093",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/093/high.png"
+ },
+ {
+  "name": "Metang",
+  "localId": "094",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/094/high.png"
+ },
+ {
+  "name": "Sliggoo",
+  "localId": "095",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/095/high.png"
+ },
+ {
+  "name": "Tauros",
+  "localId": "096",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/096/high.png"
+ },
+ {
+  "name": "Watchog",
+  "localId": "097",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/097/high.png"
+ },
+ {
+  "name": "Beedrill ex",
+  "localId": "098",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/098/high.png"
+ },
+ {
+  "name": "Mega Pyroar ex",
+  "localId": "099",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/099/high.png"
+ },
+ {
+  "name": "Mega Greninja ex",
+  "localId": "100",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/100/high.png"
+ },
+ {
+  "name": "Mega Floette ex",
+  "localId": "101",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/101/high.png"
+ },
+ {
+  "name": "Gourgeist ex",
+  "localId": "102",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/102/high.png"
+ },
+ {
+  "name": "Cobalion ex",
+  "localId": "103",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/103/high.png"
+ },
+ {
+  "name": "Mega Dragalge ex",
+  "localId": "104",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/104/high.png"
+ },
+ {
+  "name": "Cinccino ex",
+  "localId": "105",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/105/high.png"
+ },
+ {
+  "name": "AZ's Tranquility",
+  "localId": "106",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/106/high.png"
+ },
+ {
+  "name": "Emma",
+  "localId": "107",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/107/high.png"
+ },
+ {
+  "name": "Energy Retrieval",
+  "localId": "108",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/108/high.png"
+ },
+ {
+  "name": "Jumbo Ice Cream",
+  "localId": "109",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/109/high.png"
+ },
+ {
+  "name": "Philippe",
+  "localId": "110",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/110/high.png"
+ },
+ {
+  "name": "Prism Tower",
+  "localId": "111",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/111/high.png"
+ },
+ {
+  "name": "Roxie's Performance",
+  "localId": "112",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/112/high.png"
+ },
+ {
+  "name": "Special Red Card",
+  "localId": "113",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/113/high.png"
+ },
+ {
+  "name": "Surfing Beach",
+  "localId": "114",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/114/high.png"
+ },
+ {
+  "name": "Tool Scrapper",
+  "localId": "115",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/115/high.png"
+ },
+ {
+  "name": "Mega Greninja ex",
+  "localId": "116",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/116/high.png"
+ },
+ {
+  "name": "Mega Floette ex",
+  "localId": "117",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/117/high.png"
+ },
+ {
+  "name": "Mega Dragalge ex",
+  "localId": "118",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/118/high.png"
+ },
+ {
+  "name": "Cinccino ex",
+  "localId": "119",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/119/high.png"
+ },
+ {
+  "name": "AZ's Tranquility",
+  "localId": "120",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/120/high.png"
+ },
+ {
+  "name": "Roxie's Performance",
+  "localId": "121",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/121/high.png"
+ },
+ {
+  "name": "Mega Greninja ex",
+  "localId": "122",
+  "set_id": "me04",
+  "image_url": "https://assets.tcgdex.net/en/me/me04/122/high.png"
+ }
+]
