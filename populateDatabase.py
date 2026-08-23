@@ -8,7 +8,7 @@ sets = ["svp", "sv01", "sv02", "sv03", "sv03.5", "sv04", "sv04.5", "sv05", "sv06
 
 for currSet in sets:
     set_data = sdk.set.getSync(currSet)
-                                            
+    # Create a list of card dictionaries with the required fields
     all_cards = []
     for card in set_data.cards:
         all_cards.append({
@@ -17,6 +17,6 @@ for currSet in sets:
             "set_id": set_data.id,
             "image_url": card.get_image_url(quality="high", extension="png"),
         })
-
+    # Save the list of card dictionaries to a JSON file in data/sets/
     with open(f"data/sets/{currSet}.json", "w") as f:
         json.dump(all_cards, f, indent=1)
