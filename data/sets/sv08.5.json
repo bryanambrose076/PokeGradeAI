@@ -3,1080 +3,1260 @@
   "name": "Exeggcute",
   "localId": "001",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/001/high.png"
  },
  {
   "name": "Exeggutor",
   "localId": "002",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/002/high.png"
  },
  {
   "name": "Pinsir",
   "localId": "003",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/003/high.png"
  },
  {
   "name": "Budew",
   "localId": "004",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/004/high.png"
  },
  {
   "name": "Leafeon",
   "localId": "005",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/005/high.png"
  },
  {
   "name": "Leafeon ex",
   "localId": "006",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/006/high.png"
  },
  {
   "name": "Cottonee",
   "localId": "007",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/007/high.png"
  },
  {
   "name": "Whimsicott",
   "localId": "008",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/008/high.png"
  },
  {
   "name": "Applin",
   "localId": "009",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/009/high.png"
  },
  {
   "name": "Dipplin",
   "localId": "010",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/010/high.png"
  },
  {
   "name": "Hydrapple ex",
   "localId": "011",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/011/high.png"
  },
  {
   "name": "Teal Mask Ogerpon ex",
   "localId": "012",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/012/high.png"
  },
  {
   "name": "Flareon",
   "localId": "013",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/013/high.png"
  },
  {
   "name": "Flareon ex",
   "localId": "014",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/014/high.png"
  },
  {
   "name": "Litleo",
   "localId": "015",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/015/high.png"
  },
  {
   "name": "Pyroar",
   "localId": "016",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/016/high.png"
  },
  {
   "name": "Hearthflame Mask Ogerpon ex",
   "localId": "017",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/017/high.png"
  },
  {
   "name": "Slowpoke",
   "localId": "018",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/018/high.png"
  },
  {
   "name": "Slowking",
   "localId": "019",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/019/high.png"
  },
  {
   "name": "Goldeen",
   "localId": "020",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/020/high.png"
  },
  {
   "name": "Seaking",
   "localId": "021",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/021/high.png"
  },
  {
   "name": "Vaporeon",
   "localId": "022",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/022/high.png"
  },
  {
   "name": "Vaporeon ex",
   "localId": "023",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/023/high.png"
  },
  {
   "name": "Suicune",
   "localId": "024",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/024/high.png"
  },
  {
   "name": "Glaceon",
   "localId": "025",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/025/high.png"
  },
  {
   "name": "Glaceon ex",
   "localId": "026",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/026/high.png"
  },
  {
   "name": "Wellspring Mask Ogerpon ex",
   "localId": "027",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/027/high.png"
  },
  {
   "name": "Pikachu ex",
   "localId": "028",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/028/high.png"
  },
  {
   "name": "Jolteon",
   "localId": "029",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/029/high.png"
  },
  {
   "name": "Jolteon ex",
   "localId": "030",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/030/high.png"
  },
  {
   "name": "Iron Hands ex",
   "localId": "031",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/031/high.png"
  },
  {
   "name": "Iron Thorns ex",
   "localId": "032",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/032/high.png"
  },
  {
   "name": "Espeon",
   "localId": "033",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/033/high.png"
  },
  {
   "name": "Espeon ex",
   "localId": "034",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/034/high.png"
  },
  {
   "name": "Duskull",
   "localId": "035",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/035/high.png"
  },
  {
   "name": "Dusclops",
   "localId": "036",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/036/high.png"
  },
  {
   "name": "Dusknoir",
   "localId": "037",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/037/high.png"
  },
  {
   "name": "Spritzee",
   "localId": "038",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/038/high.png"
  },
  {
   "name": "Aromatisse",
   "localId": "039",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/039/high.png"
  },
  {
   "name": "Sylveon",
   "localId": "040",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/040/high.png"
  },
  {
   "name": "Sylveon ex",
   "localId": "041",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/041/high.png"
  },
  {
   "name": "Scream Tail",
   "localId": "042",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/042/high.png"
  },
  {
   "name": "Flutter Mane",
   "localId": "043",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/043/high.png"
  },
  {
   "name": "Munkidori",
   "localId": "044",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/044/high.png"
  },
  {
   "name": "Fezandipiti",
   "localId": "045",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/045/high.png"
  },
  {
   "name": "Iron Boulder",
   "localId": "046",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/046/high.png"
  },
  {
   "name": "Larvitar",
   "localId": "047",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/047/high.png"
  },
  {
   "name": "Pupitar",
   "localId": "048",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/048/high.png"
  },
  {
   "name": "Groudon",
   "localId": "049",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/049/high.png"
  },
  {
   "name": "Riolu",
   "localId": "050",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/050/high.png"
  },
  {
   "name": "Lucario ex",
   "localId": "051",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/051/high.png"
  },
  {
   "name": "Hippopotas",
   "localId": "052",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/052/high.png"
  },
  {
   "name": "Hippowdon",
   "localId": "053",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/053/high.png"
  },
  {
   "name": "Bloodmoon Ursaluna",
   "localId": "054",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/054/high.png"
  },
  {
   "name": "Great Tusk",
   "localId": "055",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/055/high.png"
  },
  {
   "name": "Sandy Shocks ex",
   "localId": "056",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/056/high.png"
  },
  {
   "name": "Okidogi",
   "localId": "057",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/057/high.png"
  },
  {
   "name": "Cornerstone Mask Ogerpon ex",
   "localId": "058",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/058/high.png"
  },
  {
   "name": "Umbreon",
   "localId": "059",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/059/high.png"
  },
  {
   "name": "Umbreon ex",
   "localId": "060",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/060/high.png"
  },
  {
   "name": "Sneasel",
   "localId": "061",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/061/high.png"
  },
  {
   "name": "Houndour",
   "localId": "062",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/062/high.png"
  },
  {
   "name": "Houndoom",
   "localId": "063",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/063/high.png"
  },
  {
   "name": "Tyranitar ex",
   "localId": "064",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/064/high.png"
  },
  {
   "name": "Roaring Moon",
   "localId": "065",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/065/high.png"
  },
  {
   "name": "Bronzor",
   "localId": "066",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/066/high.png"
  },
  {
   "name": "Bronzong",
   "localId": "067",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/067/high.png"
  },
  {
   "name": "Heatran",
   "localId": "068",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/068/high.png"
  },
  {
   "name": "Duraludon",
   "localId": "069",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/069/high.png"
  },
  {
   "name": "Archaludon",
   "localId": "070",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/070/high.png"
  },
  {
   "name": "Dreepy",
   "localId": "071",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/071/high.png"
  },
  {
   "name": "Drakloak",
   "localId": "072",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/072/high.png"
  },
  {
   "name": "Dragapult ex",
   "localId": "073",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/073/high.png"
  },
  {
   "name": "Eevee",
   "localId": "074",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/074/high.png"
  },
  {
   "name": "Eevee ex",
   "localId": "075",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/075/high.png"
  },
  {
   "name": "Snorlax ex",
   "localId": "076",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/076/high.png"
  },
  {
   "name": "Hoothoot",
   "localId": "077",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/077/high.png"
  },
  {
   "name": "Noctowl",
   "localId": "078",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/078/high.png"
  },
  {
   "name": "Dunsparce",
   "localId": "079",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/079/high.png"
  },
  {
   "name": "Dudunsparce",
   "localId": "080",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/080/high.png"
  },
  {
   "name": "Miltank",
   "localId": "081",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/081/high.png"
  },
  {
   "name": "Lugia ex",
   "localId": "082",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/082/high.png"
  },
  {
   "name": "Buneary",
   "localId": "083",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/083/high.png"
  },
  {
   "name": "Lopunny",
   "localId": "084",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/084/high.png"
  },
  {
   "name": "Fan Rotom",
   "localId": "085",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/085/high.png"
  },
  {
   "name": "Regigigas",
   "localId": "086",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/086/high.png"
  },
  {
   "name": "Shaymin",
   "localId": "087",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/087/high.png"
  },
  {
   "name": "Furfrou",
   "localId": "088",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/088/high.png"
  },
  {
   "name": "Hawlucha",
   "localId": "089",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/089/high.png"
  },
  {
   "name": "Noibat",
   "localId": "090",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/090/high.png"
  },
  {
   "name": "Noivern ex",
   "localId": "091",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/091/high.png"
  },
  {
   "name": "Terapagos ex",
   "localId": "092",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/092/high.png"
  },
  {
   "name": "Amarys",
   "localId": "093",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/093/high.png"
  },
  {
   "name": "Area Zero Underdepths",
   "localId": "094",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/094/high.png"
  },
  {
   "name": "Binding Mochi",
   "localId": "095",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/095/high.png"
  },
  {
   "name": "Black Belt's Training",
   "localId": "096",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/096/high.png"
  },
  {
   "name": "Black Belt's Training",
   "localId": "097",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/097/high.png"
  },
  {
   "name": "Black Belt's Training",
   "localId": "098",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/098/high.png"
  },
  {
   "name": "Black Belt's Training",
   "localId": "099",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/099/high.png"
  },
  {
   "name": "Briar",
   "localId": "100",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/100/high.png"
  },
  {
   "name": "Buddy-Buddy Poffin",
   "localId": "101",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/101/high.png"
  },
  {
   "name": "Bug Catching Set",
   "localId": "102",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/102/high.png"
  },
  {
   "name": "Carmine",
   "localId": "103",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/103/high.png"
  },
  {
   "name": "Ciphermaniac's Codebreaking",
   "localId": "104",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/104/high.png"
  },
  {
   "name": "Crispin",
   "localId": "105",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/105/high.png"
  },
  {
   "name": "Earthen Vessel",
   "localId": "106",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/106/high.png"
  },
  {
   "name": "Explorer's Guidance",
   "localId": "107",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/107/high.png"
  },
  {
   "name": "Festival Grounds",
   "localId": "108",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/108/high.png"
  },
  {
   "name": "Friends in Paldea",
   "localId": "109",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/109/high.png"
  },
  {
   "name": "Glass Trumpet",
   "localId": "110",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/110/high.png"
  },
  {
   "name": "Haban Berry",
   "localId": "111",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/111/high.png"
  },
  {
   "name": "Janine's Secret Art",
   "localId": "112",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/112/high.png"
  },
  {
   "name": "Kieran",
   "localId": "113",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/113/high.png"
  },
  {
   "name": "Lacey",
   "localId": "114",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/114/high.png"
  },
  {
   "name": "Larry's Skill",
   "localId": "115",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/115/high.png"
  },
  {
   "name": "Max Rod",
   "localId": "116",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/116/high.png"
  },
  {
   "name": "Maximum Belt",
   "localId": "117",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/117/high.png"
  },
  {
   "name": "Ogre's Mask",
   "localId": "118",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/118/high.png"
  },
  {
   "name": "Prime Catcher",
   "localId": "119",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/119/high.png"
  },
  {
   "name": "Professor Sada's Vitality",
   "localId": "120",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/120/high.png"
  },
  {
   "name": "Professor Turo's Scenario",
   "localId": "121",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/121/high.png"
  },
  {
   "name": "Professor's Research",
   "localId": "122",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/122/high.png"
  },
  {
   "name": "Professor's Research",
   "localId": "123",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/123/high.png"
  },
  {
   "name": "Professor's Research",
   "localId": "124",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/124/high.png"
  },
  {
   "name": "Professor's Research",
   "localId": "125",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/125/high.png"
  },
  {
   "name": "Rescue Board",
   "localId": "126",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/126/high.png"
  },
  {
   "name": "Roto-Stick",
   "localId": "127",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/127/high.png"
  },
  {
   "name": "Scoop Up Cyclone",
   "localId": "128",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/128/high.png"
  },
  {
   "name": "Sparkling Crystal",
   "localId": "129",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/129/high.png"
  },
  {
   "name": "Techno Radar",
   "localId": "130",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/130/high.png"
  },
  {
   "name": "Treasure Tracker",
   "localId": "131",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/131/high.png"
  },
  {
   "name": "Amarys",
   "localId": "132",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/132/high.png"
  },
  {
   "name": "Atticus",
   "localId": "133",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/133/high.png"
  },
  {
   "name": "Atticus",
   "localId": "134",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/134/high.png"
  },
  {
   "name": "Brassius",
   "localId": "135",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/135/high.png"
  },
  {
   "name": "Eri",
   "localId": "136",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/136/high.png"
  },
  {
   "name": "Friends in Paldea",
   "localId": "137",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/137/high.png"
  },
  {
   "name": "Giacomo",
   "localId": "138",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/138/high.png"
  },
  {
   "name": "Larry's Skill",
   "localId": "139",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/139/high.png"
  },
  {
   "name": "Mela",
   "localId": "140",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/140/high.png"
  },
  {
   "name": "Ortega",
   "localId": "141",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/141/high.png"
  },
  {
   "name": "Raifort",
   "localId": "142",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/142/high.png"
  },
  {
   "name": "Tyme",
   "localId": "143",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/143/high.png"
  },
  {
   "name": "Leafeon ex",
   "localId": "144",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/144/high.png"
  },
  {
   "name": "Teal Mask Ogerpon ex",
   "localId": "145",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/145/high.png"
  },
  {
   "name": "Flareon ex",
   "localId": "146",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/146/high.png"
  },
  {
   "name": "Ceruledge ex",
   "localId": "147",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/147/high.png"
  },
  {
   "name": "Hearthflame Mask Ogerpon ex",
   "localId": "148",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/148/high.png"
  },
  {
   "name": "Vaporeon ex",
   "localId": "149",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/149/high.png"
  },
  {
   "name": "Glaceon ex",
   "localId": "150",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/150/high.png"
  },
  {
   "name": "Palafin ex",
   "localId": "151",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/151/high.png"
  },
  {
   "name": "Wellspring Mask Ogerpon ex",
   "localId": "152",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/152/high.png"
  },
  {
   "name": "Jolteon ex",
   "localId": "153",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/153/high.png"
  },
  {
   "name": "Iron Hands ex",
   "localId": "154",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/154/high.png"
  },
  {
   "name": "Espeon ex",
   "localId": "155",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/155/high.png"
  },
  {
   "name": "Sylveon ex",
   "localId": "156",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/156/high.png"
  },
  {
   "name": "Iron Valiant ex",
   "localId": "157",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/157/high.png"
  },
  {
   "name": "Iron Crown ex",
   "localId": "158",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/158/high.png"
  },
  {
   "name": "Sandy Shocks ex",
   "localId": "159",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/159/high.png"
  },
  {
   "name": "Cornerstone Mask Ogerpon ex",
   "localId": "160",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/160/high.png"
  },
  {
   "name": "Umbreon ex",
   "localId": "161",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/161/high.png"
  },
  {
   "name": "Roaring Moon ex",
   "localId": "162",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/162/high.png"
  },
  {
   "name": "Pecharunt ex",
   "localId": "163",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/163/high.png"
  },
  {
   "name": "Gholdengo ex",
   "localId": "164",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/164/high.png"
  },
  {
   "name": "Dragapult ex",
   "localId": "165",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/165/high.png"
  },
  {
   "name": "Raging Bolt ex",
   "localId": "166",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/166/high.png"
  },
  {
   "name": "Eevee ex",
   "localId": "167",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/167/high.png"
  },
  {
   "name": "Bloodmoon Ursaluna ex",
   "localId": "168",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/168/high.png"
  },
  {
   "name": "Terapagos ex",
   "localId": "169",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/169/high.png"
  },
  {
   "name": "Amarys",
   "localId": "170",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/170/high.png"
  },
  {
   "name": "Crispin",
   "localId": "171",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/171/high.png"
  },
  {
   "name": "Drayton",
   "localId": "172",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/172/high.png"
  },
  {
   "name": "Janine's Secret Art",
   "localId": "173",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/173/high.png"
  },
  {
   "name": "Kieran",
   "localId": "174",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/174/high.png"
  },
  {
   "name": "Lacey",
   "localId": "175",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/175/high.png"
  },
  {
   "name": "Iron Leaves ex",
   "localId": "176",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/176/high.png"
  },
  {
   "name": "Teal Mask Ogerpon ex",
   "localId": "177",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/177/high.png"
  },
  {
   "name": "Walking Wake ex",
   "localId": "178",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/178/high.png"
  },
  {
   "name": "Pikachu ex",
   "localId": "179",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/179/high.png"
  },
  {
   "name": "Terapagos ex",
   "localId": "180",
   "set_id": "sv08.5",
+  "set_name": "Prismatic Evolutions",
   "image_url": "https://assets.tcgdex.net/en/sv/sv08.5/180/high.png"
  }
 ]

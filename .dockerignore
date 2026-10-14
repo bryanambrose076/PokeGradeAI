@@ -1,0 +1,14 @@
+# Not needed at runtime (only embeddings.pt and sets/ are read)
+data/images/
+
+# Local-only files
+venv/
+.venv/
+.git/
+__pycache__/
+*.pyc
+.DS_Store
+.claude/
+
+# Secrets: pass at runtime with --env-file instead
+.env

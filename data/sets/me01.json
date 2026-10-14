@@ -3,1128 +3,1316 @@
   "name": "Bulbasaur",
   "localId": "001",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/001/high.png"
  },
  {
   "name": "Ivysaur",
   "localId": "002",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/002/high.png"
  },
  {
   "name": "Mega Venusaur ex",
   "localId": "003",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/003/high.png"
  },
  {
   "name": "Exeggcute",
   "localId": "004",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/004/high.png"
  },
  {
   "name": "Exeggutor",
   "localId": "005",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/005/high.png"
  },
  {
   "name": "Tangela",
   "localId": "006",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/006/high.png"
  },
  {
   "name": "Tangrowth",
   "localId": "007",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/007/high.png"
  },
  {
   "name": "Chikorita",
   "localId": "008",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/008/high.png"
  },
  {
   "name": "Bayleef",
   "localId": "009",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/009/high.png"
  },
  {
   "name": "Meganium",
   "localId": "010",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/010/high.png"
  },
  {
   "name": "Shuckle",
   "localId": "011",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/011/high.png"
  },
  {
   "name": "Celebi",
   "localId": "012",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/012/high.png"
  },
  {
   "name": "Seedot",
   "localId": "013",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/013/high.png"
  },
  {
   "name": "Nuzleaf",
   "localId": "014",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/014/high.png"
  },
  {
   "name": "Shiftry",
   "localId": "015",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/015/high.png"
  },
  {
   "name": "Nincada",
   "localId": "016",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/016/high.png"
  },
  {
   "name": "Ninjask",
   "localId": "017",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/017/high.png"
  },
  {
   "name": "Dhelmise",
   "localId": "018",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/018/high.png"
  },
  {
   "name": "Vulpix",
   "localId": "019",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/019/high.png"
  },
  {
   "name": "Ninetales",
   "localId": "020",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/020/high.png"
  },
  {
   "name": "Numel",
   "localId": "021",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/021/high.png"
  },
  {
   "name": "Mega Camerupt ex",
   "localId": "022",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/022/high.png"
  },
  {
   "name": "Litleo",
   "localId": "023",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/023/high.png"
  },
  {
   "name": "Pyroar",
   "localId": "024",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/024/high.png"
  },
  {
   "name": "Volcanion",
   "localId": "025",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/025/high.png"
  },
  {
   "name": "Scorbunny",
   "localId": "026",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/026/high.png"
  },
  {
   "name": "Raboot",
   "localId": "027",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/027/high.png"
  },
  {
   "name": "Cinderace",
   "localId": "028",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/028/high.png"
  },
  {
   "name": "Sizzlipede",
   "localId": "029",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/029/high.png"
  },
  {
   "name": "Centiskorch",
   "localId": "030",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/030/high.png"
  },
  {
   "name": "Chi-Yu",
   "localId": "031",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/031/high.png"
  },
  {
   "name": "Mantine",
   "localId": "032",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/032/high.png"
  },
  {
   "name": "Corphish",
   "localId": "033",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/033/high.png"
  },
  {
   "name": "Kyogre",
   "localId": "034",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/034/high.png"
  },
  {
   "name": "Snover",
   "localId": "035",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/035/high.png"
  },
  {
   "name": "Mega Abomasnow ex",
   "localId": "036",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/036/high.png"
  },
  {
   "name": "Clauncher",
   "localId": "037",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/037/high.png"
  },
  {
   "name": "Clawitzer",
   "localId": "038",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/038/high.png"
  },
  {
   "name": "Sobble",
   "localId": "039",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/039/high.png"
  },
  {
   "name": "Drizzile",
   "localId": "040",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/040/high.png"
  },
  {
   "name": "Inteleon",
   "localId": "041",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/041/high.png"
  },
  {
   "name": "Snom",
   "localId": "042",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/042/high.png"
  },
  {
   "name": "Frosmoth",
   "localId": "043",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/043/high.png"
  },
  {
   "name": "Eiscue",
   "localId": "044",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/044/high.png"
  },
  {
   "name": "Magnemite",
   "localId": "045",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/045/high.png"
  },
  {
   "name": "Magneton",
   "localId": "046",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/046/high.png"
  },
  {
   "name": "Magnezone",
   "localId": "047",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/047/high.png"
  },
  {
   "name": "Raikou",
   "localId": "048",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/048/high.png"
  },
  {
   "name": "Electrike",
   "localId": "049",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/049/high.png"
  },
  {
   "name": "Mega Manectric ex",
   "localId": "050",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/050/high.png"
  },
  {
   "name": "Pachirisu",
   "localId": "051",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/051/high.png"
  },
  {
   "name": "Helioptile",
   "localId": "052",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/052/high.png"
  },
  {
   "name": "Heliolisk",
   "localId": "053",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/053/high.png"
  },
  {
   "name": "Abra",
   "localId": "054",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/054/high.png"
  },
  {
   "name": "Kadabra",
   "localId": "055",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/055/high.png"
  },
  {
   "name": "Alakazam",
   "localId": "056",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/056/high.png"
  },
  {
   "name": "Jynx",
   "localId": "057",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/057/high.png"
  },
  {
   "name": "Ralts",
   "localId": "058",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/058/high.png"
  },
  {
   "name": "Kirlia",
   "localId": "059",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/059/high.png"
  },
  {
   "name": "Mega Gardevoir ex",
   "localId": "060",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/060/high.png"
  },
  {
   "name": "Shedinja",
   "localId": "061",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/061/high.png"
  },
  {
   "name": "Spoink",
   "localId": "062",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/062/high.png"
  },
  {
   "name": "Grumpig",
   "localId": "063",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/063/high.png"
  },
  {
   "name": "Xerneas",
   "localId": "064",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/064/high.png"
  },
  {
   "name": "Greavard",
   "localId": "065",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/065/high.png"
  },
  {
   "name": "Houndstone",
   "localId": "066",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/066/high.png"
  },
  {
   "name": "Gimmighoul",
   "localId": "067",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/067/high.png"
  },
  {
   "name": "Sandshrew",
   "localId": "068",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/068/high.png"
  },
  {
   "name": "Sandslash",
   "localId": "069",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/069/high.png"
  },
  {
   "name": "Onix",
   "localId": "070",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/070/high.png"
  },
  {
   "name": "Tyrogue",
   "localId": "071",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/071/high.png"
  },
  {
   "name": "Makuhita",
   "localId": "072",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/072/high.png"
  },
  {
   "name": "Hariyama",
   "localId": "073",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/073/high.png"
  },
  {
   "name": "Lunatone",
   "localId": "074",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/074/high.png"
  },
  {
   "name": "Solrock",
   "localId": "075",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/075/high.png"
  },
  {
   "name": "Riolu",
   "localId": "076",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/076/high.png"
  },
  {
   "name": "Mega Lucario ex",
   "localId": "077",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/077/high.png"
  },
  {
   "name": "Croagunk",
   "localId": "078",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/078/high.png"
  },
  {
   "name": "Toxicroak",
   "localId": "079",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/079/high.png"
  },
  {
   "name": "Marshadow",
   "localId": "080",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/080/high.png"
  },
  {
   "name": "Stonjourner",
   "localId": "081",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/081/high.png"
  },
  {
   "name": "Nacli",
   "localId": "082",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/082/high.png"
  },
  {
   "name": "Naclstack",
   "localId": "083",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/083/high.png"
  },
  {
   "name": "Garganacl",
   "localId": "084",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/084/high.png"
  },
  {
   "name": "Crawdaunt",
   "localId": "085",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/085/high.png"
  },
  {
   "name": "Mega Absol ex",
   "localId": "086",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/086/high.png"
  },
  {
   "name": "Spiritomb",
   "localId": "087",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/087/high.png"
  },
  {
   "name": "Yveltal",
   "localId": "088",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/088/high.png"
  },
  {
   "name": "Nickit",
   "localId": "089",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/089/high.png"
  },
  {
   "name": "Thievul",
   "localId": "090",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/090/high.png"
  },
  {
   "name": "Shroodle",
   "localId": "091",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/091/high.png"
  },
  {
   "name": "Grafaiai",
   "localId": "092",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/092/high.png"
  },
  {
   "name": "Steelix",
   "localId": "093",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/093/high.png"
  },
  {
   "name": "Mega Mawile ex",
   "localId": "094",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/094/high.png"
  },
  {
   "name": "Dialga",
   "localId": "095",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/095/high.png"
  },
  {
   "name": "Tinkatink",
   "localId": "096",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/096/high.png"
  },
  {
   "name": "Tinkatuff",
   "localId": "097",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/097/high.png"
  },
  {
   "name": "Tinkaton",
   "localId": "098",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/098/high.png"
  },
  {
   "name": "Gholdengo",
   "localId": "099",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/099/high.png"
  },
  {
   "name": "Mega Latias ex",
   "localId": "100",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/100/high.png"
  },
  {
   "name": "Latios",
   "localId": "101",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/101/high.png"
  },
  {
   "name": "Spearow",
   "localId": "102",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/102/high.png"
  },
  {
   "name": "Fearow",
   "localId": "103",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/103/high.png"
  },
  {
   "name": "Mega Kangaskhan ex",
   "localId": "104",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/104/high.png"
  },
  {
   "name": "Delibird",
   "localId": "105",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/105/high.png"
  },
  {
   "name": "Miltank",
   "localId": "106",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/106/high.png"
  },
  {
   "name": "Buneary",
   "localId": "107",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/107/high.png"
  },
  {
   "name": "Lopunny",
   "localId": "108",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/108/high.png"
  },
  {
   "name": "Yungoos",
   "localId": "109",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/109/high.png"
  },
  {
   "name": "Gumshoos",
   "localId": "110",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/110/high.png"
  },
  {
   "name": "Stufful",
   "localId": "111",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/111/high.png"
  },
  {
   "name": "Bewear",
   "localId": "112",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/112/high.png"
  },
  {
   "name": "Acerola's Mischief",
   "localId": "113",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/113/high.png"
  },
  {
   "name": "Boss's Orders",
   "localId": "114",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/114/high.png"
  },
  {
   "name": "Energy Switch",
   "localId": "115",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/115/high.png"
  },
  {
   "name": "Fighting Gong",
   "localId": "116",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/116/high.png"
  },
  {
   "name": "Forest of Vitality",
   "localId": "117",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/117/high.png"
  },
  {
   "name": "Iron Defender",
   "localId": "118",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/118/high.png"
  },
  {
   "name": "Lillie's Determination",
   "localId": "119",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/119/high.png"
  },
  {
   "name": "Lt. Surge's Bargain",
   "localId": "120",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/120/high.png"
  },
  {
   "name": "Mega Signal",
   "localId": "121",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/121/high.png"
  },
  {
   "name": "Mystery Garden",
   "localId": "122",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/122/high.png"
  },
  {
   "name": "Pok\u00e9mon Center Lady",
   "localId": "123",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/123/high.png"
  },
  {
   "name": "Premium Power Pro",
   "localId": "124",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/124/high.png"
  },
  {
   "name": "Rare Candy",
   "localId": "125",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/125/high.png"
  },
  {
   "name": "Repel",
   "localId": "126",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/126/high.png"
  },
  {
   "name": "Risky Ruins",
   "localId": "127",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/127/high.png"
  },
  {
   "name": "Strange Timepiece",
   "localId": "128",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/128/high.png"
  },
  {
   "name": "Surfing Beach",
   "localId": "129",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/129/high.png"
  },
  {
   "name": "Switch",
   "localId": "130",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/130/high.png"
  },
  {
   "name": "Ultra Ball",
   "localId": "131",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/131/high.png"
  },
  {
   "name": "Wally's Compassion",
   "localId": "132",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/132/high.png"
  },
  {
   "name": "Bulbasaur",
   "localId": "133",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/133/high.png"
  },
  {
   "name": "Ivysaur",
   "localId": "134",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/134/high.png"
  },
  {
   "name": "Exeggutor",
   "localId": "135",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/135/high.png"
  },
  {
   "name": "Shuckle",
   "localId": "136",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/136/high.png"
  },
  {
   "name": "Ninjask",
   "localId": "137",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/137/high.png"
  },
  {
   "name": "Vulpix",
   "localId": "138",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/138/high.png"
  },
  {
   "name": "Litleo",
   "localId": "139",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/139/high.png"
  },
  {
   "name": "Snover",
   "localId": "140",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/140/high.png"
  },
  {
   "name": "Clawitzer",
   "localId": "141",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/141/high.png"
  },
  {
   "name": "Inteleon",
   "localId": "142",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/142/high.png"
  },
  {
   "name": "Helioptile",
   "localId": "143",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/143/high.png"
  },
  {
   "name": "Shedinja",
   "localId": "144",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/144/high.png"
  },
  {
   "name": "Houndstone",
   "localId": "145",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/145/high.png"
  },
  {
   "name": "Marshadow",
   "localId": "146",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/146/high.png"
  },
  {
   "name": "Garganacl",
   "localId": "147",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/147/high.png"
  },
  {
   "name": "Spiritomb",
   "localId": "148",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/148/high.png"
  },
  {
   "name": "Shroodle",
   "localId": "149",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/149/high.png"
  },
  {
   "name": "Steelix",
   "localId": "150",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/150/high.png"
  },
  {
   "name": "Spearow",
   "localId": "151",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/151/high.png"
  },
  {
   "name": "Delibird",
   "localId": "152",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/152/high.png"
  },
  {
   "name": "Gumshoos",
   "localId": "153",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/153/high.png"
  },
  {
   "name": "Stufful",
   "localId": "154",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/154/high.png"
  },
  {
   "name": "Mega Venusaur ex",
   "localId": "155",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/155/high.png"
  },
  {
   "name": "Mega Camerupt ex",
   "localId": "156",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/156/high.png"
  },
  {
   "name": "Mega Abomasnow ex",
   "localId": "157",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/157/high.png"
  },
  {
   "name": "Mega Manectric ex",
   "localId": "158",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/158/high.png"
  },
  {
   "name": "Mega Gardevoir ex",
   "localId": "159",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/159/high.png"
  },
  {
   "name": "Mega Lucario ex",
   "localId": "160",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/160/high.png"
  },
  {
   "name": "Mega Absol ex",
   "localId": "161",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/161/high.png"
  },
  {
   "name": "Mega Mawile ex",
   "localId": "162",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/162/high.png"
  },
  {
   "name": "Mega Latias ex",
   "localId": "163",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/163/high.png"
  },
  {
   "name": "Mega Kangaskhan ex",
   "localId": "164",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/164/high.png"
  },
  {
   "name": "Acerola's Mischief",
   "localId": "165",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/165/high.png"
  },
  {
   "name": "Air Balloon",
   "localId": "166",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/166/high.png"
  },
  {
   "name": "Buddy-Buddy Poffin",
   "localId": "167",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/167/high.png"
  },
  {
   "name": "Fighting Gong",
   "localId": "168",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/168/high.png"
  },
  {
   "name": "Lillie's Determination",
   "localId": "169",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/169/high.png"
  },
  {
   "name": "Lt. Surge's Bargain",
   "localId": "170",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/170/high.png"
  },
  {
   "name": "Mega Signal",
   "localId": "171",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/171/high.png"
  },
  {
   "name": "Mystery Garden",
   "localId": "172",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/172/high.png"
  },
  {
   "name": "Night Stretcher",
   "localId": "173",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/173/high.png"
  },
  {
   "name": "Premium Power Pro",
   "localId": "174",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/174/high.png"
  },
  {
   "name": "Rare Candy",
   "localId": "175",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/175/high.png"
  },
  {
   "name": "Wally's Compassion",
   "localId": "176",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/176/high.png"
  },
  {
   "name": "Mega Venusaur ex",
   "localId": "177",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/177/high.png"
  },
  {
   "name": "Mega Gardevoir ex",
   "localId": "178",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/178/high.png"
  },
  {
   "name": "Mega Lucario ex",
   "localId": "179",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/179/high.png"
  },
  {
   "name": "Mega Absol ex",
   "localId": "180",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/180/high.png"
  },
  {
   "name": "Mega Latias ex",
   "localId": "181",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/181/high.png"
  },
  {
   "name": "Mega Kangaskhan ex",
   "localId": "182",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/182/high.png"
  },
  {
   "name": "Acerola's Mischief",
   "localId": "183",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/183/high.png"
  },
  {
   "name": "Lillie's Determination",
   "localId": "184",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/184/high.png"
  },
  {
   "name": "Lt. Surge's Bargain",
   "localId": "185",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/185/high.png"
  },
  {
   "name": "Wally's Compassion",
   "localId": "186",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/186/high.png"
  },
  {
   "name": "Mega Gardevoir ex",
   "localId": "187",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/187/high.png"
  },
  {
   "name": "Mega Lucario ex",
   "localId": "188",
   "set_id": "me01",
+  "set_name": "Mega Evolution",
   "image_url": "https://assets.tcgdex.net/en/me/me01/188/high.png"
  }
 ]

@@ -3,780 +3,910 @@
   "name": "Oddish",
   "localId": "001",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/001/high.png"
  },
  {
   "name": "Gloom",
   "localId": "002",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/002/high.png"
  },
  {
   "name": "Vileplume",
   "localId": "003",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/003/high.png"
  },
  {
   "name": "Mega Heracross ex",
   "localId": "004",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/004/high.png"
  },
  {
   "name": "Lotad",
   "localId": "005",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/005/high.png"
  },
  {
   "name": "Lombre",
   "localId": "006",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/006/high.png"
  },
  {
   "name": "Ludicolo",
   "localId": "007",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/007/high.png"
  },
  {
   "name": "Genesect",
   "localId": "008",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/008/high.png"
  },
  {
   "name": "Nymble",
   "localId": "009",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/009/high.png"
  },
  {
   "name": "Lokix",
   "localId": "010",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/010/high.png"
  },
  {
   "name": "Charmander",
   "localId": "011",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/011/high.png"
  },
  {
   "name": "Charmeleon",
   "localId": "012",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/012/high.png"
  },
  {
   "name": "Mega Charizard X ex",
   "localId": "013",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/013/high.png"
  },
  {
   "name": "Moltres",
   "localId": "014",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/014/high.png"
  },
  {
   "name": "Darumaka",
   "localId": "015",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/015/high.png"
  },
  {
   "name": "Darmanitan",
   "localId": "016",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/016/high.png"
  },
  {
   "name": "Reshiram",
   "localId": "017",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/017/high.png"
  },
  {
   "name": "Oricorio ex",
   "localId": "018",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/018/high.png"
  },
  {
   "name": "Charcadet",
   "localId": "019",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/019/high.png"
  },
  {
   "name": "Ceruledge",
   "localId": "020",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/020/high.png"
  },
  {
   "name": "Seel",
   "localId": "021",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/021/high.png"
  },
  {
   "name": "Dewgong",
   "localId": "022",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/022/high.png"
  },
  {
   "name": "Swinub",
   "localId": "023",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/023/high.png"
  },
  {
   "name": "Piloswine",
   "localId": "024",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/024/high.png"
  },
  {
   "name": "Mamoswine",
   "localId": "025",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/025/high.png"
  },
  {
   "name": "Suicune",
   "localId": "026",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/026/high.png"
  },
  {
   "name": "Piplup",
   "localId": "027",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/027/high.png"
  },
  {
   "name": "Prinplup",
   "localId": "028",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/028/high.png"
  },
  {
   "name": "Rotom ex",
   "localId": "029",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/029/high.png"
  },
  {
   "name": "Yamper",
   "localId": "030",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/030/high.png"
  },
  {
   "name": "Boltund",
   "localId": "031",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/031/high.png"
  },
  {
   "name": "Pawmi",
   "localId": "032",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/032/high.png"
  },
  {
   "name": "Pawmo",
   "localId": "033",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/033/high.png"
  },
  {
   "name": "Pawmot",
   "localId": "034",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/034/high.png"
  },
  {
   "name": "Misdreavus",
   "localId": "035",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/035/high.png"
  },
  {
   "name": "Mismagius ex",
   "localId": "036",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/036/high.png"
  },
  {
   "name": "Snubbull",
   "localId": "037",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/037/high.png"
  },
  {
   "name": "Granbull",
   "localId": "038",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/038/high.png"
  },
  {
   "name": "Cresselia",
   "localId": "039",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/039/high.png"
  },
  {
   "name": "Meloetta",
   "localId": "040",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/040/high.png"
  },
  {
   "name": "Mega Diancie ex",
   "localId": "041",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/041/high.png"
  },
  {
   "name": "Mimikyu",
   "localId": "042",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/042/high.png"
  },
  {
   "name": "Milcery",
   "localId": "043",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/043/high.png"
  },
  {
   "name": "Alcremie",
   "localId": "044",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/044/high.png"
  },
  {
   "name": "Zacian",
   "localId": "045",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/045/high.png"
  },
  {
   "name": "Bramblin",
   "localId": "046",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/046/high.png"
  },
  {
   "name": "Brambleghast",
   "localId": "047",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/047/high.png"
  },
  {
   "name": "Paldean Tauros",
   "localId": "048",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/048/high.png"
  },
  {
   "name": "Gligar",
   "localId": "049",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/049/high.png"
  },
  {
   "name": "Gliscor",
   "localId": "050",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/050/high.png"
  },
  {
   "name": "Trapinch",
   "localId": "051",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/051/high.png"
  },
  {
   "name": "Vibrava",
   "localId": "052",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/052/high.png"
  },
  {
   "name": "Flygon",
   "localId": "053",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/053/high.png"
  },
  {
   "name": "Gastly",
   "localId": "054",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/054/high.png"
  },
  {
   "name": "Haunter",
   "localId": "055",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/055/high.png"
  },
  {
   "name": "Mega Gengar ex",
   "localId": "056",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/056/high.png"
  },
  {
   "name": "Murkrow",
   "localId": "057",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/057/high.png"
  },
  {
   "name": "Honchkrow",
   "localId": "058",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/058/high.png"
  },
  {
   "name": "Sableye",
   "localId": "059",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/059/high.png"
  },
  {
   "name": "Carvanha",
   "localId": "060",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/060/high.png"
  },
  {
   "name": "Mega Sharpedo ex",
   "localId": "061",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/061/high.png"
  },
  {
   "name": "Seviper",
   "localId": "062",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/062/high.png"
  },
  {
   "name": "Absol",
   "localId": "063",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/063/high.png"
  },
  {
   "name": "Sandile",
   "localId": "064",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/064/high.png"
  },
  {
   "name": "Krokorok",
   "localId": "065",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/065/high.png"
  },
  {
   "name": "Krookodile",
   "localId": "066",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/066/high.png"
  },
  {
   "name": "Toxel",
   "localId": "067",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/067/high.png"
  },
  {
   "name": "Toxtricity",
   "localId": "068",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/068/high.png"
  },
  {
   "name": "Eternatus",
   "localId": "069",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/069/high.png"
  },
  {
   "name": "Empoleon ex",
   "localId": "070",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/070/high.png"
  },
  {
   "name": "Bronzor",
   "localId": "071",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/071/high.png"
  },
  {
   "name": "Bronzong",
   "localId": "072",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/072/high.png"
  },
  {
   "name": "Togedemaru",
   "localId": "073",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/073/high.png"
  },
  {
   "name": "Duraludon",
   "localId": "074",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/074/high.png"
  },
  {
   "name": "Archaludon",
   "localId": "075",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/075/high.png"
  },
  {
   "name": "Jigglypuff",
   "localId": "076",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/076/high.png"
  },
  {
   "name": "Wigglytuff",
   "localId": "077",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/077/high.png"
  },
  {
   "name": "Aipom",
   "localId": "078",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/078/high.png"
  },
  {
   "name": "Ambipom",
   "localId": "079",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/079/high.png"
  },
  {
   "name": "Smeargle",
   "localId": "080",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/080/high.png"
  },
  {
   "name": "Zigzagoon",
   "localId": "081",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/081/high.png"
  },
  {
   "name": "Linoone",
   "localId": "082",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/082/high.png"
  },
  {
   "name": "Buneary",
   "localId": "083",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/083/high.png"
  },
  {
   "name": "Mega Lopunny ex",
   "localId": "084",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/084/high.png"
  },
  {
   "name": "Battle Cage",
   "localId": "085",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/085/high.png"
  },
  {
   "name": "Blowtorch",
   "localId": "086",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/086/high.png"
  },
  {
   "name": "Dawn",
   "localId": "087",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/087/high.png"
  },
  {
   "name": "Dizzying Valley",
   "localId": "088",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/088/high.png"
  },
  {
   "name": "Firebreather",
   "localId": "089",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/089/high.png"
  },
  {
   "name": "Grimsley's Move",
   "localId": "090",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/090/high.png"
  },
  {
   "name": "Jumbo Ice Cream",
   "localId": "091",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/091/high.png"
  },
  {
   "name": "Punk Helmet",
   "localId": "092",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/092/high.png"
  },
  {
   "name": "Sacred Charm",
   "localId": "093",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/093/high.png"
  },
  {
   "name": "Wondrous Patch",
   "localId": "094",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/094/high.png"
  },
  {
   "name": "Ludicolo",
   "localId": "095",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/095/high.png"
  },
  {
   "name": "Nymble",
   "localId": "096",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/096/high.png"
  },
  {
   "name": "Dewgong",
   "localId": "097",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/097/high.png"
  },
  {
   "name": "Piplup",
   "localId": "098",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/098/high.png"
  },
  {
   "name": "Yamper",
   "localId": "099",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/099/high.png"
  },
  {
   "name": "Zacian",
   "localId": "100",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/100/high.png"
  },
  {
   "name": "Flygon",
   "localId": "101",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/101/high.png"
  },
  {
   "name": "Paldean Wooper",
   "localId": "102",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/102/high.png"
  },
  {
   "name": "Toxtricity",
   "localId": "103",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/103/high.png"
  },
  {
   "name": "Togedemaru",
   "localId": "104",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/104/high.png"
  },
  {
   "name": "Wigglytuff",
   "localId": "105",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/105/high.png"
  },
  {
   "name": "Meowth",
   "localId": "106",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/106/high.png"
  },
  {
   "name": "Ambipom",
   "localId": "107",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/107/high.png"
  },
  {
   "name": "Mega Heracross ex",
   "localId": "108",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/108/high.png"
  },
  {
   "name": "Mega Charizard X ex",
   "localId": "109",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/109/high.png"
  },
  {
   "name": "Oricorio ex",
   "localId": "110",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/110/high.png"
  },
  {
   "name": "Rotom ex",
   "localId": "111",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/111/high.png"
  },
  {
   "name": "Mismagius ex",
   "localId": "112",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/112/high.png"
  },
  {
   "name": "Mega Sharpedo ex",
   "localId": "113",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/113/high.png"
  },
  {
   "name": "Empoleon ex",
   "localId": "114",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/114/high.png"
  },
  {
   "name": "Mega Lopunny ex",
   "localId": "115",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/115/high.png"
  },
  {
   "name": "Battle Cage",
   "localId": "116",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/116/high.png"
  },
  {
   "name": "Blowtorch",
   "localId": "117",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/117/high.png"
  },
  {
   "name": "Dawn",
   "localId": "118",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/118/high.png"
  },
  {
   "name": "Firebreather",
   "localId": "119",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/119/high.png"
  },
  {
   "name": "Grimsley's Move",
   "localId": "120",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/120/high.png"
  },
  {
   "name": "Punk Helmet",
   "localId": "121",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/121/high.png"
  },
  {
   "name": "Sacred Charm",
   "localId": "122",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/122/high.png"
  },
  {
   "name": "Switch",
   "localId": "123",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/123/high.png"
  },
  {
   "name": "Ignition Energy",
   "localId": "124",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/124/high.png"
  },
  {
   "name": "Mega Charizard X ex",
   "localId": "125",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/125/high.png"
  },
  {
   "name": "Rotom ex",
   "localId": "126",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/126/high.png"
  },
  {
   "name": "Mega Sharpedo ex",
   "localId": "127",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/127/high.png"
  },
  {
   "name": "Mega Lopunny ex",
   "localId": "128",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/128/high.png"
  },
  {
   "name": "Dawn",
   "localId": "129",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/129/high.png"
  },
  {
   "name": "Mega Charizard X ex",
   "localId": "130",
   "set_id": "me02",
+  "set_name": "Phantasmal Flames",
   "image_url": "https://assets.tcgdex.net/en/me/me02/130/high.png"
  }
 ]

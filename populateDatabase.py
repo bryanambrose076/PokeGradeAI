@@ -15,6 +15,7 @@ for currSet in sets:
             "name": card.name,
             "localId": card.localId,
             "set_id": set_data.id,
+            "set_name": set_data.name,
             "image_url": card.get_image_url(quality="high", extension="png"),
         })
     # Save the list of card dictionaries to a JSON file in data/sets/
