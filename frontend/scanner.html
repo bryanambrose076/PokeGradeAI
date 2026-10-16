@@ -18,6 +18,7 @@
 
     function formatPrice(price) {
       if (price === null || price === undefined) return "N/A";
+      if (price < 0) return `-$${Math.abs(price).toFixed(2)}`;
       return `$${price.toFixed(2)}`;
     }
 
@@ -52,8 +53,18 @@
       const lines = [
         data.card.name,
         `${data.card.set_name} · #${data.card.number}`,
-        "",
       ];
+
+      if (data.low_confidence) {
+        if (data.runner_up !== null) {
+          const ru = data.runner_up;
+          lines.push(`⚠️ Not sure. Could also be ${ru.name} (${ru.set_name} · #${ru.number})`);
+        } else {
+          lines.push("⚠️ Not sure about this match");
+        }
+      }
+
+      lines.push("");
 
       if (data.prices === null) {
         lines.push("Prices unavailable");
@@ -61,6 +72,7 @@
         lines.push(`Raw: ${formatPrice(data.prices.raw)}`);
         lines.push(`PSA 9: ${formatPrice(data.prices.psa9)}`);
         lines.push(`PSA 10: ${formatPrice(data.prices.psa10)}`);
+        lines.push(`Profit if PSA 10: ${formatPrice(data.profit)}`);
       }
 
       resultBox.textContent = lines.join("\n");

@@ -9,6 +9,10 @@ from imageCrop import crop_card
 from cosineSimilarity import load_matcher, match_card
 from pricing import lookup_local_card, get_card_prices, grading_roi,  API_KEY
 
+# If the top match beats the runner-up by less than this, the result is flagged as uncertain.
+# Tuned for DINOv2 scores: correct matches on real test photos had gaps of 0.09+ (one at 0.014).
+LOW_CONFIDENCE_GAP = 0.03
+
 
 def scan_image(image_bytes, matcher, top_k=5):
     # 1. Decode the raw bytes into a BGR image array (same as cv2.imread gives)
@@ -26,6 +30,9 @@ def scan_image(image_bytes, matcher, top_k=5):
         "matches": [{"key": key, "score": score} for key, score in matches],
         "card": None,
         "prices": None,
+        "profit": None,
+        "low_confidence": False,
+        "runner_up": None,
     }
 
     # 4. Look up the top match's name, set, and number
@@ -35,6 +42,14 @@ def scan_image(image_bytes, matcher, top_k=5):
     name, set_name, card_number = local_card_info
     result["card"] = {"name": name, "set_name": set_name, "number": card_number}
 
+    # If the top two matches are too close to call, include the runner-up so the user can check
+    if matches[0][1] - matches[1][1] < LOW_CONFIDENCE_GAP:
+        result["low_confidence"] = True
+        runner_up_info = lookup_local_card(matches[1][0])
+        if runner_up_info is not None:
+            ru_name, ru_set_name, ru_number = runner_up_info
+            result["runner_up"] = {"name": ru_name, "set_name": ru_set_name, "number": ru_number}
+
     # 5. Fetch raw, PSA 9, and PSA 10 prices for that card
     try:
         prices = get_card_prices(name, set_name, card_number, API_KEY)
@@ -43,6 +58,7 @@ def scan_image(image_bytes, matcher, top_k=5):
     if prices is not None:
         raw_price, psa9_price, psa10_price = prices
         result["prices"] = {"raw": raw_price, "psa9": psa9_price, "psa10": psa10_price}
+        result["profit"] = grading_roi(raw_price, psa10_price)
 
     # 6. Return everything as one dictionary
     return result
@@ -70,4 +86,4 @@ if __name__ == "__main__":
             print(f"  Raw price: {result['prices']['raw']}$")
             print(f"  PSA 9 price: {result['prices']['psa9']}$")
             print(f"  PSA 10 price: {result['prices']['psa10']}$")
-            print(f"  Potential Profit: {grading_roi(result['prices']['raw'],result['prices']['psa10'])}$")
+            print(f"  Potential Profit: {result['profit']}$")
