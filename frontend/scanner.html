@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokeGrade Scanner</title>
+</head>
+<body>
+  <h1>PokeGrade Scanner</h1>
+  <p>Take a photo of a card to identify it and look up prices.</p>
+  
+  <input type="file" id="photo" accept="image/*" capture="environment">
+
+  <div id="result" style="white-space: pre-line;"></div>
+
+  <script>
+    const photoInput = document.getElementById("photo");
+    const resultBox = document.getElementById("result");
+
+    function formatPrice(price) {
+      if (price === null || price === undefined) return "N/A";
+      return `$${price.toFixed(2)}`;
+    }
+
+    photoInput.addEventListener("change", async () => {
+      const photo = photoInput.files[0];
+      if (!photo) return;
+
+      resultBox.textContent = "Scanning...";
+
+      const formData = new FormData();
+      formData.append("file", photo);
+
+      let response, data;
+      try {
+        response = await fetch("/scan", { method: "POST", body: formData });
+        data = await response.json();
+      } catch {
+        resultBox.textContent = "Something went wrong. Please try again.";
+        return;
+      }
+
+      if (!response.ok) {
+        resultBox.textContent = `Something went wrong: ${data.detail}`;
+        return;
+      }
+
+      if (data.card === null) {
+        resultBox.textContent = "Couldn't identify this card.";
+        return;
+      }
+
+      const lines = [
+        data.card.name,
+        `${data.card.set_name} · #${data.card.number}`,
+        "",
+      ];
+
+      if (data.prices === null) {
+        lines.push("Prices unavailable");
+      } else {
+        lines.push(`Raw: ${formatPrice(data.prices.raw)}`);
+        lines.push(`PSA 9: ${formatPrice(data.prices.psa9)}`);
+        lines.push(`PSA 10: ${formatPrice(data.prices.psa10)}`);
+      }
+
+      resultBox.textContent = lines.join("\n");
+    });
+  </script>
+</body>
+</html>

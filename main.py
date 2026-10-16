@@ -1,4 +1,5 @@
 from fastapi import FastAPI, File, HTTPException
+from fastapi.responses import FileResponse
 
 from cosineSimilarity import load_matcher
 from pipeline import scan_image
@@ -20,3 +21,8 @@ def scan(file: bytes = File()):
         return scan_image(file, matcher)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
+
+
+@app.get("/")
+def scanner_page():
+    return FileResponse("frontend/scanner.html")
