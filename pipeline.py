@@ -3,10 +3,11 @@ import sys
 
 import cv2
 import numpy as np
+import requests
 
 from imageCrop import crop_card
 from cosineSimilarity import load_matcher, match_card
-from pricing import lookup_local_card, get_card_prices, API_KEY
+from pricing import lookup_local_card, get_card_prices, grading_roi,  API_KEY
 
 
 def scan_image(image_bytes, matcher, top_k=5):
@@ -34,11 +35,14 @@ def scan_image(image_bytes, matcher, top_k=5):
     name, set_name, card_number = local_card_info
     result["card"] = {"name": name, "set_name": set_name, "number": card_number}
 
-    # 5. Fetch raw and PSA 10 prices for that card
-    prices = get_card_prices(name, set_name, card_number, API_KEY)
+    # 5. Fetch raw, PSA 9, and PSA 10 prices for that card
+    try:
+        prices = get_card_prices(name, set_name, card_number, API_KEY)
+    except requests.RequestException:
+        prices = None
     if prices is not None:
-        raw_price, psa10_price = prices
-        result["prices"] = {"raw": raw_price, "psa10": psa10_price}
+        raw_price, psa9_price, psa10_price = prices
+        result["prices"] = {"raw": raw_price, "psa9": psa9_price, "psa10": psa10_price}
 
     # 6. Return everything as one dictionary
     return result
@@ -63,5 +67,7 @@ if __name__ == "__main__":
         card = result["card"]
         print(f"Price data for {card['name']} ({card['set_name']} {card['number']}):")
         if result["prices"] is not None:
-            print(f"  Raw price: {result['prices']['raw']}")
-            print(f"  PSA 10 price: {result['prices']['psa10']}")
+            print(f"  Raw price: {result['prices']['raw']}$")
+            print(f"  PSA 9 price: {result['prices']['psa9']}$")
+            print(f"  PSA 10 price: {result['prices']['psa10']}$")
+            print(f"  Potential Profit: {grading_roi(result['prices']['raw'],result['prices']['psa10'])}$")

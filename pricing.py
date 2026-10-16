@@ -55,10 +55,24 @@ def get_card_prices(name, set_name, card_number, api_key):
 
     card = data["data"][0]
     raw_price = card.get("prices", {}).get("market")
+    psa9_price = card.get("ebay", {}).get("salesByGrade", {}).get("psa9", {}).get("smartMarketPrice", {}).get("price")
     psa10_price = card.get("ebay", {}).get("salesByGrade", {}).get("psa10", {}).get("smartMarketPrice", {}).get("price")
 
-    return (raw_price, psa10_price)
+    return (raw_price, psa9_price, psa10_price)
 
+def grading_roi(raw_price, psa10_price):
+    if raw_price is None or psa10_price is None:
+        return None
+    profit = None
+    if psa10_price <= 500:
+        profit = psa10_price - raw_price - 27
+    elif psa10_price <= 1000:
+        profit = psa10_price - raw_price - 66
+    elif psa10_price <= 1500:
+        profit = psa10_price - raw_price - 88
+    elif psa10_price <= 2500:
+        profit = psa10_price - raw_price - 220
+    else:
+        profit = psa10_price - raw_price - 380
 
-
-
+    return profit
