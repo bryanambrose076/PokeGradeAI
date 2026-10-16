@@ -2,19 +2,43 @@ import sys
 import torch
 import numpy as np
 import cv2
-from transformers import CLIPProcessor, CLIPModel
+from transformers import AutoImageProcessor, AutoModel
 from PIL import Image
 
 
-def load_matcher(embeddings_path="data/embeddings.pt", model_name="openai/clip-vit-base-patch32"):
+MODEL_NAME = "facebook/dinov2-base"
+
+
+def load_model(model_name=MODEL_NAME):
     device = "mps" if torch.backends.mps.is_available() else "cpu"
 
-    model = CLIPModel.from_pretrained(model_name).to(device)
-    processor = CLIPProcessor.from_pretrained(model_name)
+    model = AutoModel.from_pretrained(model_name).to(device).eval()
+    processor = AutoImageProcessor.from_pretrained(model_name)
+    return model, processor, device
+
+
+def embed_images(images, model, processor, device):
+    """images: list of PIL.Images or BGR numpy arrays. Returns a [len(images), 768] tensor."""
+    pil_images = []
+    for image in images:
+        if isinstance(image, np.ndarray):
+            image = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+        # squash the whole card to 224x224 instead of the processor's default center crop,
+        # which would cut off the card's top (name) and bottom (set number)
+        pil_images.append(image.convert("RGB").resize((224, 224), Image.BICUBIC))
+
+    inputs = processor(images=pil_images, return_tensors="pt", do_resize=False, do_center_crop=False).to(device)
+    with torch.no_grad():
+        features = model(**inputs).pooler_output  # [batch, 768]
+    return features
+
+
+def load_matcher(embeddings_path="data/embeddings.pt", model_name=MODEL_NAME):
+    model, processor, device = load_model(model_name)
 
     embeddings = torch.load(embeddings_path, map_location=device)
     keys = list(embeddings.keys())
-    embedding_matrix = torch.stack([embeddings[k] for k in keys]).to(device)  # [num_cards, 512]
+    embedding_matrix = torch.stack([embeddings[k] for k in keys]).to(device)  # [num_cards, 768]
     normalized_matrix = torch.nn.functional.normalize(embedding_matrix, p=2, dim=1)
 
     return {
@@ -28,15 +52,7 @@ def load_matcher(embeddings_path="data/embeddings.pt", model_name="openai/clip-v
 
 def match_card(image, matcher, top_k=5):
     """image: a PIL.Image, or a BGR numpy array (e.g. from imageCrop.crop_card)."""
-    if isinstance(image, np.ndarray):
-        image = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
-
-    model = matcher["model"]
-    device = matcher["device"]
-
-    inputs = matcher["processor"](images=image, return_tensors="pt").to(device)
-    with torch.no_grad():
-        query_features = model.get_image_features(**inputs).pooler_output[0]  # [512]
+    query_features = embed_images([image], matcher["model"], matcher["processor"], matcher["device"])[0]
     normalized_query = torch.nn.functional.normalize(query_features, p=2, dim=0)
 
     # cosine similarity = dot product of normalized vectors

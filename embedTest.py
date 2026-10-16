@@ -1,15 +1,12 @@
 import torch
-from transformers import CLIPProcessor, CLIPModel
 from PIL import Image
 import os
 
+from cosineSimilarity import load_model, embed_images
 
 
-# initialize CLIP and set the device to GPU if available, otherwise CPU
-device = "mps" if torch.backends.mps.is_available() else "cpu"
-
-model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32").to(device)
-processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
+# initialize DINOv2 (same model and preprocessing the matcher uses at scan time)
+model, processor, device = load_model()
 
 # Get the list of set folders in data/images
 set_files = os.listdir("data/images")
@@ -20,20 +17,16 @@ for filename in set_files:
     if not os.path.isdir(f"data/images/{filename}"):
         continue
     # Loop over each image file in the set folder
-    image_files = os.listdir(f"data/images/{filename}")
-    for images in image_files:
-        if not images.lower().endswith(".png"):
-            continue
-        # Open the image and process it with CLIP
-        image = Image.open(f"data/images/{filename}/{images}")
-        inputs = processor(images=image, return_tensors="pt").to(device)
-        # Get the image features from the model
-        with torch.no_grad():
-            image_features = model.get_image_features(**inputs).pooler_output
-        # Save the image features in the embeddings dictionary with a key that includes the set and image name
-        key = f"{filename}/{images}"
-        embeddings[key] = image_features[0].cpu()
-        print(f"Processed {key}")
+    image_files = [f for f in os.listdir(f"data/images/{filename}") if f.lower().endswith(".png")]
+    # Embed the set's images in batches of 32, which is much faster than one at a time
+    for start in range(0, len(image_files), 32):
+        batch = image_files[start:start + 32]
+        images = [Image.open(f"data/images/{filename}/{name}") for name in batch]
+        features = embed_images(images, model, processor, device)
+        # Save each image's features with a key that includes the set and image name
+        for name, feature in zip(batch, features):
+            embeddings[f"{filename}/{name}"] = feature.cpu()
+    print(f"Processed {filename} ({len(image_files)} cards)")
+
 torch.save(embeddings, "data/embeddings.pt")
 print("Done")
-
