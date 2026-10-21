@@ -6,6 +6,7 @@ python-dotenv==1.2.3
 requests==2.34.2
 tcgdex-sdk==2.3.0
 torch==2.13.0
+torchvision==0.28.0
 transformers==5.15.1
 
 # Web API
