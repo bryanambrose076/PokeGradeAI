@@ -5,13 +5,20 @@ import cv2
 import numpy as np
 import requests
 
-from imageCrop import crop_card
-from cosineSimilarity import load_matcher, match_card
+from imageCrop import crop_candidates
+from cosineSimilarity import load_matcher, match_candidates
 from pricing import lookup_local_card, get_card_prices, grading_roi,  API_KEY
 
 # If the top match beats the runner-up by less than this, the result is flagged as uncertain.
 # Tuned for DINOv2 scores: correct matches on real test photos had gaps of 0.09+ (one at 0.014).
 LOW_CONFIDENCE_GAP = 0.03
+
+
+def match_photo(img, matcher, top_k=5):
+    """img: BGR array. Returns (matches, chosen crop). Shared by /scan and eval.py."""
+    candidates = crop_candidates(img)
+    matches, chosen = match_candidates(candidates, matcher, top_k=top_k)
+    return matches, candidates[chosen]
 
 
 def scan_image(image_bytes, matcher, top_k=5):
@@ -20,11 +27,8 @@ def scan_image(image_bytes, matcher, top_k=5):
     if img is None:
         raise ValueError("Could not decode image bytes")
 
-    # 2. Crop the card out of the photo
-    cropped = crop_card(img)
-
-    # 3. Match the cropped card against the embeddings
-    matches = match_card(cropped, matcher, top_k=top_k)
+    # 2-3. Crop the card several ways and keep whichever crop matches a card best
+    matches, _ = match_photo(img, matcher, top_k=top_k)
 
     result = {
         "matches": [{"key": key, "score": score} for key, score in matches],

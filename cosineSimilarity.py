@@ -63,6 +63,24 @@ def match_card(image, matcher, top_k=5):
     return [(keys[i], s) for i, s in zip(top_indices.tolist(), top_scores.tolist())]
 
 
+def match_candidates(images, matcher, top_k=5, margin=0.04):
+    """Matches several candidate crops in one batch and returns (matches, index of the chosen crop).
+    The first crop is kept unless another one's top score beats it by at least `margin`,
+    so a random patch that happens to resemble some card doesn't win on a tiny edge."""
+    features = embed_images(images, matcher["model"], matcher["processor"], matcher["device"])
+    normalized = torch.nn.functional.normalize(features, p=2, dim=1)
+    scores = normalized @ matcher["normalized_matrix"].T  # [num_crops, num_cards]
+    top_scores, top_indices = torch.topk(scores, k=top_k, dim=1)
+
+    best = int(torch.argmax(top_scores[:, 0]))
+    if top_scores[best, 0] - top_scores[0, 0] < margin:
+        best = 0
+
+    keys = matcher["keys"]
+    matches = [(keys[i], s) for i, s in zip(top_indices[best].tolist(), top_scores[best].tolist())]
+    return matches, best
+
+
 if __name__ == "__main__":
     query_path = sys.argv[1] if len(sys.argv) > 1 else "data/query.png"
 
