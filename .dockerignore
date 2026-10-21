@@ -1,5 +1,8 @@
 # Not needed at runtime (only embeddings.pt and sets/ are read)
 data/images/
+eval/
+eval.py
+tests/
 
 # Local-only files
 venv/
