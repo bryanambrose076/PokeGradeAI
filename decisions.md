@@ -165,12 +165,30 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 ---
 
 ## 6. Deployment target
-**Date:**
-**Decision:**
+**Date:** 2026-10-20
+**Decision:** AWS Lambda running the existing Docker image (container image from ECR), behind a public Function URL, in `us-east-2`. Function `PokeGradeAI`: arm64, 3008 MB memory, 180s timeout, env vars `POKEMONPRICETRACKER_API_KEY` and `OMP_NUM_THREADS=2`.
 **Options considered:**
--
--
+- **Lambda (container image) + Function URL:** about $0 at demo traffic (free tier), ECR storage ~$0.10–0.20/month for the ~790MB compressed image.
+- **ECS on Fargate:** always on, no cold starts, but ~$25/month unless created and destroyed per demo.
+- **Lambda Web Functions** (newer console option): only accepts code as a ZIP or from S3, no container images, and PyTorch + DINOv2 needs the container.
+- **Mangum vs. Lambda Web Adapter** to run FastAPI on Lambda: Mangum needs a handler in `main.py` plus the Lambda base image or runtime client; the Web Adapter is one `COPY` line in the Dockerfile.
 **Tradeoffs:**
--
-**Picked:**
-**Would change my mind if:**
+- Lambda's near-zero idle cost keeps the demo link live for free; the cost is cold starts (below).
+- Web Adapter keeps the app a normal uvicorn server, so the exact image tested locally is what runs on Lambda, and it would also run on Fargate unchanged. The model is downloaded to `/app/.hf_cache` instead of `/root/.cache` because Lambda doesn't run as root.
+- arm64 because the image is built on an Apple Silicon Mac (and arm64 Lambda is cheaper).
+- Uploads: Lambda caps requests at ~6MB and full-size iPhone JPEGs are ~3–4MB+, so the page shrinks photos in the browser before upload. Tested on the eval set: 2000px / JPEG 90 changed no answers (23/25), while 1600px/90 dropped to 21/25 and 1000px/90 to 22/25. The photos that flipped were ones already winning by tiny gaps (Mewtwo 0.003), so it's mostly borderline cases tipping, but 2000px was the only setting with no changes. Uploads are ~0.5MB.
+**Picked:** Lambda + Web Adapter + Function URL.
+
+**Cold starts (found on first deploy):**
+- Lambda gives a function 10s to start; this app needed ~60s (import torch, read the 1.85GB image for the first time, load DINOv2 + embeddings). Lambda then retries the start inside the request, counted against the timeout. With a 60s timeout, the first request 502'd at 60.0s and the second finished at 59.9s. Fix: timeout → 180s (Lambda's default is 3s, raised to 60s at setup).
+- Then the *first scan* on each new instance took ~56s while later scans took ~5s. Not CPU threads (`OMP_NUM_THREADS=2` didn't change it): Lambda loads container image files lazily, so the first pass over the model weights was slow. PyTorch's `Error in cpuinfo` / `Can't open MIDR_EL1` log lines are harmless warnings on Lambda's ARM machines.
+- Fix: `main.py` runs one match on a blank image at startup, so the slow first pass happens during startup. Result: cold start ~16s, first scan 5.3s (was ~56s).
+- Keep-warm: EventBridge Scheduler `pokegrade-keepwarm` invokes the function every 5 minutes (IAM role `pokegrade-keepwarm`, allowed to invoke only this function). The Web Adapter forwards these as `POST /events`, which returns a harmless 404. ~8,600 invocations/month, far inside the free tier. Two people scanning at the same moment can still hit a second, cold instance.
+
+| | Before | After |
+|---|---|---|
+| Cold start | ~60s, first request often failed | ~16s |
+| First scan on a new instance | ~56s | ~5s |
+| Later scans | ~5s | ~5s |
+
+**Would change my mind if:** real traffic makes cold starts common (try SnapStart, which snapshots the instance after the warm-up; it needs the Function URL on a published version/alias), or the demo needs steady traffic with no cold starts at all (Fargate). Cleanup still to do: replace the default `PowerUserRole` execution role with a minimal one (the app only needs CloudWatch Logs), and move the setup into Terraform.
