@@ -22,6 +22,28 @@
       return `$${price.toFixed(2)}`;
     }
 
+    // Shrink the photo before upload: phone photos can be several MB, close to Lambda's ~6MB limit.
+    // 2000px / JPEG 0.9 matched full-size accuracy on the eval photos. Falls back to the original on any error.
+    const MAX_SIDE = 2000;
+
+    async function resizePhoto(file) {
+      try {
+        const bitmap = await createImageBitmap(file);  // applies the phone's rotation tag
+        const scale = MAX_SIDE / Math.max(bitmap.width, bitmap.height);
+        if (scale >= 1) return file;  // already small enough
+
+        const canvas = document.createElement("canvas");
+        canvas.width = Math.round(bitmap.width * scale);
+        canvas.height = Math.round(bitmap.height * scale);
+        canvas.getContext("2d").drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+
+        const blob = await new Promise(resolve => canvas.toBlob(resolve, "image/jpeg", 0.9));
+        return blob || file;
+      } catch {
+        return file;
+      }
+    }
+
     photoInput.addEventListener("change", async () => {
       const photo = photoInput.files[0];
       if (!photo) return;
@@ -29,7 +51,7 @@
       resultBox.textContent = "Scanning...";
 
       const formData = new FormData();
-      formData.append("file", photo);
+      formData.append("file", await resizePhoto(photo), "photo.jpg");
 
       let response, data;
       try {
