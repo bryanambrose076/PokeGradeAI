@@ -6,15 +6,15 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     steps:
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v7
-        with:
-          python-version: "3.13"
-          cache: pip
+      - run: docker build -t pokegrade .
 
-      - run: pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-dev.txt
-
-      - run: pytest -q
+      - run: >
+          docker run --rm
+          -v "$PWD/tests:/app/tests"
+          -v "$PWD/pytest.ini:/app/pytest.ini"
+          pokegrade
+          sh -c "pip install -q -r requirements-dev.txt && pytest -q"
