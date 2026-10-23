@@ -191,4 +191,21 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 | First scan on a new instance | ~56s | ~5s |
 | Later scans | ~5s | ~5s |
 
-**Would change my mind if:** real traffic makes cold starts common (try SnapStart, which snapshots the instance after the warm-up; it needs the Function URL on a published version/alias), or the demo needs steady traffic with no cold starts at all (Fargate). Cleanup still to do: replace the default `PowerUserRole` execution role with a minimal one (the app only needs CloudWatch Logs), and move the setup into Terraform.
+**Would change my mind if:** real traffic makes cold starts common (try SnapStart, which snapshots the instance after the warm-up; it needs the Function URL on a published version/alias), or the demo needs steady traffic with no cold starts at all (Fargate). Cleanup still to do: move the setup into Terraform.
+
+**Follow-up — least-privilege execution role (2026-10-22):** The function was created with the console's default role, `PowerUserRole` (AWS-managed `PowerUserAccess`: everything except managing IAM), behind a public URL. Switched it to a new role, `pokegrade-lambda-exec`, with only `AWSLambdaBasicExecutionRole` (write CloudWatch Logs). The app calls no other AWS service; pricing goes to PokemonPriceTracker over the internet.
+- Why it matters: the public URL alone doesn't hand anyone those permissions, since visitors can only call the app's endpoints. The risk is a bug that lets someone run code inside the function (e.g. a malicious image exploiting OpenCV or Pillow); that code gets whatever the role allows. Logs-only limits the damage to writing logs.
+- Checked after the swap: cold start, `/health` and `/` all 200, and logs still arrive. The keep-warm schedule uses its own role, so it's unaffected. `PowerUserRole` itself was left in place (part of the account's default setup), just no longer used here.
+
+---
+
+## 7. CI/CD
+**Date:** 2026-10-22
+**Decision:** GitHub Actions workflow (`.github/workflows/ci.yml`) runs `pytest` on every push and pull request: checkout → Python 3.13 (same as the Dockerfile, pip cache on) → install `requirements-dev.txt` with CPU-only torch (the default PyPI torch is a ~2GB GPU build) → `pytest -q`. First run took 46s.
+**Endpoint test:** `tests/test_scan_endpoint.py` posts a real photo (`tests/fixtures/mew_ex_gold.jpg`, my gold Mew ex shrunk to 1000px, 113KB) to `/scan` through FastAPI's `TestClient`, with `get_card_prices` monkeypatched to raise a connection error. It asserts a 200, the right card (`sv03.5/205`), and `prices`/`profit` null. This guards the "pricing failure turns the scan into a 500" bug at the endpoint level (upload parsing, the try/except, JSON), which calling `scan_image()` directly would skip. It runs the real model, since `data/embeddings.pt` (15MB) is in git, so CI downloads DINOv2 each run (~70s total now).
+**Tradeoffs:**
+- Real model instead of a fake matcher: slower CI, but it tests the actual crop + match path. Caching the model between runs can bring the time back down.
+- `httpx` pinned in `requirements-dev.txt` because `TestClient` needs it and it was only arriving indirectly through Hugging Face. Starlette now warns that `httpx` is deprecated in favor of `httpx2` (Pydantic's fork, first released May 2026); kept `httpx` for now since it's only a warning.
+- The eval photos are gitignored, so the eval can't run in CI yet (options: commit 2000px copies ~12MB, keep them in S3, or run the eval by hand).
+**Next:** build the Docker image in CI and run the tests inside it (test exactly what ships), then an OIDC role so GitHub can deploy without stored AWS keys, then deploy to Lambda on merge to `main`.
+**Would change my mind if:** CI time grows enough to slow down pushes (cache the model, or split fast unit tests from the model test).
