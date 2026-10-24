@@ -19,6 +19,13 @@ jobs:
           pokegrade
           sh -c "pip install -q -r requirements-dev.txt && pytest -q"
 
+      - run: >
+          docker run --rm
+          -v "$PWD/eval:/app/eval"
+          -v "$PWD/eval.py:/app/eval.py"
+          pokegrade
+          python eval.py --min-top1 22 --min-top5 25
+
   deploy:
     needs: test
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'

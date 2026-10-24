@@ -1,3 +1,4 @@
+import argparse
 import csv
 import os
 import sys
@@ -11,7 +12,7 @@ from pipeline import match_photo
 # and reports top-1 / top-5 accuracy and the #1-#2 score gap for each photo.
 
 LABELS_PATH = "eval/labels.csv"
-PHOTOS_DIR = "eval/photos"
+PHOTOS_DIR = "eval/photos_2000"  # same size the site resizes uploads to; originals are in eval/photos_raw
 CROPS_DIR = "eval/crops"  # cropped cards are saved here so misses can be checked by eye
 
 
@@ -72,8 +73,19 @@ def print_report(results):
     if wrong_gaps:
         print(f"gap when wrong:   max {wrong_gaps[-1]:.3f}")
 
+    return top1, top5
+
 
 if __name__ == "__main__":
-    labels_path = sys.argv[1] if len(sys.argv) > 1 else LABELS_PATH
-    results = run_eval(load_labels(labels_path), load_matcher())
-    print_report(results)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("labels", nargs="?", default=LABELS_PATH)
+    parser.add_argument("--min-top1", type=int, help="exit with an error if fewer photos are correct at #1")
+    parser.add_argument("--min-top5", type=int, help="exit with an error if fewer photos have the right card in the top 5")
+    args = parser.parse_args()
+
+    results = run_eval(load_labels(args.labels), load_matcher())
+    top1, top5 = print_report(results)
+
+    if (args.min_top1 is not None and top1 < args.min_top1) or (args.min_top5 is not None and top5 < args.min_top5):
+        print("Accuracy below the minimum")
+        sys.exit(1)
