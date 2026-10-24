@@ -49,3 +49,5 @@ jobs:
           docker push $IMAGE
           aws lambda update-function-code --function-name PokeGradeAI --image-uri $IMAGE
           aws lambda wait function-updated-v2 --function-name PokeGradeAI
+
+      - run: curl -sf --retry 5 --retry-all-errors --max-time 180 https://vwvdyeg3h7wtvpxtci3mqnvmei0tmrny.lambda-url.us-east-2.on.aws/health
