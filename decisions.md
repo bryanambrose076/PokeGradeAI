@@ -141,7 +141,7 @@ One entry per technical fork. Written as decisions were actually made; supersede
 **Tradeoffs:**
 - Graded prices are often "low" confidence and can diverge from the median sale (Okidogi ex PSA 10: smart price $82 vs median $36.50, weighted toward a few recent sales).
 - PSA 9 can be below the raw price (Mega Greninja ex: PSA 9 $126.50, raw $128.06), a real data quirk.
-**Would change my mind if:** the daily quota becomes a constraint (add ~24h price caching keyed by card), or price confidence proves too unreliable to show without a warning.
+**Would change my mind if:** the daily quota becomes a constraint (*→ done: 24h cache in Postgres, section 8*), or price confidence proves too unreliable to show without a warning.
 
 ---
 
@@ -166,7 +166,7 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 
 ## 6. Deployment target
 **Date:** 2026-10-20
-**Decision:** AWS Lambda running the existing Docker image (container image from ECR), behind a public Function URL, in `us-east-2`. Function `PokeGradeAI`: arm64, 3008 MB memory, 180s timeout, env vars `POKEMONPRICETRACKER_API_KEY` and `OMP_NUM_THREADS=2`.
+**Decision:** AWS Lambda running the existing Docker image (container image from ECR), behind a public Function URL, in `us-east-2`. Function `PokeGradeAI`: arm64, 3008 MB memory, 180s timeout, env vars `POKEMONPRICETRACKER_API_KEY` and `OMP_NUM_THREADS=2` (plus `DATABASE_URL` since 2026-10-24, section 8).
 **Options considered:**
 - **Lambda (container image) + Function URL:** about $0 at demo traffic (free tier), ECR storage ~$0.10–0.20/month for the ~790MB compressed image.
 - **ECS on Fargate:** always on, no cold starts, but ~$25/month unless created and destroyed per demo.
@@ -218,3 +218,25 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 - **Slow first request after a deploy:** the first request on a new image takes ~2 min (uncached image plus the init retry). The deploy job ends with a `/health` curl (retries, 180s per try), so CI absorbs that wait instead of the first visitor, and a new image that never comes up healthy fails the deploy.
 - **Eval in CI:** 2000px copies of the 25 eval photos (~12MB) are committed in `eval/photos_2000/`, with one photo's corner blacked out because a credit card was visible. CI runs `eval.py --min-top1 22 --min-top5 25` in the image (~1 min), so a matching regression fails the build before it deploys.
 **Would change my mind if:** the eval set grows enough to slow CI (keep the photos in S3, or split them into tune and holdout sets with only holdout in CI).
+
+---
+
+## 8. Price cache (Postgres)
+**Date:** 2026-10-24
+**Decision:** Cache each card's prices in a Postgres table, `price_cache` (`schema.sql`), hosted on Neon (project `pokegrade`, AWS `us-east-2`, free plan, Postgres 18, pooled connection). `pipeline.py` checks the cache before calling PokemonPriceTracker and saves the answer after. Priced cards stay fresh for 24h; "no price found" answers for 6h, so a card that gets data later is retried sooner. API failures are never cached. The app reads `DATABASE_URL` (`.env` locally, a Lambda environment variable in production); without it, the cache is off and scans work exactly as before.
+**Why now:** the API allows 100 calls/day (section 4), and the planned MCP tools and agents will call pricing far more often than a person scanning.
+**Options considered:**
+- **Neon vs. RDS:** RDS inside a VPC means Lambda also needs a NAT gateway (~$32/month) to keep reaching the pricing API. Neon is free at this size and reached over the internet with TLS. Neon is plain hosted Postgres, so moving off it later is one connection-string change.
+- **Lambda memory or `/tmp` instead of a database:** free, but lost whenever Lambda replaces an instance, and not shared between instances.
+- **Storing the full API response (`jsonb`):** would allow CGC/TAG grades later without new calls, but meant changing `get_card_prices` and its tests for data the page doesn't show. Skipped; easy to add.
+- **pgvector:** not needed. Matching 4,585 vectors in memory takes under 1ms (2.2). Might revisit for finding similar past scans once scans are stored.
+**Tradeoffs / details:**
+- `price_cache.py` keeps one connection per Lambda instance and retries once on a dropped connection. Neon suspends after ~5 minutes idle and closes connections, while the keep-warm ping keeps Lambda alive much longer, so the saved connection is often dead on the next scan.
+- Any database error counts as a cache miss, so a Neon outage costs API calls, never a failed scan.
+- Prices are `double precision`, not `numeric`, so values come back as plain floats (no `Decimal` handling in the ROI math or JSON).
+- A `found` column separates "API had no data" from "card has no graded sales" (Kakuna), which both have empty PSA columns.
+- Freshness is computed with Postgres's clock (`now() - fetched_at`), so it doesn't depend on Lambda's clock.
+**Testing:** `tests/test_price_cache.py`: miss then hit, 24h expiry, 6h "no price" expiry, database down, and two `/scan` calls for the same photo making one (faked) API call. Tests use `TEST_DATABASE_URL`, never `DATABASE_URL`; `tests/conftest.py` points every test at an empty test table, or turns the cache off, so a local run can't write to Neon even though `.env` points there. CI adds a `postgres:18` service container and runs the tests in the Docker image with `--network host`. Locally: `TEST_DATABASE_URL=postgresql:///pokegrade_test pytest` against Homebrew Postgres 16.
+**Bug caught by the tests:** the endpoint test (pricing faked as down) started returning prices, because the cache test before it had left the gold Mew cached. Emptying the table before every test fixed it, and showed the intended behavior: a cached card still shows prices during an API outage, an uncached one doesn't.
+**Result:** real API + Neon from my Mac: first gold Mew scan 1 API call, 3.1s; second scan 0 calls, 0.6s. On Lambda (2026-10-25): the gold Mew came back with the prices my Mac had cached, row unchanged, so Lambda read Neon without calling the API. A Lillipup (`sv10.5w/154`, eval photo `IMG_0275`) scanned twice created one row, and its `fetched_at` didn't change on the second scan, so only one API call was made. Lambda scans took ~4s either way; matching, not pricing, is most of the time there.
+**Would change my mind if:** prices need to be fresher than a day (lower the TTL), Neon's free limits or wake-up time become a problem, or schema changes become frequent enough to need migrations (numbered SQL files plus a tool that tracks which ran) instead of one `schema.sql`.
