@@ -3,15 +3,15 @@ import os
 import pytest
 from fastapi.testclient import TestClient
 
+import db
 import pipeline
-import price_cache
 from price_cache import get_cached, save
 
 pytestmark = pytest.mark.skipif(not os.getenv("TEST_DATABASE_URL"), reason="TEST_DATABASE_URL not set")
 
 
 def age_row(card_id, hours):
-    price_cache._run(
+    db.run(
         "UPDATE price_cache SET fetched_at = now() - make_interval(hours => %s) WHERE card_id = %s",
         (hours, card_id),
     )
@@ -40,7 +40,7 @@ def test_no_price_found_expires_after_6h():
 # Nothing listening on port 1: should miss quietly, not crash
 def test_database_down(monkeypatch):
     monkeypatch.setenv("DATABASE_URL", "postgresql://nobody@127.0.0.1:1/x")
-    monkeypatch.setattr(price_cache, "_conn", None)
+    monkeypatch.setattr(db, "_conn", None)
     assert get_cached("sv06.5/082") == (False, None)
     save("sv06.5/082", (2.28, 15.38, 82))
 

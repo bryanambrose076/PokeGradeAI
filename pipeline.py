@@ -29,7 +29,7 @@ def scan_image(image_bytes, matcher, top_k=5):
         raise ValueError("Could not decode image bytes")
 
     # 2-3. Crop the card several ways and keep whichever crop matches a card best
-    matches, _ = match_photo(img, matcher, top_k=top_k)
+    matches, crop = match_photo(img, matcher, top_k=top_k)
 
     result = {
         "matches": [{"key": key, "score": score} for key, score in matches],
@@ -43,7 +43,7 @@ def scan_image(image_bytes, matcher, top_k=5):
     # 4. Look up the top match's name, set, and number
     local_card_info = lookup_local_card(matches[0][0])
     if local_card_info is None:
-        return result
+        return result, crop
     name, set_name, card_number = local_card_info
     result["card"] = {"name": name, "set_name": set_name, "number": card_number}
 
@@ -69,8 +69,8 @@ def scan_image(image_bytes, matcher, top_k=5):
         result["prices"] = {"raw": raw_price, "psa9": psa9_price, "psa10": psa10_price}
         result["profit"] = grading_roi(raw_price, psa10_price)
 
-    # 6. Return everything as one dictionary
-    return result
+    # 6. Return everything as one dictionary, plus the chosen crop
+    return result, crop
 
 
 if __name__ == "__main__":
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     with open(image_path, "rb") as f:
         image_bytes = f.read()
 
-    result = scan_image(image_bytes, load_matcher())
+    result, _ = scan_image(image_bytes, load_matcher())
 
     print(f"Top {len(result['matches'])} matches for {image_path}:")
     for match in result["matches"]:

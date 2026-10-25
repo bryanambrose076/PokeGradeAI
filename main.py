@@ -1,9 +1,12 @@
+import time
+
 import numpy as np
 from fastapi import FastAPI, File, HTTPException
 from fastapi.responses import FileResponse
 
 from cosineSimilarity import load_matcher, match_candidates
 from pipeline import scan_image
+from scan_history import save_scan
 
 app = FastAPI()
 
@@ -22,10 +25,16 @@ def health():
 
 @app.post("/scan")
 def scan(file: bytes = File()):
+    start = time.perf_counter()
     try:
-        return scan_image(file, matcher)
+        result, crop = scan_image(file, matcher)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
+    duration_ms = round((time.perf_counter() - start) * 1000)
+
+    # Save the scan before responding; Lambda freezes once the response is sent
+    result["scan_id"] = save_scan(file, crop, result, duration_ms)
+    return result
 
 
 @app.get("/")

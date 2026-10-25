@@ -16,3 +16,6 @@ python-multipart==0.0.32
 
 # Price cache
 psycopg[binary]==3.3.6
+
+# Scan history
+boto3==1.43.118
