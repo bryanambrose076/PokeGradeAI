@@ -8,6 +8,7 @@ import requests
 from imageCrop import crop_candidates
 from cosineSimilarity import load_matcher, match_candidates
 from pricing import lookup_local_card, get_card_prices, grading_roi,  API_KEY
+from price_cache import get_cached, save
 
 # If the top match beats the runner-up by less than this, the result is flagged as uncertain.
 # Tuned for DINOv2 scores: correct matches on real test photos had gaps of 0.09+ (one at 0.014).
@@ -54,11 +55,15 @@ def scan_image(image_bytes, matcher, top_k=5):
             ru_name, ru_set_name, ru_number = runner_up_info
             result["runner_up"] = {"name": ru_name, "set_name": ru_set_name, "number": ru_number}
 
-    # 5. Fetch raw, PSA 9, and PSA 10 prices for that card
-    try:
-        prices = get_card_prices(name, set_name, card_number, API_KEY)
-    except requests.RequestException:
-        prices = None
+    # 5. Fetch raw, PSA 9, and PSA 10 prices for that card (cached for a day)
+    card_id = matches[0][0].removesuffix(".png")
+    hit, prices = get_cached(card_id)
+    if not hit:
+        try:
+            prices = get_card_prices(name, set_name, card_number, API_KEY)
+            save(card_id, prices)
+        except requests.RequestException:
+            prices = None
     if prices is not None:
         raw_price, psa9_price, psa10_price = prices
         result["prices"] = {"raw": raw_price, "psa9": psa9_price, "psa10": psa10_price}
