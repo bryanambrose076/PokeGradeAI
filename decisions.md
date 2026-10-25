@@ -240,3 +240,27 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 **Bug caught by the tests:** the endpoint test (pricing faked as down) started returning prices, because the cache test before it had left the gold Mew cached. Emptying the table before every test fixed it, and showed the intended behavior: a cached card still shows prices during an API outage, an uncached one doesn't.
 **Result:** real API + Neon from my Mac: first gold Mew scan 1 API call, 3.1s; second scan 0 calls, 0.6s. On Lambda (2026-10-25): the gold Mew came back with the prices my Mac had cached, row unchanged, so Lambda read Neon without calling the API. A Lillipup (`sv10.5w/154`, eval photo `IMG_0275`) scanned twice created one row, and its `fetched_at` didn't change on the second scan, so only one API call was made. Lambda scans took ~4s either way; matching, not pricing, is most of the time there.
 **Would change my mind if:** prices need to be fresher than a day (lower the TTL), Neon's free limits or wake-up time become a problem, or schema changes become frequent enough to need migrations (numbered SQL files plus a tool that tracks which ran) instead of one `schema.sql`.
+
+---
+
+## 9. Scan history (S3 + Postgres)
+**Date:** 2026-10-25
+**Decision:** Every successful scan is saved. `/scan` calls `save_scan()` (`pokegrade/scan_history.py`), which uploads the uploaded photo and the crop the matcher chose to a private S3 bucket (`pokegrade-scans-017421876144-us-east-2-an`, under `scans/<date>/<id>.jpg` and `<id>_crop.jpg`) and inserts a row into a `scans` table: random UUID, time, the top-match card ID, the top 5 with scores (`jsonb`), the #1–#2 gap, the low-confidence flag, both S3 keys, and how long the scan took. `/scan` returns the ID as `scan_id`, which the "Wrong card?" button (next step) will send back so a correction attaches to the right scan.
+**Why:** the review agent and accuracy numbers need a record of what the app said on real scans. Before this, a wrong answer left no trace.
+**Options considered:**
+- **Save every scan vs. only low-confidence ones:** every scan. The app can't tell a right answer from a confidently wrong one (Umbreon `svp/176` scores 0.79 as Hydreigon ex with no warning), correct scans are needed for real accuracy numbers and new eval photos, and storage is cheap (~0.2–0.6MB per scan).
+- **Photos in Postgres vs. S3:** S3. Databases are poor at storing files, and Neon's free tier is small; the row stores only the file names.
+- **Save in the background after responding vs. before:** before. On Lambda the function is frozen once the response is sent, so background work may never finish. Costs a little time per scan, not counted in `duration_ms`.
+- **Neon object storage vs. S3:** S3, reached through the Lambda role with no stored keys.
+**Security / privacy:**
+- Bucket: all public access blocked, SSE-S3 encryption, no versioning (so deletion is real).
+- The Lambda role got one inline policy, `pokegrade-scans-upload`: `s3:PutObject` on `scans/*` only (no read, list or delete). Code running inside the function could at worst add files.
+- Lifecycle rule `delete-scans-after-90-days` on `scans/`. Photos approved as labels will be copied to `labels/` (not covered by the rule).
+- The page says "Photos are saved for 90 days to improve matching." under the upload button, before the photo is taken. Needs rewording once approved photos are kept longer.
+**Failure handling:** saving only happens when both `SCANS_BUCKET` and `DATABASE_URL` are set (only on Lambda), so local runs don't fill Neon with rows that have no photos. If an S3 upload fails, the row is saved with that key empty; if the database fails, `scan_id` is `None`. Either way the user still gets their result.
+**Also changed:** the Neon connection moved from `price_cache.py` into `db.py`, shared by the cache and scan history (one connection per Lambda instance, one copy of the reconnect logic). `scan_image()` now also returns the chosen crop. `boto3` added to requirements (~80–100MB in the image; the plain Python base image doesn't include it).
+**Testing:** `tests/test_scan_history.py` goes through the real `/scan` with S3 faked and pricing faked: a scan saves a row plus both uploads; S3 down still saves the row; database down still returns the scan with `scan_id: None`; no `SCANS_BUCKET` saves nothing. `tests/conftest.py` removes `SCANS_BUCKET` and empties both tables before every test. 23 tests total.
+**Result (live, 2026-10-25):** one gold Mew scan on Lambda returned a `scan_id`; Neon had its row (`sv03.5/205`, gap 0.044, 6,685ms, 5 matches) and S3 had both files (113KB photo, 106KB crop). The price came from the cache.
+**Would change my mind if:** storage or privacy concerns grow (shorter retention, or save only scans that get a correction), or saving makes scans noticeably slower (save in a queue instead).
+
+**Follow-up — code layout (2026-10-25):** the app files moved into `pokegrade/` and hand-run scripts into `scripts/`, with clearer names: `imageCrop` → `crop`, `cosineSimilarity` → `matcher`, `populateDatabase` → `fetch_sets` (it downloads card lists, not a database), `embedTest` → `build_embeddings`, `downloadImages` → `download_images`. Scripts run as `python -m scripts.eval`. Earlier sections keep the old names as they were written.
