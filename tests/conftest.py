@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-import db
+from pokegrade import db
 
 
 # Point the app at an empty test database (or turn it off) so tests never touch Neon

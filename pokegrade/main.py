@@ -1,12 +1,13 @@
+"""Web server: the scanner page, /scan, and /health."""
 import time
 
 import numpy as np
 from fastapi import FastAPI, File, HTTPException
 from fastapi.responses import FileResponse
 
-from cosineSimilarity import load_matcher, match_candidates
-from pipeline import scan_image
-from scan_history import save_scan
+from pokegrade.matcher import load_matcher, match_candidates
+from pokegrade.pipeline import scan_image
+from pokegrade.scan_history import save_scan
 
 app = FastAPI()
 

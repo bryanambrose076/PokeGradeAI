@@ -1,3 +1,4 @@
+"""Download card images into data/images/. Run: python -m scripts.download_images"""
 import json
 import os
 import urllib.request

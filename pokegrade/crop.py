@@ -1,3 +1,4 @@
+"""Find the card in a photo and straighten it."""
 import cv2
 import numpy as np
 import os

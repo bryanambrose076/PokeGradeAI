@@ -1,8 +1,7 @@
 import requests
 from fastapi.testclient import TestClient
 
-import main
-import pipeline
+from pokegrade import main, pipeline
 
 
 def test_scan_returns_match_when_pricing_fails(monkeypatch):

@@ -1,3 +1,4 @@
+"""Accuracy on the labeled eval photos (also runs in CI). Run: python -m scripts.eval"""
 import argparse
 import csv
 import os
@@ -5,8 +6,8 @@ import sys
 
 import cv2
 
-from cosineSimilarity import load_matcher
-from pipeline import match_photo
+from pokegrade.matcher import load_matcher
+from pokegrade.pipeline import match_photo
 
 # Runs every labeled photo through the same crop + match steps as /scan (no pricing calls)
 # and reports top-1 / top-5 accuracy and the #1-#2 score gap for each photo.

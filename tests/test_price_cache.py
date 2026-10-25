@@ -3,9 +3,8 @@ import os
 import pytest
 from fastapi.testclient import TestClient
 
-import db
-import pipeline
-from price_cache import get_cached, save
+from pokegrade import db, pipeline
+from pokegrade.price_cache import get_cached, save
 
 pytestmark = pytest.mark.skipif(not os.getenv("TEST_DATABASE_URL"), reason="TEST_DATABASE_URL not set")
 
@@ -47,7 +46,7 @@ def test_database_down(monkeypatch):
 
 # Real model + fake pricing API that counts calls
 def test_second_scan_uses_cache(monkeypatch):
-    import main
+    from pokegrade import main
 
     calls = []
 

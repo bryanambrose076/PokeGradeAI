@@ -1,3 +1,4 @@
+"""DINOv2 matching: embed card crops and find the closest reference cards."""
 import sys
 import torch
 import numpy as np
@@ -51,7 +52,7 @@ def load_matcher(embeddings_path="data/embeddings.pt", model_name=MODEL_NAME):
 
 
 def match_card(image, matcher, top_k=5):
-    """image: a PIL.Image, or a BGR numpy array (e.g. from imageCrop.crop_card)."""
+    """image: a PIL.Image, or a BGR numpy array (e.g. from crop.crop_card)."""
     query_features = embed_images([image], matcher["model"], matcher["processor"], matcher["device"])[0]
     normalized_query = torch.nn.functional.normalize(query_features, p=2, dim=0)
 

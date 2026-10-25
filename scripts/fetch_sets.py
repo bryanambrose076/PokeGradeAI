@@ -1,3 +1,4 @@
+"""Download card lists from TCGdex into data/sets/. Run: python -m scripts.fetch_sets"""
 from tcgdexsdk import TCGdex, Language
 import json
 

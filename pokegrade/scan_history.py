@@ -1,3 +1,4 @@
+"""Save each scan's photo and crop to S3 and a row to Postgres."""
 import os
 import uuid
 from datetime import datetime, timezone
@@ -8,7 +9,7 @@ import psycopg
 from botocore.exceptions import BotoCoreError, ClientError
 from psycopg.types.json import Jsonb
 
-import db
+from pokegrade import db
 
 _s3 = None
 

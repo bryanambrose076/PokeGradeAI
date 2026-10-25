@@ -4,10 +4,7 @@ import pytest
 from botocore.exceptions import ClientError
 from fastapi.testclient import TestClient
 
-import db
-import main
-import pipeline
-import scan_history
+from pokegrade import db, main, pipeline, scan_history
 
 pytestmark = pytest.mark.skipif(not os.getenv("TEST_DATABASE_URL"), reason="TEST_DATABASE_URL not set")
 

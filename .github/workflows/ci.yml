@@ -36,9 +36,9 @@ jobs:
       - run: >
           docker run --rm
           -v "$PWD/eval:/app/eval"
-          -v "$PWD/eval.py:/app/eval.py"
+          -v "$PWD/scripts:/app/scripts"
           pokegrade
-          python eval.py --min-top1 22 --min-top5 25
+          python -m scripts.eval --min-top1 22 --min-top5 25
 
   deploy:
     needs: test

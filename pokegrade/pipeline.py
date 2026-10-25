@@ -1,3 +1,4 @@
+"""One scan from start to finish: crop, match, price."""
 import os
 import sys
 
@@ -5,10 +6,10 @@ import cv2
 import numpy as np
 import requests
 
-from imageCrop import crop_candidates
-from cosineSimilarity import load_matcher, match_candidates
-from pricing import lookup_local_card, get_card_prices, grading_roi,  API_KEY
-from price_cache import get_cached, save
+from pokegrade.crop import crop_candidates
+from pokegrade.matcher import load_matcher, match_candidates
+from pokegrade.pricing import lookup_local_card, get_card_prices, grading_roi,  API_KEY
+from pokegrade.price_cache import get_cached, save
 
 # If the top match beats the runner-up by less than this, the result is flagged as uncertain.
 # Tuned for DINOv2 scores: correct matches on real test photos had gaps of 0.09+ (one at 0.014).
@@ -16,7 +17,7 @@ LOW_CONFIDENCE_GAP = 0.03
 
 
 def match_photo(img, matcher, top_k=5):
-    """img: BGR array. Returns (matches, chosen crop). Shared by /scan and eval.py."""
+    """img: BGR array. Returns (matches, chosen crop). Shared by /scan and scripts/eval.py."""
     candidates = crop_candidates(img)
     matches, chosen = match_candidates(candidates, matcher, top_k=top_k)
     return matches, candidates[chosen]

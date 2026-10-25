@@ -1,3 +1,4 @@
+"""Shared Neon (Postgres) connection."""
 import os
 
 import psycopg

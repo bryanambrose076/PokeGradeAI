@@ -1,8 +1,9 @@
+"""Rebuild data/embeddings.pt from data/images/. Run: python -m scripts.build_embeddings"""
 import torch
 from PIL import Image
 import os
 
-from cosineSimilarity import load_model, embed_images
+from pokegrade.matcher import load_model, embed_images
 
 
 # initialize DINOv2 (same model and preprocessing the matcher uses at scan time)

@@ -1,8 +1,8 @@
 import pytest
 import requests
 
-import pricing
-from pricing import grading_roi, get_card_prices
+from pokegrade import pricing
+from pokegrade.pricing import grading_roi, get_card_prices
 
 
 # grading_roi: profit = PSA 10 price - raw price - grading fee for that value tier

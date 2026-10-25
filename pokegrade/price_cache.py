@@ -1,9 +1,10 @@
+"""Remember each card's prices in Postgres for 24h."""
 import os
 from datetime import timedelta
 
 import psycopg
 
-import db
+from pokegrade import db
 
 FRESH_FOR = timedelta(hours=24)
 NOT_FOUND_FRESH_FOR = timedelta(hours=6)
