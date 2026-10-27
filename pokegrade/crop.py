@@ -8,7 +8,7 @@ import os
 CARD_RATIO = 63 / 88
 
 
-# ordered points of raw image corners
+# Sort the 4 corners into top-left, top-right, bottom-right, bottom-left
 def order_points(pts):
     pts = pts.astype("float32")
     s = pts.sum(axis=1)
@@ -40,6 +40,7 @@ def find_card_contour(contours, img_area):
     return best
 
 
+# Main crop: find the card's outline and flatten it into a straight 500x700 image
 def crop_card(image, card_width=500, card_height=700, max_side=1000, debug=False, save_path=None):
     """image: a file path, or a BGR numpy array (e.g. from cv2.imdecode)."""
     if isinstance(image, str):
@@ -57,13 +58,13 @@ def crop_card(image, card_width=500, card_height=700, max_side=1000, debug=False
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     blurred = cv2.GaussianBlur(gray, (5, 5), 0)
 
-    # edge detection
+    # Find edges (sudden brightness changes) in the photo
     edges = cv2.Canny(blurred, 50, 150)
     # dilate border to form connected outline
     kernel = np.ones((3, 3), np.uint8)
     edges_dilated = cv2.dilate(edges, kernel, iterations=1)
 
-    # extract corner contours from the dilated edges
+    # Trace the edges into outlines (contours)
     # RETR_LIST keeps inner contours too, so the card outline is found even when it merges with the background
     contours, _ = cv2.findContours(edges_dilated, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
     if not contours:
@@ -120,7 +121,7 @@ def portrait_corners(box):
     return pts.astype("float32")
 
 
-# card-shaped boxes from several edge sensitivities, largest first, near-duplicates removed
+# Find every card-shaped box in the photo using 3 edge sensitivities, largest first, duplicates removed
 def find_card_boxes(img, ratio_tol=0.10, min_frac=0.10, max_boxes=8):
     img_area = img.shape[0] * img.shape[1]
     gray = cv2.GaussianBlur(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), (5, 5), 0)

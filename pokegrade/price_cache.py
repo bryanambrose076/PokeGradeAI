@@ -6,10 +6,12 @@ import psycopg
 
 from pokegrade import db
 
+# How long a saved price counts as fresh; "no price found" expires sooner in case the card gets listed
 FRESH_FOR = timedelta(hours=24)
 NOT_FOUND_FRESH_FOR = timedelta(hours=6)
 
 
+# Return (hit, prices); a miss if there's no row, it's too old, or the database is down
 def get_cached(card_id):
     if not os.getenv("DATABASE_URL"):
         return False, None
@@ -29,6 +31,7 @@ def get_cached(card_id):
     return True, ((raw, psa9, psa10) if found else None)
 
 
+# Save or overwrite this card's prices; database errors are ignored
 def save(card_id, prices):
     if not os.getenv("DATABASE_URL"):
         return

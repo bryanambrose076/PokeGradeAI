@@ -10,6 +10,7 @@ from PIL import Image
 MODEL_NAME = "facebook/dinov2-base"
 
 
+# Load DINOv2 (uses the Mac's GPU when available)
 def load_model(model_name=MODEL_NAME):
     device = "mps" if torch.backends.mps.is_available() else "cpu"
 
@@ -34,6 +35,7 @@ def embed_images(images, model, processor, device):
     return features
 
 
+# Load the model plus every reference card's saved embedding, ready to compare against
 def load_matcher(embeddings_path="data/embeddings.pt", model_name=MODEL_NAME):
     model, processor, device = load_model(model_name)
 
@@ -51,6 +53,7 @@ def load_matcher(embeddings_path="data/embeddings.pt", model_name=MODEL_NAME):
     }
 
 
+# Find the closest cards for one image (only used when running this file directly)
 def match_card(image, matcher, top_k=5):
     """image: a PIL.Image, or a BGR numpy array (e.g. from crop.crop_card)."""
     query_features = embed_images([image], matcher["model"], matcher["processor"], matcher["device"])[0]

@@ -264,3 +264,26 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 **Would change my mind if:** storage or privacy concerns grow (shorter retention, or save only scans that get a correction), or saving makes scans noticeably slower (save in a queue instead).
 
 **Follow-up — code layout (2026-10-25):** the app files moved into `pokegrade/` and hand-run scripts into `scripts/`, with clearer names: `imageCrop` → `crop`, `cosineSimilarity` → `matcher`, `populateDatabase` → `fetch_sets` (it downloads card lists, not a database), `embedTest` → `build_embeddings`, `downloadImages` → `download_images`. Scripts run as `python -m scripts.eval`. Earlier sections keep the old names as they were written.
+
+---
+
+## 10. "Wrong card?" reports (corrections)
+**Date:** 2026-10-26
+**Decision:** After a saved scan, the page shows a **Wrong card?** button. It opens a search box; as the user types, `GET /search` returns up to 10 cards from `data/sets/` ("Did you mean…?"), and tapping one (or **None of these**) sends `POST /corrections` with the `scan_id`, the typed text and the chosen card ID (empty for "None of these"). Reports land in a new `corrections` table as `unverified`; approving or rejecting them is the review page (next step).
+**Why:** the app can't tell when it's confidently wrong (Umbreon `svp/176`, section 9). Users who know the card can.
+**Options considered:**
+- **A "Looks right ✓" button too:** skipped. Unflagged scans are assumed correct. Simpler page, but accuracy from live scans ("share of scans nobody flagged") is an upper bound; the eval set stays the strict number.
+- **Free-text only vs. pick from search:** search, so most reports carry a real card ID that can be checked. The typed text is kept anyway, to see how people describe cards.
+- **Search library or database search vs. a loop in Python:** a loop. 4,619 cards take milliseconds and need no new dependency. `search_cards` will be reused as an MCP tool.
+- **Live search vs. a Search button:** live, waiting until 300ms after the last keystroke so typing "mew" sends one request, not three. Search doesn't touch the pricing API, so request count isn't a cost concern.
+**Search details:** a card scores one point per typed word that matches a whole word in its name, set name or number, so "mew" no longer matches Mewtwo, and "gold mew 151" returns the three Mew ex in 151 instead of Golduck. Numbers ignore leading zeros ("umbreon 59" finds `sv08.5/059`). Known gaps: typos find nothing, and names with symbols split into pieces ("Farfetch'd" must be typed "farfetch d"); an LLM fallback is an option if these matter (2d).
+**Guardrails:**
+- Text must be 1–100 characters; `/search` also cuts input at 100.
+- A chosen card must exist in `data/sets/` (`is_real_card`).
+- `scan_id REFERENCES scans (id)`, so Postgres rejects reports for scans that don't exist; non-ID text gets the same "Unknown scan" answer.
+- One report per scan (`UNIQUE`): resubmitting replaces an unverified report, but approved or rejected ones can't be changed, and the page gets the same "saved" answer either way, so it doesn't reveal what's been reviewed.
+- `status` is limited to `unverified`/`approved`/`rejected` by a `CHECK`.
+- Card names are put on the page with `textContent`, never `innerHTML`.
+- Not yet: rate limiting (2d).
+**Testing:** `tests/test_corrections.py`: search finds the right card, ignores leading zeros, matches whole words only, and returns nothing for empty text; reports save as `unverified`, "None of these" saves an empty card, resubmitting replaces an unverified report but not an approved one, and a fake card, fake scan, malformed ID, too-long and blank text are each rejected with the right message. `tests/conftest.py` now empties `corrections` too (Postgres won't empty `scans` while another table references it). 35 tests total.
+**Would change my mind if:** reports turn out noisy or abusive (require a reason, rate limit, or hide the button on high-confidence scans), or search misses too often (add typo tolerance).

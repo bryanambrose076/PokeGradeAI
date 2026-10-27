@@ -14,6 +14,7 @@ from pokegrade import db
 _s3 = None
 
 
+# Upload one JPEG to the scans bucket
 def _upload(key, data):
     global _s3
     if _s3 is None:
@@ -21,6 +22,7 @@ def _upload(key, data):
     _s3.put_object(Bucket=os.environ["SCANS_BUCKET"], Key=key, Body=data, ContentType="image/jpeg")
 
 
+# Save the photo and crop to S3 and a row to scans; returns the scan ID, or None if saving is off or failed
 def save_scan(photo_bytes, crop, result, duration_ms):
     if not os.getenv("SCANS_BUCKET") or not os.getenv("DATABASE_URL"):
         return None

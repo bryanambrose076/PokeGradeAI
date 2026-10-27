@@ -9,7 +9,7 @@ load_dotenv()
 _conn = None
 
 
-# One connection per Lambda instance; reconnect once if Neon dropped it
+# Run one SQL query and return its first row (or None); keeps one connection open, reconnects once if Neon dropped it
 def run(query, params=()):
     global _conn
     for attempt in range(2):

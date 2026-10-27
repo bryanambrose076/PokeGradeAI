@@ -1,4 +1,8 @@
-"""Accuracy on the labeled eval photos (also runs in CI). Run: python -m scripts.eval"""
+"""Accuracy on the labeled eval photos (also runs in CI). Run: python -m scripts.eval
+
+Runs every labeled photo through the same crop + match steps as /scan (no pricing calls)
+and reports top-1 / top-5 accuracy and the #1-#2 score gap for each photo.
+"""
 import argparse
 import csv
 import os
@@ -9,19 +13,18 @@ import cv2
 from pokegrade.matcher import load_matcher
 from pokegrade.pipeline import match_photo
 
-# Runs every labeled photo through the same crop + match steps as /scan (no pricing calls)
-# and reports top-1 / top-5 accuracy and the #1-#2 score gap for each photo.
-
 LABELS_PATH = "eval/labels.csv"
 PHOTOS_DIR = "eval/photos_2000"  # same size the site resizes uploads to; originals are in eval/photos_raw
 CROPS_DIR = "eval/crops"  # cropped cards are saved here so misses can be checked by eye
 
 
+# Read labels.csv: each photo's filename and correct card ID
 def load_labels(path=LABELS_PATH):
     with open(path, newline="") as f:
         return list(csv.DictReader(f))
 
 
+# Scan each labeled photo and record where the right card ranked
 def run_eval(labels, matcher, top_k=5):
     os.makedirs(CROPS_DIR, exist_ok=True)
     results = []
@@ -48,6 +51,7 @@ def run_eval(labels, matcher, top_k=5):
     return results
 
 
+# Print each photo's result plus overall top-1 / top-5 accuracy
 def print_report(results):
     print(f"{'file':<14} {'expected':<13} {'got':<13} {'score':>6} {'gap':>6}  result")
     for r in results:

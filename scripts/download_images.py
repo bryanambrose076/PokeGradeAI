@@ -6,6 +6,7 @@ import urllib.request
 from PIL import Image, UnidentifiedImageError
 
 
+# Check that a downloaded file is a real image (catches half-finished downloads)
 def is_valid_png(path):
     try:
         with Image.open(path) as im:

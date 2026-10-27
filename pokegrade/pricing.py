@@ -9,7 +9,7 @@ load_dotenv()
 
 API_KEY = os.getenv("POKEMONPRICETRACKER_API_KEY")
 
-# Parse JSON files to identify the card's name, set, and number for price lookup
+# Look up a card's name, set, and number in data/sets/ from an ID like "sv03.5/205"
 def lookup_local_card(tcgdex_key):
     set_id, local_id = tcgdex_key.split("/")
     local_id = local_id.removesuffix(".png")
@@ -30,9 +30,8 @@ def lookup_local_card(tcgdex_key):
     return (match["name"], match["set_name"], match["localId"])
 
 
+# Ask PokemonPriceTracker for raw, PSA 9, and PSA 10 prices; None if it has no listing
 def get_card_prices(name, set_name, card_number, api_key):
-    # the requests.get() call to PokemonPriceTracker
-    # returns raw + graded prices
     response = requests.get(
         "https://www.pokemonpricetracker.com/api/v2/cards",
         headers={
@@ -61,6 +60,7 @@ def get_card_prices(name, set_name, card_number, api_key):
 
     return (raw_price, psa9_price, psa10_price)
 
+# Estimated grading profit: PSA 10 price − raw price − the grading fee for that price tier
 def grading_roi(raw_price, psa10_price):
     if raw_price is None or psa10_price is None:
         return None

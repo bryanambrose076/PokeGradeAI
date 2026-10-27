@@ -23,6 +23,7 @@ def match_photo(img, matcher, top_k=5):
     return matches, candidates[chosen]
 
 
+# Full scan of one photo: decode, crop, match, look up the card, price it
 def scan_image(image_bytes, matcher, top_k=5):
     # 1. Decode the raw bytes into a BGR image array (same as cv2.imread gives)
     img = cv2.imdecode(np.frombuffer(image_bytes, np.uint8), cv2.IMREAD_COLOR)
