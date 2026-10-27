@@ -308,3 +308,16 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 - `db.py` gained `run_all` (all rows); `run` and `run_all` share one connect-and-retry function.
 **Testing:** `tests/test_review.py` (S3 faked): pending reports come oldest first with the app's guess; approve saves the label, copies both photos and marks the report approved; a missing crop copies only the photo; a forced random value lands in `holdout`; "None of these" or a fake card is refused until a real card is given; approving twice or after rejecting is refused; the page escapes `<script>` in user text and shows errors after a redirect. CI now mounts `scripts/` for the tests too, since the image doesn't include it. 44 tests total.
 **Would change my mind if:** reports become frequent enough that reviewing at my desk is a bottleneck (move the page online behind real auth), or labels need to include eval photos too (import `eval/labels.csv` into `labels`).
+
+---
+
+## 12. Guardrails
+**Date:** 2026-10-26
+**Decision:** Two guardrails on top of the ones from section 10: the Lambda function has **reserved concurrency of 3** (at most 3 requests run at once; extra ones get an error), and reports are only accepted within **24 hours** of the scan (`REPORT_WINDOW` in `pokegrade/corrections.py`; older scans get "This scan is too old to report").
+**Why:** `/corrections` was already hard to abuse (one report per scan, and each scan costs real matching work), so the bigger risk is someone scripting `/scan`. The account allows 400 concurrent Lambda runs, and the $10 budget alert only emails after money is spent; the cap puts a fixed ceiling on cost. The 24-hour window stops old scan IDs being collected and reported later; real users report right after scanning.
+**Options considered:**
+- **Cap of 3:** enough for me and a few friends; a 4th scan at the exact same moment sees "Something went wrong. Please try again." Easy to raise in the console (Configuration → Concurrency).
+- **Per-IP rate limit:** skipped. Each Lambda instance has its own memory, so a limit would need IP addresses stored in Neon, which is new personal data, for little benefit at this traffic.
+- **LLM fallback for search:** skipped. The one real report so far found its card with plain search; revisit if reports show search missing.
+**Testing:** `test_old_scan_rejected` ages a scan to 25 hours and checks the report is refused and nothing saved. 46 tests total. Concurrency set and checked from the CLI (`get-function-concurrency` returns 3); `/health` still ok.
+**Would change my mind if:** real users hit the concurrency cap (raise it), or abuse shows up from one source (add a per-IP limit, or AWS WAF in front of the function).
