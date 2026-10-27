@@ -287,3 +287,24 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 - Not yet: rate limiting (2d).
 **Testing:** `tests/test_corrections.py`: search finds the right card, ignores leading zeros, matches whole words only, and returns nothing for empty text; reports save as `unverified`, "None of these" saves an empty card, resubmitting replaces an unverified report but not an approved one, and a fake card, fake scan, malformed ID, too-long and blank text are each rejected with the right message. `tests/conftest.py` now empties `corrections` too (Postgres won't empty `scans` while another table references it). 35 tests total.
 **Would change my mind if:** reports turn out noisy or abusive (require a reason, rate limit, or hide the button on high-confidence scans), or search misses too often (add typo tolerance).
+
+---
+
+## 11. Review page and labels
+**Date:** 2026-10-26
+**Decision:** "Wrong card?" reports are reviewed on a local page (`python -m scripts.review`, http://127.0.0.1:8932). Each report shows the photo and crop, the app's guess with its gap, what the user typed and picked, and three actions: **Approve** (as the user's card), **Approve as…** (a card ID I enter, found with the page's search box), and **Reject**. Approving adds a row to a new `labels` table and copies both photos from `scans/` to `labels/` in S3; rejecting only changes the report's status. The actions live in `pokegrade/review.py` so the MCP server can reuse them.
+**Why:** reports are unverified (section 10). A label should only exist once I've confirmed the card, since labels will be used to measure and improve matching.
+**Options considered:**
+- **Local page vs. a password-protected page on the live site:** local. Nothing new is exposed to the internet, and Lambda's role stays upload-only (serving and copying photos would need `s3:GetObject`). It runs with my own AWS login. Cost: no reviewing from my phone, fine at a handful of reports. The MCP server and review agent will also run locally.
+- **Using `corrections.status = 'approved'` as the label vs. a separate table:** separate. `corrections` is what users said; `labels` is what's confirmed, and labels may later come from other sources (scans nobody flagged, agent suggestions).
+- **A "confirm recent scans" list:** dropped, since unflagged scans are assumed correct (section 10).
+**Tune / holdout split:** each label is randomly assigned `tune` (~80%) or `holdout` (~20%) once, when approved, and stored, so a photo never changes sides. Tune labels can be looked at while improving matching; holdout labels are only used to measure, so the numbers stay honest.
+**Details:**
+- Photos are shown through presigned S3 links that expire after an hour; the bucket stays private.
+- Copies under `labels/` aren't covered by the 90-day rule. The page's privacy line now says: "If you report a wrong card, that photo may be kept to train the scanner."
+- User text is passed through `html.escape`, since the page shows text strangers wrote; the server only listens on `127.0.0.1`.
+- `SCANS_BUCKET` is set inside `scripts/review.py`, not in `.env`, so running the main app locally still doesn't save scans (section 9).
+- Approving a "None of these" report needs a card from me; approving or rejecting a report twice is refused.
+- `db.py` gained `run_all` (all rows); `run` and `run_all` share one connect-and-retry function.
+**Testing:** `tests/test_review.py` (S3 faked): pending reports come oldest first with the app's guess; approve saves the label, copies both photos and marks the report approved; a missing crop copies only the photo; a forced random value lands in `holdout`; "None of these" or a fake card is refused until a real card is given; approving twice or after rejecting is refused; the page escapes `<script>` in user text and shows errors after a redirect. CI now mounts `scripts/` for the tests too, since the image doesn't include it. 44 tests total.
+**Would change my mind if:** reports become frequent enough that reviewing at my desk is a bottleneck (move the page online behind real auth), or labels need to include eval photos too (import `eval/labels.csv` into `labels`).
