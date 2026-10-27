@@ -17,4 +17,4 @@ def test_database(monkeypatch):
     monkeypatch.setenv("DATABASE_URL", url)
     with open("schema.sql") as f:
         db.run(f.read())
-    db.run("TRUNCATE price_cache, scans, corrections")
+    db.run("TRUNCATE price_cache, scans, corrections, labels")

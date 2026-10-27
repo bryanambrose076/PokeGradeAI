@@ -32,3 +32,13 @@ CREATE TABLE IF NOT EXISTS corrections (
   status     text NOT NULL DEFAULT 'unverified' CHECK (status IN ('unverified', 'approved', 'rejected')),
   created_at timestamptz NOT NULL DEFAULT now()
 );
+
+-- Approved reports: real photos with a confirmed card, for measuring and improving matching
+CREATE TABLE IF NOT EXISTS labels (
+  scan_id    uuid PRIMARY KEY REFERENCES scans (id),
+  card_id    text NOT NULL,
+  split      text NOT NULL CHECK (split IN ('tune', 'holdout')),
+  photo_key  text,
+  crop_key   text,
+  created_at timestamptz NOT NULL DEFAULT now()
+);
