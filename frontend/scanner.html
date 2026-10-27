@@ -13,6 +13,17 @@
 
   <div id="result" style="white-space: pre-line;"></div>
 
+  <div id="wrong-card" hidden>
+    <p><button id="wrong-button">Wrong card?</button></p>
+    <div id="report" hidden>
+      <label>What card is it? <input id="card-search" type="search" maxlength="100" autocomplete="off"></label>
+      <p>Did you mean…?</p>
+      <div id="suggestions"></div>
+      <p><button id="none-button">None of these</button></p>
+    </div>
+    <p id="report-status"></p>
+  </div>
+
   <script>
     const photoInput = document.getElementById("photo");
     const resultBox = document.getElementById("result");
@@ -50,6 +61,7 @@
       if (!photo) return;
 
       resultBox.textContent = "Scanning...";
+      resetReport(null);
 
       const formData = new FormData();
       formData.append("file", await resizePhoto(photo), "photo.jpg");
@@ -67,6 +79,8 @@
         resultBox.textContent = `Something went wrong: ${data.detail}`;
         return;
       }
+
+      resetReport(data.scan_id);
 
       if (data.card === null) {
         resultBox.textContent = "Couldn't identify this card.";
@@ -100,6 +114,85 @@
 
       resultBox.textContent = lines.join("\n");
     });
+
+    // "Wrong card?" box: search as the user types, then send the card they pick
+    const wrongCard = document.getElementById("wrong-card");
+    const reportBox = document.getElementById("report");
+    const searchInput = document.getElementById("card-search");
+    const suggestions = document.getElementById("suggestions");
+    const reportStatus = document.getElementById("report-status");
+    let scanId = null;
+    let searchTimer = null;
+
+    // Hide and clear the box; show the button again only if this scan was saved
+    function resetReport(id) {
+      scanId = id;
+      wrongCard.hidden = id === null;
+      document.getElementById("wrong-button").hidden = false;
+      reportBox.hidden = true;
+      searchInput.value = "";
+      suggestions.replaceChildren();
+      reportStatus.textContent = "";
+    }
+
+    document.getElementById("wrong-button").addEventListener("click", () => {
+      document.getElementById("wrong-button").hidden = true;
+      reportBox.hidden = false;
+      searchInput.focus();
+    });
+
+    // Search once the user stops typing for 300ms
+    searchInput.addEventListener("input", () => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(async () => {
+        const q = searchInput.value.trim();
+        if (!q) {
+          suggestions.replaceChildren();
+          return;
+        }
+        try {
+          const cards = await (await fetch(`/search?q=${encodeURIComponent(q)}`)).json();
+          if (searchInput.value.trim() !== q) return;  // a newer search is on its way
+          suggestions.replaceChildren(...cards.map(card => {
+            const button = document.createElement("button");
+            button.textContent = `${card.name} — ${card.set_name} #${card.number}`;
+            button.addEventListener("click", () => sendReport(card.card_id));
+            const row = document.createElement("p");
+            row.appendChild(button);
+            return row;
+          }));
+        } catch {
+          reportStatus.textContent = "Search failed. Please try again.";
+        }
+      }, 300);
+    });
+
+    document.getElementById("none-button").addEventListener("click", () => sendReport(null));
+
+    // Send the report; card_id is null for "None of these"
+    async function sendReport(cardId) {
+      const query = searchInput.value.trim();
+      if (!query) {
+        reportStatus.textContent = "Type what card it is first.";
+        return;
+      }
+      try {
+        const response = await fetch("/corrections", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ scan_id: scanId, query, card_id: cardId }),
+        });
+        if (!response.ok) {
+          reportStatus.textContent = `Couldn't send: ${(await response.json()).detail}`;
+          return;
+        }
+      } catch {
+        reportStatus.textContent = "Couldn't send. Please try again.";
+        return;
+      }
+      reportBox.hidden = true;
+      reportStatus.textContent = "Thanks! We'll use this to improve matching.";
+    }
   </script>
 </body>
 </html>

@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS price_cache (
   fetched_at timestamptz NOT NULL DEFAULT now()
 );
 
--- Logs scan data: what the app guessed, how sure it was, and where the photos are in S3
+-- Logs scan data: what the app guessed, how sure it was, and stores the photos in S3
 CREATE TABLE IF NOT EXISTS scans (
   id             uuid PRIMARY KEY,
   created_at     timestamptz NOT NULL DEFAULT now(),
@@ -22,3 +22,13 @@ CREATE TABLE IF NOT EXISTS scans (
 );
 
 CREATE INDEX IF NOT EXISTS scans_created_at ON scans (created_at);
+
+-- User reports that a scan matched the wrong card; unverified until approved on the review page
+CREATE TABLE IF NOT EXISTS corrections (
+  id         bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  scan_id    uuid NOT NULL UNIQUE REFERENCES scans (id),
+  query      text NOT NULL,
+  card_id    text,
+  status     text NOT NULL DEFAULT 'unverified' CHECK (status IN ('unverified', 'approved', 'rejected')),
+  created_at timestamptz NOT NULL DEFAULT now()
+);
