@@ -2,6 +2,7 @@ import os
 import uuid
 
 import pytest
+from botocore.exceptions import NoCredentialsError
 from fastapi.testclient import TestClient
 
 from pokegrade import db, review
@@ -117,6 +118,17 @@ def test_page_escapes_user_text():
     page = TestClient(app).get("/").text
     assert "Reports waiting for review (1)" in page
     assert "<script>" not in page and "&lt;script&gt;" in page
+
+
+def test_page_aws_login_expired(monkeypatch):
+    def expired(*args, **kwargs):
+        raise NoCredentialsError()
+
+    monkeypatch.setattr(review, "photo_url", expired)
+    make_report("mew 151", "sv03.5/151")
+    response = TestClient(app).get("/")
+    assert response.status_code == 503
+    assert "aws login" in response.text
 
 
 def test_page_approve_and_errors():

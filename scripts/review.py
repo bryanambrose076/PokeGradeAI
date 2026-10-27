@@ -4,7 +4,8 @@ from html import escape
 from urllib.parse import quote
 
 import uvicorn
-from fastapi import FastAPI, Form
+from botocore.exceptions import BotoCoreError
+from fastapi import FastAPI, Form, Request
 from fastapi.responses import HTMLResponse, RedirectResponse
 
 from pokegrade import review
@@ -15,6 +16,16 @@ from pokegrade.search import search_cards
 os.environ.setdefault("SCANS_BUCKET", "pokegrade-scans-017421876144-us-east-2-an")
 
 app = FastAPI()
+
+
+# Show a clear message instead of a server error when the AWS login is missing or expired
+@app.exception_handler(BotoCoreError)
+def aws_error(request: Request, exc: BotoCoreError):
+    return HTMLResponse(
+        f'<p style="color:red">AWS error: {escape(str(exc))}</p>'
+        "<p>Run <code>aws login</code> in the terminal, then reload this page.</p>",
+        status_code=503,
+    )
 
 
 # Turn a card ID into a readable name, set, and number for the page
