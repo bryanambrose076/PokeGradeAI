@@ -69,6 +69,16 @@ def test_resubmit_replaces_unless_reviewed():
 
 
 @needs_db
+def test_old_scan_rejected():
+    scan_id = make_scan()
+    db.run("UPDATE scans SET created_at = now() - make_interval(hours => 25) WHERE id = %s", (scan_id,))
+    response = report(scan_id, "mew 205", "sv03.5/205")
+    assert response.status_code == 400
+    assert response.json()["detail"] == "This scan is too old to report"
+    assert saved(scan_id) is None
+
+
+@needs_db
 @pytest.mark.parametrize("scan_id, query, card_id, error", [
     (None, "mew", "fake/1", "Unknown card"),
     ("new", "mew", None, "Unknown scan"),
