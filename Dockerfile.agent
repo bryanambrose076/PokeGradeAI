@@ -1,0 +1,18 @@
+# Fix agent: the app image plus Claude Code, so the agent can run the tests and eval while it works.
+# Built on top of the app image: docker build -t pokegrade . && docker build -f Dockerfile.agent -t pokegrade-agent .
+FROM pokegrade
+
+RUN apt-get update && apt-get install -y --no-install-recommends curl git ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+RUN pip install --no-cache-dir -r /app/requirements-dev.txt
+
+# Claude Code refuses to skip permission checks as root, so the agent runs as its own user
+RUN useradd -m agent && chown -R agent /app
+USER agent
+RUN curl -fsSL https://claude.ai/install.sh | bash -s 2.1.312
+ENV PATH="/home/agent/.local/bin:$PATH" DISABLE_AUTOUPDATER=1
+# The workspace is mounted from the host, so git must accept a folder owned by another user
+RUN git config --global --add safe.directory '*' \
+    && git config --global user.name fix-agent && git config --global user.email agent@localhost
+
+WORKDIR /work
