@@ -1,6 +1,6 @@
 """Run the fix agent (Claude Code in Docker) on the tune misses, then score its candidates with the harness.
 
-Run: python -m scripts.export_labels, then python -m scripts.fix_agent [--budget 10] [--minutes 60]
+Run: python -m scripts.export_labels, then python -m scripts.fix_agent [--model opus] [--effort high]
 Needs CLAUDE_CODE_OAUTH_TOKEN in .env (from `claude setup-token`). Writes experiments/<run id>/.
 """
 import argparse
@@ -18,9 +18,6 @@ from scripts import harness
 REPO = Path(__file__).resolve().parent.parent
 PROMPT = REPO / "agent" / "prompt.md"
 TASK = "Follow the instructions in your system prompt. Start by running the evals."
-# Strongest model for diagnosing from photos; on the subscription it costs usage limits, not money
-MODEL = "opus"
-EFFORT = "xhigh"
 
 
 def run(cmd, **kwargs):
@@ -55,7 +52,7 @@ def collect_candidates(work, run_dir):
     return branches
 
 
-def main(budget, minutes):
+def main(model, effort, budget, minutes):
     token = dotenv_values(REPO / ".env").get("CLAUDE_CODE_OAUTH_TOKEN")
     if not token:
         raise SystemExit("CLAUDE_CODE_OAUTH_TOKEN isn't in .env; run `claude setup-token` and add it")
@@ -75,13 +72,13 @@ def main(budget, minutes):
 
     # The token is the container's only credential, passed by name so it never appears on the command line.
     # Reference images are mounted read-only for comparing; no MCP servers, no permission prompts inside the sandbox.
-    print(f"Running the fix agent (up to ${budget} of usage, {minutes} min)...")
+    print(f"Running the fix agent ({model}, {effort} effort, up to ${budget} of usage, {minutes} min)...")
     name = f"fix-agent-{run_dir.name}"
     try:
         agent = run(["docker", "run", "--rm", "--name", name, "-e", "CLAUDE_CODE_OAUTH_TOKEN",
                      "-v", f"{work}:/work", "-v", f"{REPO / 'data' / 'images'}:/work/data/images:ro",
                      "-v", f"{PROMPT}:/task/prompt.md:ro", "pokegrade-agent",
-                     "claude", "-p", TASK, "--model", MODEL, "--effort", EFFORT, "--append-system-prompt-file", "/task/prompt.md",
+                     "claude", "-p", TASK, "--model", model, "--effort", effort, "--append-system-prompt-file", "/task/prompt.md",
                      "--permission-mode", "bypassPermissions", "--strict-mcp-config",
                      "--max-budget-usd", str(budget), "--output-format", "json"],
                     env={**os.environ, "CLAUDE_CODE_OAUTH_TOKEN": token}, timeout=minutes * 60)
@@ -108,7 +105,10 @@ def main(budget, minutes):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--budget", type=float, default=10, help="stop the agent at this much usage, in API dollars")
-    parser.add_argument("--minutes", type=int, default=60, help="stop the agent after this many minutes")
+    # On the subscription these cost usage limits, not money; Opus at high fits a fresh Pro window better than xhigh
+    parser.add_argument("--model", default="opus", help="opus or sonnet")
+    parser.add_argument("--effort", default="high", choices=["low", "medium", "high", "xhigh", "max"])
+    parser.add_argument("--budget", type=float, default=25, help="stop the agent at this much usage, in API dollars")
+    parser.add_argument("--minutes", type=int, default=90, help="stop the agent after this many minutes")
     args = parser.parse_args()
-    main(args.budget, args.minutes)
+    main(args.model, args.effort, args.budget, args.minutes)

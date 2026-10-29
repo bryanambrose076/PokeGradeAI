@@ -10,9 +10,9 @@ reference image (`pokegrade/matcher.py`, `pokegrade/pipeline.py`). You are in a 
    Look at each missed crop next to the reference images of the right card and of the app's guess
    (`data/images/<card_id>.png`). Work out *why* the matcher picked the wrong card: tint, glare, blur,
    a bad crop, a sleeve or toploader edge, or something else.
-2. **Fix.** Write 2 to 4 *different* candidate fixes for the cause you found. Each candidate goes on
+2. **Fix.** Write 2 or 3 *different* candidate fixes for the cause you found. Each candidate goes on
    its own branch made from `base`: `git checkout -b fix-1 base`, change the code, run the checks
-   below, then `git commit -am "<cause>: <what the fix does>"`. Name branches fix-1 to fix-4.
+   below, then `git commit -am "<cause>: <what the fix does>"`. Name branches fix-1 to fix-3.
 3. **Check each candidate** before committing: `pytest -q`, and both evals above. A candidate that makes
    a photo that was right go wrong is not a good candidate; try something else.
 4. **Finish** with a short summary: the cause you found, the evidence, and one line per candidate.
