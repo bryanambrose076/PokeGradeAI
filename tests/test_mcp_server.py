@@ -173,8 +173,11 @@ def test_view_crop_no_photo(s3):
 
 @needs_db
 def test_image_tools_return_pictures(s3):
-    scan_id = make_photo_scan()
-    for name, args in [("view_crop", {"scan_id": scan_id}), ("view_reference", {"card_id": MEW})]:
+    tools = [("view_crop", {"scan_id": make_photo_scan()})]
+    # Reference images are gitignored, so view_reference is only checked where they've been downloaded
+    if (mcp_server.IMAGES_DIR / f"{MEW}.png").exists():
+        tools.append(("view_reference", {"card_id": MEW}))
+    for name, args in tools:
         result = asyncio.run(mcp_server.mcp.call_tool(name, args))
         assert not result.is_error
         assert result.content[0].type == "image"
