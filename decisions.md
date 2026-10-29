@@ -350,3 +350,28 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 **What the experiment left behind:** in `mcp` 2.3 only `ToolError` messages reach the model; any other exception shows up as a bare "Error executing tool X". The first run hit an expired AWS login and the agent could only guess why. Every server error is now a `ToolError`, with a test that the AWS message gets through. The agent also handled that failure well: it logged nothing instead of approving blind.
 **Testing:** two real runs on Opus 5.5 at medium effort (first: AWS login expired, 0 suggestions; second: 2 correct approve suggestions, 12 tool calls, 29 s). 71 tests total.
 **Would change my mind if:** reports arrive faster than I can check them (then a reviewer agent, run on a schedule, earns its cost), or low-confidence scans turn out common enough that the Claude fallback above is worth building.
+
+## 15. Fix agent and harness
+**Date:** 2026-10-29
+**Decision:** Claude Code runs headless (`claude -p`) inside a Docker image built on the app image (`Dockerfile.agent`), on my Claude subscription. It studies the tune misses, writes 2–4 candidate fixes on git branches, and stops. A separate harness (`scripts/harness.py`) then scores every candidate in a fresh container against the committed code and writes a report. I apply the winner myself.
+**How a run works:** `export_labels.py` downloads tune labels (never holdout) → `fix_agent.py` builds a workspace from `git archive` (no `.env`, no `.mcp.json`, no history) plus the tune photos → Claude Code works in the container → each `fix-N` branch becomes a `.diff` → the harness builds, tests and evals the baseline and each candidate, with eval photos mounted read-only → `compare_evals` per photo → gate → `report.md`.
+**Why:**
+- **Subscription, not the API:** no extra bill. `--bare` would be the cleaner headless mode but it ignores subscription logins, so the run uses `CLAUDE_CODE_OAUTH_TOKEN` from `claude setup-token` and gets the same isolation another way: `--strict-mcp-config` with no config (no MCP servers), and a workspace with nothing personal in it.
+- **The agent never scores itself:** it can run the evals while it works, but the result that counts comes from the harness, in containers it can't touch, built from a clean checkout.
+- **Container per candidate:** each is built and scored from scratch, so one can't affect another and every score is reproducible.
+**Guardrails:**
+| Rule | Enforced by |
+| --- | --- |
+| No edits to `eval/`, `scripts/`, CI, Dockerfiles, requirements | Harness rejects the candidate before building it |
+| No card-specific hacks | Prompt rule, plus a flag (not a rejection) on real card IDs or photo names in added `pokegrade/` lines; tests and card data legitimately use IDs |
+| No photo that was right may go wrong | Gate, per photo, not just totals (+1 −1 is not a win) |
+| No Neon, S3 or GitHub access | None of those credentials are in the container; the subscription token is the only one |
+| Bounded runs | `--max-budget-usd`, a wall-clock timeout, and the container is killed on timeout |
+| Agent can run anything | Only inside the container (`bypassPermissions`), as a non-root user, writing only to its workspace copy |
+**Options considered:**
+- **Timing as a gate:** no. A no-op candidate measured +28% and +50% "slower" in the first harness test, so time is reported for me to judge, never gated.
+- **Rejecting card IDs outright:** no; it would reject good fixes that add tests. Flag them instead and let holdout catch the subtle overfitting.
+- **Fix agent opens a PR:** no; it would need a GitHub token, and merging deploys.
+**Testing:** a harness run on 3 planted candidates: the one editing `scripts/eval.py` was rejected unbuilt, the one naming `me02.5/257` was flagged, and a no-op matched the baseline exactly (23/25, 0/2). It also caught a real bug: `test_view_reference` needs gitignored images, so it failed in every container, including CI since the MCP commit. That test now skips without the images, and the harness refuses to run if the baseline's own tests fail. The token was checked inside the agent container with a one-word prompt. 79 tests total.
+**Results:** pending the first real run.
+**Would change my mind if:** candidates keep failing on too few labels to learn from (then collect more misses before running it again), or the network needs locking down to Anthropic only (not done yet).
