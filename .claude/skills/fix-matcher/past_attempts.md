@@ -39,3 +39,30 @@ most confident about" with CLIP (picked a confidently wrong crop).
 ## Fix agent runs
 
 Each run's outcome is added here, so the next run starts from what's already known.
+
+### 2026-10-29 (Opus, high effort, 49 turns)
+
+Note: the 2 tune scans are the same photos as eval misses IMG_0277 and IMG_0287, so each fix counts twice in the report.
+
+**Canari (toploader, tilted):** the traced outline was right (#1, 0.666), but a center window scored 0.698 for Ludicolo and
+beat crop #1 by more than the margin. Windows only had to beat crop #1, never the best outline.
+
+| Candidate | Change | Eval | Tune | Speed | Outcome |
+|---|---|---|---|---|---|
+| fix-1 | A center window must beat *every* traced outline by the margin | 24/25 | 1/2 | +1% | Passed; recommended |
+| fix-2 | Re-match the chosen crop after a per-channel 1st/99th percentile contrast stretch | 24/25 | 1/2 | +11% | Passed; untested on unseen cards |
+| fix-3 | Both | 24/25 | 1/2 | +11% | Passed; no extra photo fixed |
+
+Canari is right after each fix but still under the 0.03 confidence gap (0.006-0.022).
+
+**Failed for Canari / overall:**
+- Contrast-stretching every candidate before choosing: fixes Canari, breaks IMG_0291 (a wrong outline wins by 0.004).
+- Averaging raw and stretched embeddings: no gain.
+- Choosing the crop with the biggest #1-#2 gap: 18/27.
+- Color re-rank of near ties: 20-22/27; broke a same-number reprint and other near ties.
+
+**Lillie's Clefairy ex (CGC slab, holo glare, warm tint) is still #2-#3; the crop itself is correct.** Nothing tried moves it to #1:
+contrast stretch, black-point lift, dehaze, glare inpainting, CLAHE, sharpening, more saturation, grayscale, the crop 6%
+smaller to 10% bigger, exact four corners, score centering or hub correction, color-histogram re-ranking. Mega Clefable ex
+and sv08.5/156 keep winning; sv08.5/156 is a "hub" card that scores high for many photos (it also came up for Canari).
+Ideas not tried: glare-aware matching, or reading the printed card number to break near ties.

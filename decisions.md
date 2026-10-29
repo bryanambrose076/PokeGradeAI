@@ -375,5 +375,19 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 - **Rejecting card IDs outright:** no; it would reject good fixes that add tests. Flag them instead and let holdout catch the subtle overfitting.
 - **Fix agent opens a PR:** no; it would need a GitHub token, and merging deploys.
 **Testing:** a harness run on 3 planted candidates: the one editing `scripts/eval.py` was rejected unbuilt, the one naming `me02.5/257` was flagged, and a no-op matched the baseline exactly (23/25, 0/2). It also caught a real bug: `test_view_reference` needs gitignored images, so it failed in every container, including CI since the MCP commit. That test now skips without the images, and the harness refuses to run if the baseline's own tests fail. The token was checked inside the agent container with a one-word prompt. 79 tests total.
-**Results:** pending the first real run.
+**Results (first real run, 2026-10-29, `experiments/2026-10-29-1327/`):** Opus at high effort, 49 turns, ~40 minutes, about $1.86 at API prices (on the subscription, not billed); the 4 GB Docker VM was enough. The agent's diagnosis matched what the side-by-side images show:
+- **Canari:** the traced outline was right, but a blind center window scored higher for the wrong card (Ludicolo) and beat crop #1 by more than the margin; windows only ever had to beat crop #1. This is the regression the center windows introduced in section 3.
+- **Lillie's Clefairy ex:** the crop is correct; slab haze and holo glare are the problem. Over 10 clean-up ideas failed (all recorded in the skill's `past_attempts.md`).
+
+| Candidate | Change | Eval top-1 | Tune top-1 | Speed | Gate |
+| --- | --- | --- | --- | --- | --- |
+| baseline | | 23/25 | 0/2 | | |
+| **fix-1** | A center window must beat every traced outline by the margin | **24/25** | 1/2 | +1% | passes |
+| fix-2 | Re-match the chosen crop after a contrast stretch | 24/25 | 1/2 | +11% | passes |
+| fix-3 | Both | 24/25 | 1/2 | +11% | passes |
+
+- **Picked fix-1.** Same gain as the others, no speed cost, and it only changes which crop wins. fix-2 and fix-3 change what every scan is matched on, for no extra photo fixed, and with no holdout there's no way to check they don't hurt unseen cards. They stay saved in `experiments/` to retest once holdout photos exist.
+- **The real gain is one photo.** The tune scan of Canari is the same picture as eval photo IMG_0277, so "2 fixed" in the report is one photo counted twice. Canari is right but still flagged as unsure (gap 0.006–0.022).
+- **What the system showed:** the agent diagnosed correctly, stayed inside its rules (no protected files, no card IDs flagged), reported what failed as well as what worked, and the harness, not the agent, confirmed the result.
+- **Gap:** without holdout photos, "fixes Canari and breaks none of 25" is encouraging but not proof that fix-1 generalizes.
 **Would change my mind if:** candidates keep failing on too few labels to learn from (then collect more misses before running it again), or the network needs locking down to Anthropic only (not done yet).
