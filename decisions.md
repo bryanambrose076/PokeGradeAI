@@ -333,3 +333,20 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 **Testing:** `tests/test_mcp_server.py` calls each tool directly (filters, unknown scan IDs, tune-only label misses, every tool has a real description). Also started the server over stdio and called `search_cards` through an MCP client. 70 tests total.
 **Login:** `db.py` and `pricing.py` load `.env` on import, so the server would quietly get the owner `DATABASE_URL`. It refuses to start without `AGENT_DATABASE_URL` and swaps it in; checked that `current_user` is `pokegrade_agent`. `.mcp.json` starts it from Claude Code and holds no secrets.
 **Would change my mind if:** suggestions turn out to be mostly code fixes (then the review step adds little), or the holdout can't be kept out of the fix agent's container.
+**Update 2026-10-29:** the review agent was built and then dropped; see section 14.
+
+## 14. Review agent dropped; I review reports, the fix agent diagnoses
+**Date:** 2026-10-29
+**Decision:** No review agent. I approve or reject every report on the review page. The fix agent (Claude Code in Docker) gets the approved tune misses, as crops plus correct card IDs, and works out the failure pattern itself before writing candidate fixes. The MCP server stays as a read-only toolbox for inspecting failures from Claude Code.
+**Why:** The review agent worked: 2 of 2 reports judged right (Canari, Lillie's Clefairy ex) by reading the set number, attacks and HP off the crop. But an AI that identifies cards invites "why not use it for every scan?", and the answer (cost and speed) argues for keeping it out of that job. The cleaner design is a cheap matcher in production and an expensive agent working offline to improve it. Reports are few, so checking them myself takes seconds, and human-checked labels are fairer test data than labels Claude approved and a Claude agent is later graded on.
+**Options considered:**
+| Option | Per scan | Speed | Verdict |
+| --- | --- | --- | --- |
+| Matcher only (now) | ~$0 | <1 s | Keep: 23/25 top-1 on the eval |
+| Claude identifies every scan | ~1–3¢ on Opus | several seconds | No: pays for the 92% the matcher already gets right |
+| Claude only on low-confidence scans (gap < 0.03) | a few ¢, on maybe 10–20% of scans | several seconds on those | Backlog: both misses had gaps ~0.018 and Claude got both right |
+| Review agent suggests, I approve | ~$0.01–0.10 per run | 30 s per run | Dropped: works, but adds little at this volume |
+- **Hand-written agent loop vs the SDK tool runner:** chose the tool runner; the loop alone added nothing the runner's hooks couldn't do.
+**What the experiment left behind:** in `mcp` 2.3 only `ToolError` messages reach the model; any other exception shows up as a bare "Error executing tool X". The first run hit an expired AWS login and the agent could only guess why. Every server error is now a `ToolError`, with a test that the AWS message gets through. The agent also handled that failure well: it logged nothing instead of approving blind.
+**Testing:** two real runs on Opus 5.5 at medium effort (first: AWS login expired, 0 suggestions; second: 2 correct approve suggestions, 12 tool calls, 29 s). 71 tests total.
+**Would change my mind if:** reports arrive faster than I can check them (then a reviewer agent, run on a schedule, earns its cost), or low-confidence scans turn out common enough that the Claude fallback above is worth building.
