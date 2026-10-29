@@ -20,6 +20,7 @@ PROMPT = REPO / "agent" / "prompt.md"
 TASK = "Follow the instructions in your system prompt. Start by running the evals."
 # Strongest model for diagnosing from photos; on the subscription it costs usage limits, not money
 MODEL = "opus"
+EFFORT = "xhigh"
 
 
 def run(cmd, **kwargs):
@@ -80,7 +81,7 @@ def main(budget, minutes):
         agent = run(["docker", "run", "--rm", "--name", name, "-e", "CLAUDE_CODE_OAUTH_TOKEN",
                      "-v", f"{work}:/work", "-v", f"{REPO / 'data' / 'images'}:/work/data/images:ro",
                      "-v", f"{PROMPT}:/task/prompt.md:ro", "pokegrade-agent",
-                     "claude", "-p", TASK, "--model", MODEL, "--append-system-prompt-file", "/task/prompt.md",
+                     "claude", "-p", TASK, "--model", MODEL, "--effort", EFFORT, "--append-system-prompt-file", "/task/prompt.md",
                      "--permission-mode", "bypassPermissions", "--strict-mcp-config",
                      "--max-budget-usd", str(budget), "--output-format", "json"],
                     env={**os.environ, "CLAUDE_CODE_OAUTH_TOKEN": token}, timeout=minutes * 60)
