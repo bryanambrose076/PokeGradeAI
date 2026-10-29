@@ -27,11 +27,11 @@ def load_labels(path=LABELS_PATH):
 
 
 # Scan each labeled photo and record where the right card ranked
-def run_eval(labels, matcher, top_k=5):
+def run_eval(labels, matcher, top_k=5, photos_dir=PHOTOS_DIR):
     os.makedirs(CROPS_DIR, exist_ok=True)
     results = []
     for row in labels:
-        img = cv2.imread(os.path.join(PHOTOS_DIR, row["filename"]))
+        img = cv2.imread(os.path.join(photos_dir, row["filename"]))
         if img is None:
             print(f"Could not read {row['filename']}, skipping")
             continue
@@ -103,12 +103,13 @@ def print_report(results):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("labels", nargs="?", default=LABELS_PATH)
+    parser.add_argument("--photos", default=PHOTOS_DIR, help="folder holding the photos named in the labels file")
     parser.add_argument("--min-top1", type=int, help="exit with an error if fewer photos are correct at #1")
     parser.add_argument("--min-top5", type=int, help="exit with an error if fewer photos have the right card in the top 5")
     parser.add_argument("--json", metavar="PATH", help="also write every photo's result to this JSON file")
     args = parser.parse_args()
 
-    results = run_eval(load_labels(args.labels), load_matcher())
+    results = run_eval(load_labels(args.labels), load_matcher(), photos_dir=args.photos)
     top1, top5 = print_report(results)
     if args.json:
         save_json(results, args.json)
