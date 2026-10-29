@@ -7,3 +7,4 @@ venv/
 data/images/
 eval/photos_raw/
 eval/crops/
+logs/
