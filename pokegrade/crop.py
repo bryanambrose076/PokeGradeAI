@@ -7,6 +7,9 @@ import os
 # width / height of a Pokemon card (63mm x 88mm)
 CARD_RATIO = 63 / 88
 
+# sizes of the card-shaped windows around the photo center that crop_candidates adds last
+CENTER_WINDOW_FRACS = (0.5, 0.65, 0.8)
+
 
 # Sort the 4 corners into top-left, top-right, bottom-right, bottom-left
 def order_points(pts):
@@ -183,9 +186,10 @@ def crop_candidates(image, card_width=500, card_height=700, max_side=1000):
             candidates.append(cv2.rotate(warped, cv2.ROTATE_180))
 
     # card-shaped windows around the photo center, for when the card's outline isn't found
-    # (fingers or a sleeve breaking the edge); users center the card they're scanning
+    # (fingers or a sleeve breaking the edge); users center the card they're scanning.
+    # They always come last, so the matcher can tell them apart from crops that followed an outline.
     img_h, img_w = img.shape[:2]
-    for frac in (0.5, 0.65, 0.8):
+    for frac in CENTER_WINDOW_FRACS:
         h = min(img_h * frac, img_w * frac / CARD_RATIO)
         w = h * CARD_RATIO
         x0, y0 = int(img_w / 2 - w / 2), int(img_h / 2 - h / 2)

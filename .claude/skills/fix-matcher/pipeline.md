@@ -11,8 +11,9 @@
    - three card-shaped windows around the photo center (50/65/80% of the frame), for when no outline is found.
 2. **Embed and match** (`pokegrade/matcher.py` `match_candidates`). All crops are embedded in one batch with DINOv2
    (`embed_images`: the whole crop squashed to 224x224, no center crop) and compared by cosine similarity with the
-   4,585 reference embeddings in `data/embeddings.pt`. Crop #1 stays the answer unless another crop's top score beats
-   it by at least `margin = 0.04`.
+   4,585 reference embeddings in `data/embeddings.pt`. Crop #1 stays the answer unless another traced-outline crop's top
+   score beats it by at least `margin = 0.04`. The center windows (the last `len(CENTER_WINDOW_FRACS)` crops) are
+   blind guesses, so a window only wins if it beats the *best* outline crop by the margin.
 3. **Confidence** (`pipeline.py`). If #1 beats #2 by less than `LOW_CONFIDENCE_GAP = 0.03`, the scan is flagged as
    unsure. Correct matches usually have gaps of 0.09 or more; both known user misses had gaps of about 0.018.
 

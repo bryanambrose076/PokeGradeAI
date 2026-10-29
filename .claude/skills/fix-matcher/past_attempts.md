@@ -34,6 +34,7 @@ most confident about" with CLIP (picked a confidently wrong crop).
 ## Known misses (as of 2026-10-29)
 
 - Canari (toploader, warm color cast, glare): right card #2, gap 0.018. Was #1 before the center windows were added.
+  **Fixed 2026-10-30** by fix-1 (applied): now #1, gap 0.014, still flagged as unsure.
 - Lillie's Clefairy ex (CGC slab, holo glare, warm tint): crop looks correct, right card #3, gap 0.017.
 
 ## Fix agent runs

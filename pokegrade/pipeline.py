@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 import requests
 
-from pokegrade.crop import crop_candidates
+from pokegrade.crop import CENTER_WINDOW_FRACS, crop_candidates
 from pokegrade.matcher import load_matcher, match_candidates
 from pokegrade.pricing import lookup_local_card, get_card_prices, grading_roi,  API_KEY
 from pokegrade.price_cache import get_cached, save
@@ -19,7 +19,7 @@ LOW_CONFIDENCE_GAP = 0.03
 def match_photo(img, matcher, top_k=5):
     """img: BGR array. Returns (matches, chosen crop). Shared by /scan and scripts/eval.py."""
     candidates = crop_candidates(img)
-    matches, chosen = match_candidates(candidates, matcher, top_k=top_k)
+    matches, chosen = match_candidates(candidates, matcher, top_k=top_k, num_windows=len(CENTER_WINDOW_FRACS))
     return matches, candidates[chosen]
 
 

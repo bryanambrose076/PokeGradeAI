@@ -67,18 +67,27 @@ def match_card(image, matcher, top_k=5):
     return [(keys[i], s) for i, s in zip(top_indices.tolist(), top_scores.tolist())]
 
 
-def match_candidates(images, matcher, top_k=5, margin=0.04):
+def match_candidates(images, matcher, top_k=5, margin=0.04, num_windows=0):
     """Matches several candidate crops in one batch and returns (matches, index of the chosen crop).
     The first crop is kept unless another one's top score beats it by at least `margin`,
-    so a random patch that happens to resemble some card doesn't win on a tiny edge."""
+    so a random patch that happens to resemble some card doesn't win on a tiny edge.
+    The last `num_windows` crops are blind windows, not traced outlines: an axis-aligned window
+    over a tilted card or one in a toploader can edge out the true outline while matching a
+    different card, so a window must beat every outlined crop by `margin`, not just the first."""
     features = embed_images(images, matcher["model"], matcher["processor"], matcher["device"])
     normalized = torch.nn.functional.normalize(features, p=2, dim=1)
     scores = normalized @ matcher["normalized_matrix"].T  # [num_crops, num_cards]
     top_scores, top_indices = torch.topk(scores, k=top_k, dim=1)
 
-    best = int(torch.argmax(top_scores[:, 0]))
-    if top_scores[best, 0] - top_scores[0, 0] < margin:
+    best_scores = top_scores[:, 0]
+    num_outlines = len(images) - num_windows if num_windows < len(images) else len(images)
+    best = int(torch.argmax(best_scores[:num_outlines]))
+    if best_scores[best] - best_scores[0] < margin:
         best = 0
+    if num_outlines < len(images):
+        window = num_outlines + int(torch.argmax(best_scores[num_outlines:]))
+        if best_scores[window] - best_scores[:num_outlines].max() >= margin:
+            best = window
 
     keys = matcher["keys"]
     matches = [(keys[i], s) for i, s in zip(top_indices[best].tolist(), top_scores[best].tolist())]
