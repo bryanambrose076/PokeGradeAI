@@ -6,6 +6,8 @@ import uuid
 import cv2
 import numpy as np
 import pytest
+from botocore.exceptions import LoginRefreshRequired
+from mcp.server.mcpserver.exceptions import ToolError
 from psycopg.types.json import Jsonb
 
 from pokegrade import db, mcp_server, review
@@ -95,7 +97,7 @@ def test_get_scan():
 @needs_db
 @pytest.mark.parametrize("scan_id", ["abc", str(uuid.uuid4())])
 def test_get_scan_unknown(scan_id):
-    with pytest.raises(ValueError):
+    with pytest.raises(ToolError):
         mcp_server.get_scan(scan_id)
 
 
@@ -131,7 +133,7 @@ def test_view_reference():
 
 @pytest.mark.parametrize("card_id", ["fake/1", "../../.env", NO_IMAGE])
 def test_view_reference_refused(card_id):
-    with pytest.raises(ValueError):
+    with pytest.raises(ToolError):
         mcp_server.view_reference(card_id)
 
 
@@ -163,7 +165,7 @@ def test_view_crop_prefers_label_copy(s3):
 
 @needs_db
 def test_view_crop_no_photo(s3):
-    with pytest.raises(ValueError, match="no saved crop"):
+    with pytest.raises(ToolError, match="no saved crop"):
         mcp_server.view_crop(make_scan(MEW))
 
 
@@ -174,6 +176,16 @@ def test_image_tools_return_pictures(s3):
         result = asyncio.run(mcp_server.mcp.call_tool(name, args))
         assert not result.is_error
         assert result.content[0].type == "image"
+
+
+# The agent should see why S3 failed, not just "Error executing tool view_crop"
+@needs_db
+def test_view_crop_aws_login_expired(s3, monkeypatch):
+    def expired(**kwargs):
+        raise LoginRefreshRequired()
+    monkeypatch.setattr(s3, "get_object", expired)
+    with pytest.raises(ToolError, match="aws login"):
+        asyncio.run(mcp_server.mcp.call_tool("view_crop", {"scan_id": make_photo_scan()}))
 
 
 def suggestions():
@@ -199,12 +211,12 @@ def test_log_suggestion_replaces_within_run():
     ("reject", "x", "fake/1", "Not a real card"),
 ])
 def test_log_suggestion_refused(kind, reason, card_id, error):
-    with pytest.raises(ValueError, match=error):
+    with pytest.raises(ToolError, match=error):
         mcp_server.log_suggestion(make_scan(MEW), kind, reason, card_id)
     assert suggestions() == []
 
 
 @needs_db
 def test_log_suggestion_unknown_scan():
-    with pytest.raises(ValueError, match="No scan"):
+    with pytest.raises(ToolError, match="No scan"):
         mcp_server.log_suggestion(str(uuid.uuid4()), "reject", "spam")

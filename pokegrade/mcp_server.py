@@ -7,7 +7,9 @@ import uuid
 
 import cv2
 import numpy as np
+from botocore.exceptions import BotoCoreError
 from mcp.server.mcpserver import Image, MCPServer
+from mcp.server.mcpserver.exceptions import ToolError
 
 from pokegrade import db, review, search
 from pokegrade.pricing import lookup_local_card
@@ -19,6 +21,8 @@ KINDS = ("approve", "reject", "eval_photo", "code_fix")
 # Each time the server starts counts as one review run
 RUN_ID = str(uuid.uuid4())
 
+# Tools raise ToolError, not ValueError: only ToolError messages reach the agent,
+# anything else shows up as a bare "Error executing tool X"
 mcp = MCPServer("pokegrade")
 
 # Turn a card ID into {card_id, name}, or None if there's no card
@@ -42,14 +46,17 @@ def _check_scan_id(scan_id):
     try:
         uuid.UUID(scan_id)
     except ValueError:
-        raise ValueError(f"Not a scan ID: {scan_id}")
+        raise ToolError(f"Not a scan ID: {scan_id}")
 
 
 # Download a photo from S3 and shrink it so its longest side is at most MAX_IMAGE_SIDE
 def _download_jpeg(key):
     if not os.getenv("SCANS_BUCKET"):
-        raise ValueError("SCANS_BUCKET isn't set; add it to the server's env in .mcp.json")
-    data = review._client().get_object(Bucket=os.environ["SCANS_BUCKET"], Key=key)["Body"].read()
+        raise ToolError("SCANS_BUCKET isn't set; add it to the server's env in .mcp.json")
+    try:
+        data = review._client().get_object(Bucket=os.environ["SCANS_BUCKET"], Key=key)["Body"].read()
+    except BotoCoreError as e:
+        raise ToolError(f"AWS error: {e} The owner needs to run `aws login`; this isn't a problem with the scan.")
     img = cv2.imdecode(np.frombuffer(data, np.uint8), cv2.IMREAD_COLOR)
     scale = MAX_IMAGE_SIDE / max(img.shape[:2])
     if scale < 1:
@@ -107,7 +114,7 @@ def get_scan(scan_id: str) -> dict:
         "SELECT created_at, card_id, gap, low_confidence, top_matches FROM scans WHERE id = %s", (scan_id,)
     )
     if scan is None:
-        raise ValueError(f"No scan with ID {scan_id}")
+        raise ToolError(f"No scan with ID {scan_id}")
     report = db.run("SELECT query, card_id, status FROM corrections WHERE scan_id = %s", (scan_id,))
     label = db.run("SELECT card_id, split FROM labels WHERE scan_id = %s", (scan_id,))
     return {
@@ -143,11 +150,11 @@ def view_crop(scan_id: str, full_photo: bool = False) -> Image:
         (scan_id,),
     )
     if row is None:
-        raise ValueError(f"No scan with ID {scan_id}")
+        raise ToolError(f"No scan with ID {scan_id}")
     # Approved scans have a kept copy in labels/, which outlives the 90-day cleanup
     key = (row[2] or row[0]) if full_photo else (row[3] or row[1])
     if key is None:
-        raise ValueError(f"Scan {scan_id} has no saved {'photo' if full_photo else 'crop'}")
+        raise ToolError(f"Scan {scan_id} has no saved {'photo' if full_photo else 'crop'}")
     return Image(data=_download_jpeg(key), format="jpeg")
 
 
@@ -160,7 +167,7 @@ def view_reference(card_id: str) -> Image:
     """
     path = IMAGES_DIR / f"{card_id}.png"
     if not search.is_real_card(card_id) or not path.exists():
-        raise ValueError(f"Not a supported card: {card_id}")
+        raise ToolError(f"Not a supported card: {card_id}")
     return Image(data=path.read_bytes(), format="png")
 
 
@@ -245,16 +252,16 @@ def log_suggestion(scan_id: str, kind: str, reason: str, card_id: str | None = N
     """
     _check_scan_id(scan_id)
     if kind not in KINDS:
-        raise ValueError(f"kind must be one of {', '.join(KINDS)}")
+        raise ToolError(f"kind must be one of {', '.join(KINDS)}")
     reason = reason.strip()
     if not 1 <= len(reason) <= MAX_REASON_LENGTH:
-        raise ValueError(f"reason must be 1-{MAX_REASON_LENGTH} characters")
+        raise ToolError(f"reason must be 1-{MAX_REASON_LENGTH} characters")
     if card_id is None and kind in ("approve", "eval_photo"):
-        raise ValueError(f"{kind} needs a card_id")
+        raise ToolError(f"{kind} needs a card_id")
     if card_id is not None and not search.is_real_card(card_id):
-        raise ValueError(f"Not a real card: {card_id}")
+        raise ToolError(f"Not a real card: {card_id}")
     if db.run("SELECT 1 FROM scans WHERE id = %s", (scan_id,)) is None:
-        raise ValueError(f"No scan with ID {scan_id}")
+        raise ToolError(f"No scan with ID {scan_id}")
     row = db.run(
         """
         INSERT INTO suggestions (run_id, scan_id, kind, card_id, reason) VALUES (%s, %s, %s, %s, %s)
