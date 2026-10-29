@@ -16,8 +16,8 @@ from dotenv import dotenv_values
 from scripts import harness
 
 REPO = Path(__file__).resolve().parent.parent
-PROMPT = REPO / "agent" / "prompt.md"
-TASK = "Follow the instructions in your system prompt. Start by running the evals."
+# The know-how lives in the fix-matcher skill (.claude/skills/), which reaches the workspace through git
+TASK = "/fix-matcher Diagnose why the matcher misses these scans and write 2-3 candidate fixes."
 
 
 def run(cmd, **kwargs):
@@ -77,8 +77,8 @@ def main(model, effort, budget, minutes):
     try:
         agent = run(["docker", "run", "--rm", "--name", name, "-e", "CLAUDE_CODE_OAUTH_TOKEN",
                      "-v", f"{work}:/work", "-v", f"{REPO / 'data' / 'images'}:/work/data/images:ro",
-                     "-v", f"{PROMPT}:/task/prompt.md:ro", "pokegrade-agent",
-                     "claude", "-p", TASK, "--model", model, "--effort", effort, "--append-system-prompt-file", "/task/prompt.md",
+                     "pokegrade-agent",
+                     "claude", "-p", TASK, "--model", model, "--effort", effort,
                      "--permission-mode", "bypassPermissions", "--strict-mcp-config",
                      "--max-budget-usd", str(budget), "--output-format", "json"],
                     env={**os.environ, "CLAUDE_CODE_OAUTH_TOKEN": token}, timeout=minutes * 60)

@@ -15,7 +15,7 @@ from pokegrade.search import _load as load_cards
 from scripts.compare_evals import compare, rank_text
 
 # A fix may not touch how it's measured or what gets installed; those candidates are rejected outright
-PROTECTED = ("eval/", "scripts/", ".github/", "Dockerfile", ".dockerignore", "requirements", "pytest.ini")
+PROTECTED = ("eval/", "scripts/", ".claude/", ".github/", "Dockerfile", ".dockerignore", "requirements", "pytest.ini")
 EVAL_SETS = {"eval": ("eval/labels.csv", "eval/photos_2000"), "tune": ("eval/tune/labels.csv", "eval/tune")}
 REPO = Path(__file__).resolve().parent.parent
 

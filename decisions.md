@@ -354,7 +354,7 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 ## 15. Fix agent and harness
 **Date:** 2026-10-29
 **Decision:** Claude Code runs headless (`claude -p`) inside a Docker image built on the app image (`Dockerfile.agent`), on my Claude subscription, by default with Opus 5.5 at high effort (it costs usage limits, not money). It studies the tune misses, writes 2–3 candidate fixes on git branches, and stops. A separate harness (`scripts/harness.py`) then scores every candidate in a fresh container against the committed code and writes a report. I apply the winner myself.
-**How a run works:** `export_labels.py` downloads tune labels (never holdout) → `fix_agent.py` builds a workspace from `git archive` (no `.env`, no `.mcp.json`, no history) plus the tune photos → Claude Code works in the container → each `fix-N` branch becomes a `.diff` → the harness builds, tests and evals the baseline and each candidate, with eval photos mounted read-only → `compare_evals` per photo → gate → `report.md`.
+**How a run works:** `export_labels.py` downloads tune labels (never holdout) → `fix_agent.py` builds a workspace from `git archive` (no `.env`, no `.mcp.json`, no history) plus the tune photos → Claude Code works in the container, following the `fix-matcher` skill → each `fix-N` branch becomes a `.diff` → the harness builds, tests and evals the baseline and each candidate, with eval photos mounted read-only → `compare_evals` per photo → gate → `report.md`.
 **Why:**
 - **Subscription, not the API:** no extra bill. `--bare` would be the cleaner headless mode but it ignores subscription logins, so the run uses `CLAUDE_CODE_OAUTH_TOKEN` from `claude setup-token` and gets the same isolation another way: `--strict-mcp-config` with no config (no MCP servers), and a workspace with nothing personal in it.
 - **The agent never scores itself:** it can run the evals while it works, but the result that counts comes from the harness, in containers it can't touch, built from a clean checkout.
@@ -362,7 +362,7 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 **Guardrails:**
 | Rule | Enforced by |
 | --- | --- |
-| No edits to `eval/`, `scripts/`, CI, Dockerfiles, requirements | Harness rejects the candidate before building it |
+| No edits to `eval/`, `scripts/`, `.claude/`, CI, Dockerfiles, requirements | Harness rejects the candidate before building it |
 | No card-specific hacks | Prompt rule, plus a flag (not a rejection) on real card IDs or photo names in added `pokegrade/` lines; tests and card data legitimately use IDs |
 | No photo that was right may go wrong | Gate, per photo, not just totals (+1 −1 is not a win) |
 | No Neon, S3 or GitHub access | None of those credentials are in the container; the subscription token is the only one |
@@ -370,6 +370,7 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 | Agent can run anything | Only inside the container (`bypassPermissions`), as a non-root user, writing only to its workspace copy |
 **Options considered:**
 - **Model and effort:** `--model` and `--effort` are chosen per run. I'm on the $20 Pro plan with a 5-hour usage window, and a long Opus run at xhigh could use a whole window and stop before finishing; Opus at high is the best quality that should still finish, and Sonnet at high is the fallback. Candidates cut from 2–4 to 2–3 for the same reason. The harness itself uses no usage (it's Docker on my Mac).
+- **Instructions as a skill, not a prompt file:** the agent's know-how is `.claude/skills/fix-matcher/` (`SKILL.md` workflow and rules, `compare.py` for crop | right card | guess side by side, `pipeline.md` and `past_attempts.md` read only when needed). It reaches the container through git, so the same skill works when I run Claude Code on the repo myself, and `past_attempts.md` carries what each run learned into the next. Candidates can't edit `.claude/`. Checked: the agent container lists `fix-matcher` among its skills.
 - **Timing as a gate:** no. A no-op candidate measured +28% and +50% "slower" in the first harness test, so time is reported for me to judge, never gated.
 - **Rejecting card IDs outright:** no; it would reject good fixes that add tests. Flag them instead and let holdout catch the subtle overfitting.
 - **Fix agent opens a PR:** no; it would need a GitHub token, and merging deploys.
