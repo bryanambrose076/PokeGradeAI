@@ -321,3 +321,15 @@ Returns `None` if either price is missing (checked with `is None`, so a $0 price
 - **LLM fallback for search:** skipped. The one real report so far found its card with plain search; revisit if reports show search missing.
 **Testing:** `test_old_scan_rejected` ages a scan to 25 hours and checks the report is refused and nothing saved. 46 tests total. Concurrency set and checked from the CLI (`get-function-concurrency` returns 3); `/health` still ok.
 **Would change my mind if:** real users hit the concurrency cap (raise it), or abuse shows up from one source (add a per-IP limit, or AWS WAF in front of the function).
+
+## 13. MCP server and the two agents
+**Date:** 2026-10-28
+**Decision:** One local MCP server (`pokegrade/mcp_server.py`, `MCPServer` from `mcp` 2.x, run over stdio) is the review agent's toolbox. Two agents with **no overlap in what they can do**: the review agent reads scans, reports and labels and can only write rows in `suggestions`; the fix agent is Claude Code in the Docker image with no MCP server, no Neon/S3/GitHub credentials and no report text. The fix agent never pushes or opens a PR: it writes a report and candidate diffs, and I apply the winner myself.
+**Why:** The review agent reads text users typed into "Wrong card?", which could be a prompt injection; it can't act, so a trick only produces a bad suggestion I'll reject. The fix agent has a shell and the code, so it only gets a suggestion I picked plus the target crops my script copies in. No GitHub token means a confused run can't reach `main` (merging deploys to Lambda).
+**Options considered:**
+- **One Claude Code agent doing both:** simpler, but the same agent would read untrusted user text and have a shell, and I wouldn't write an agent loop myself.
+- **A general `list_scans` tool:** replaced by `list_unsure_scans` (low confidence, nobody reported). Every list tool returns only failures or likely failures, so the agent doesn't wade through normal scans.
+- **Fix agent opens the PR:** dropped; it would need a GitHub token in the container that could also push to `main`.
+**Testing:** `tests/test_mcp_server.py` calls each tool directly (filters, unknown scan IDs, tune-only label misses, every tool has a real description). Also started the server over stdio and called `search_cards` through an MCP client. 70 tests total.
+**Login:** `db.py` and `pricing.py` load `.env` on import, so the server would quietly get the owner `DATABASE_URL`. It refuses to start without `AGENT_DATABASE_URL` and swaps it in; checked that `current_user` is `pokegrade_agent`. `.mcp.json` starts it from Claude Code and holds no secrets.
+**Would change my mind if:** suggestions turn out to be mostly code fixes (then the review step adds little), or the holdout can't be kept out of the fix agent's container.

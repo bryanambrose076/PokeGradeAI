@@ -42,3 +42,15 @@ CREATE TABLE IF NOT EXISTS labels (
   crop_key   text,
   created_at timestamptz NOT NULL DEFAULT now()
 );
+
+-- Review agent output: one suggestion per scan per run, for me to act on
+CREATE TABLE IF NOT EXISTS suggestions (
+  id         bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  run_id     uuid NOT NULL,
+  scan_id    uuid NOT NULL REFERENCES scans (id),
+  kind       text NOT NULL CHECK (kind IN ('approve', 'reject', 'eval_photo', 'code_fix')),
+  card_id    text,
+  reason     text NOT NULL,
+  created_at timestamptz NOT NULL DEFAULT now(),
+  UNIQUE (run_id, scan_id)
+);

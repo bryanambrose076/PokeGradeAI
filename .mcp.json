@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "pokegrade": {
+      "command": "venv/bin/python",
+      "args": ["-m", "pokegrade.mcp_server"],
+      "env": { "SCANS_BUCKET": "pokegrade-scans-017421876144-us-east-2-an" }
+    }
+  }
+}
