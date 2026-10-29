@@ -126,6 +126,8 @@ def test_list_label_misses_tune_only():
     assert misses == {near_miss: 2, total_miss: None}
 
 
+# Reference images are gitignored and not in the Docker image, so this only runs where they've been downloaded
+@pytest.mark.skipif(not (mcp_server.IMAGES_DIR / f"{MEW}.png").exists(), reason="reference images not downloaded")
 def test_view_reference():
     image = mcp_server.view_reference(MEW)
     assert image.data.startswith(b"\x89PNG")
