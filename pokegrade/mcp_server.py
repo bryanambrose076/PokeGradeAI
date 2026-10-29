@@ -1,4 +1,4 @@
-"""MCP server for the review agent: read tools over scans, reports, labels, and cards, plus log_suggestion.
+"""MCP server for inspecting failures from Claude Code: read tools over scans, reports, labels, and cards, plus log_suggestion.
 
 Run with: python -m pokegrade.mcp_server
 """
